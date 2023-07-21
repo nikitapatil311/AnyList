@@ -4,9 +4,20 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.item}>Home</div>
-      <div className={styles.item}>Scan</div>
-      <div className={styles.item}>Cart</div>
+      <div className={styles.item}>
+        <Image priority src="/assests/home.png" alt="" width={30} height={30} />
+      </div>
+      <div className={styles.item}>
+        {" "}
+        <Image
+          priority
+          src="/assests/scanner.png"
+          alt=""
+          width={30}
+          height={30}
+        />
+      </div>
+
       <div className={styles.item}>
         <div className={styles.cart}>
           <Image
