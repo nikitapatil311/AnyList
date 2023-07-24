@@ -30,7 +30,7 @@ const Featured = () => {
           src="/assests/arrowl.png"
           alt=" "
           layout="fill"
-          objectFit="contain"
+          objectFit="cover"
         />
       </div>
       <div
@@ -52,7 +52,7 @@ const Featured = () => {
           src="/assests/arrowr.png"
           alt=" "
           layout="fill"
-          objectFit="contain"
+          objectFit="cover"
         />
       </div>
     </div>

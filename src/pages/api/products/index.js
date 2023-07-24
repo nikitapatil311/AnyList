@@ -1,5 +1,20 @@
 import dbConnect from "../../../../db/connect";
-import Product from "../../../../db/models/product";
+import Product from "../../../../db/models/Product";
+
+// import Cors from "cors";
+// import initMiddleware from "../../../../lib/init-middleware";
+
+// // Initialize the cors middleware
+// const cors = initMiddleware(
+//   // You can pass options here, but for simplicity, we'll allow all origins
+//   Cors({ origin: true, methods: ["GET", "POST"] })
+// );
+
+// export default async function handler(req, res) {
+//   const { method } = req;
+
+//   // Enable CORS for all requests
+//   await cors(req, res);
 
 export default async function handler(req, res) {
   const { method } = req;
@@ -24,3 +39,4 @@ export default async function handler(req, res) {
     }
   }
 }
+//}
