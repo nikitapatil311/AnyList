@@ -1,29 +1,31 @@
 import styles from "../../../styles/Product.module.css";
 import Image from "next/image";
-// import { useDispatch } from "react-redux"; use for scanner
-// import { useState } from "react";
+import { addProduct } from "../../../components/redux/cartSlice";
 
-const Product = () => {
-  const grocery = {
-    id: 1,
-    img: "/assests/brocoli.png",
-    name: "Brocolli",
-    price: 2.99,
-    currency: "EUR",
-    description: "/ kg",
+//
+import { useDispatch } from "react-redux";
+import { useState } from "react";
+
+//
+import axios from "axios";
+
+const Product = ({ grocery }) => {
+  //
+  const [quantity, setQuantity] = useState(1);
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    const { price } = grocery;
+    dispatch(addProduct({ ...grocery, price, quantity }));
   };
-  //   const [quantity, setQuantity] = useState(1);
-
-  //   const handleClick = () => {
-  //     dispatch(addProduct({ ...pizza, extras, price, quantity }));
-  //   };
+  //
 
   return (
     <div className={styles.container}>
       <div className={styles.left}>
         <div className={styles.imgContainer}>
           <Image
-            src={grocery.img}
+            src={grocery.Image}
             width={600}
             height={600}
             // layout="fill"
@@ -41,7 +43,7 @@ const Product = () => {
 
       {/* add cart functionality to scanned button */}
 
-      {/* <div className={styles.add}>
+      <div className={styles.add}>
         <input
           onChange={(e) => setQuantity(e.target.value)}
           type="number"
@@ -51,9 +53,21 @@ const Product = () => {
         <button className={styles.button} onClick={handleClick}>
           Add to Cart
         </button>
-      </div> */}
+      </div>
+      {/*  */}
     </div>
   );
+};
+
+export const getServerSideProps = async ({ params }) => {
+  const res = await axios.get(
+    `http://localhost:3000/api/products/${params.id}`
+  );
+  return {
+    props: {
+      grocery: res.data,
+    },
+  };
 };
 
 export default Product;

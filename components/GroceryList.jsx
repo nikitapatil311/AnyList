@@ -7,12 +7,9 @@ const GroceryList = ({ groceryList }) => {
       <h1 className={styles.title}>Groceries</h1>
 
       <div className={styles.wrapper}>
-        <GroceryCard />
-        <GroceryCard />
-        <GroceryCard />
-        <GroceryCard />
-        <GroceryCard />
-        <GroceryCard />
+        {groceryList.map((grocery) => (
+          <GroceryCard key={grocery._id} grocery={grocery} />
+        ))}
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import Head from "next/head";
 
 import Featured from "../../components/Featured";
 import GroceryList from "../../components/GroceryList";
-import Footer from "../../components/Footer";
+//import Footer from "../../components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 {
@@ -17,27 +17,27 @@ const inter = Inter({ subsets: ["latin"] });
 `}</style>; */
 }
 
-export default function Home() {
+export default function Home({ groceryList }) {
   return (
     <>
-      hey i am home
+      {/* hey i am homePage remove me at the end */}
       <Head>
         <title>Grocery Shop</title>
         <meta name="description" content="Best Grocery Shop" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Featured />
-      <GroceryList />
-      <Footer />
+      <GroceryList groceryList={groceryList} />
+      {/* <Footer /> */}
     </>
   );
 }
 
-// export const getServerSideProps = async () => {
-//   const res = await axios.get("http://localhost:3000/api/products");
-//   return {
-//     props: {
-//       categoryList: res.data,
-//     },
-//   };
-// };
+export const getServerSideProps = async () => {
+  const res = await axios.get("http://localhost:3000/api/products");
+  return {
+    props: {
+      groceryList: res.data,
+    },
+  };
+};

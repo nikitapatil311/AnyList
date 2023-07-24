@@ -1,7 +1,10 @@
 import styles from "../styles/Footer.module.css";
 import Image from "next/image";
+import { useSelector } from "react-redux";
+import Link from "next/link";
 
 const Footer = () => {
+  const quantity = useSelector((state) => state.cart.quantity);
   return (
     <div className={styles.container}>
       <div className={styles.item}>
@@ -18,18 +21,20 @@ const Footer = () => {
         />
       </div>
 
-      <div className={styles.item}>
-        <div className={styles.cart}>
-          <Image
-            priority
-            src="/assests/cart.png"
-            alt=""
-            width={30}
-            height={30}
-          />
-          <div className={styles.counter}>2</div>
+      <Link href="/cart" passHref>
+        <div className={styles.item}>
+          <div className={styles.cart}>
+            <Image
+              priority
+              src="/assests/cart.png"
+              alt=""
+              width={30}
+              height={30}
+            />
+            <div className={styles.counter}>{quantity}</div>
+          </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };
