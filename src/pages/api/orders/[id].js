@@ -1,0 +1,35 @@
+import dbConnect from "../../../../db/connect";
+import Orders from "../../../../db/models/Order";
+
+const handler = async (req, res) => {
+  const {
+    method,
+    query: { id },
+  } = req;
+
+  await dbConnect();
+
+  if (method === "GET") {
+    try {
+      const order = await Order.findById(id);
+      res.status(200).json(order);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  }
+
+  if (method === "PUT") {
+    try {
+      const order = await Product.findByIdAndUpdate(id, req.body, {
+        new: true,
+      });
+      res.status(201).json(order);
+    } catch (error) {
+      res.status(500).json(error);
+    }
+  }
+  if (method === "DELETE") {
+  }
+};
+
+export default handler;
