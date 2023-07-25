@@ -8,8 +8,17 @@ const Footer = () => {
   return (
     <div className={styles.container}>
       <div className={styles.item}>
-        <Image priority src="/assests/home.png" alt="" width={30} height={30} />
+        <Link href="/" passHref>
+          <Image
+            priority
+            src="/assests/home.png"
+            alt=""
+            width={30}
+            height={30}
+          />
+        </Link>
       </div>
+
       <div className={styles.item}>
         {" "}
         <Image
