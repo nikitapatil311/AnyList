@@ -7,6 +7,7 @@ const nextConfig = {
       "m.media-amazon.com",
       "www.refrigeratedfrozenfood.com",
       "res.cloudinary.com",
+      "images.unsplash.com",
     ],
   },
 };

@@ -7,11 +7,12 @@ import {
   PayPalButtons,
   usePayPalScriptReducer,
 } from "@paypal/react-paypal-js";
-//import { ButtonWrapper } from "@paypal/react-paypal-js";
+
 import axios from "axios";
 import { useRouter } from "next/router";
 import { reset } from "../../redux/cartSlice";
 import OrderDetail from "../../components/OrderDetail";
+import React from "react"; // Added useState import
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
@@ -49,7 +50,7 @@ const Cart = () => {
           currency: currency,
         },
       });
-    }, [currency, showSpinner, options, dispatch]);
+    }, [currency, showSpinner]);
 
     return (
       <>
