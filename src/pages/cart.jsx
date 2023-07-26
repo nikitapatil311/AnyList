@@ -50,8 +50,8 @@ const Cart = () => {
           currency: currency,
         },
       });
-    }, [currency, showSpinner]);
-
+    }, []);
+    //currency, showSpinner
     return (
       <>
         {showSpinner && isPending && <div className="spinner" />}
