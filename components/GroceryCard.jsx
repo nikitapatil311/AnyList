@@ -6,14 +6,7 @@ const GroceryCard = ({ grocery }) => {
   return (
     <div className={styles.container}>
       <Link href={`/product/${grocery._id}`} passHref>
-        <Image
-          src={grocery.image}
-          alt=""
-          width={300}
-          height={300}
-          layout="responsive"
-          objectFit="cover"
-        />
+        <Image src={grocery.image} alt="" width={300} height={300} />
       </Link>
       <h1 className={styles.title}>{grocery.name}</h1>
       <span className={styles.price}>

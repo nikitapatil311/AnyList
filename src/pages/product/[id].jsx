@@ -1,16 +1,11 @@
 import styles from "../../../styles/Product.module.css";
 import Image from "next/image";
-import { addProduct } from "../../../components/redux/cartSlice";
-
-//
-import { useDispatch } from "react-redux";
 import { useState } from "react";
-
-//
 import axios from "axios";
+import { addProduct } from "../../../redux/cartSlice";
+import { useDispatch } from "react-redux";
 
 const Product = ({ grocery }) => {
-  //
   const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
 
@@ -18,20 +13,12 @@ const Product = ({ grocery }) => {
     const { price } = grocery;
     dispatch(addProduct({ ...grocery, price, quantity }));
   };
-  //
 
   return (
     <div className={styles.container}>
       <div className={styles.left}>
         <div className={styles.imgContainer}>
-          <Image
-            src={grocery.Image}
-            width={600}
-            height={600}
-            // layout="fill"
-            objectFit="contain"
-            alt=""
-          />
+          <Image src={grocery.Image} layout="fill" objectFit="contain" alt="" />
         </div>
       </div>
       <div className={styles.right}>

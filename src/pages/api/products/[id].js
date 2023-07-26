@@ -1,5 +1,5 @@
 import dbConnect from "../../../../db/connect";
-import Product from "../../../../db/models/Product";
+import Product from "../../../../models/Product";
 
 export default async function handler(req, res) {
   const {
@@ -28,7 +28,7 @@ export default async function handler(req, res) {
       const product = await Product.findByIdAndUpdate(id, req.body, {
         new: true,
       });
-      res.status(201).json(product);
+      res.status(200).json(product);
     } catch (error) {
       res.status(500).json(error);
     }

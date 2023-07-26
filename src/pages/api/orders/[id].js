@@ -1,5 +1,5 @@
 import dbConnect from "../../../../db/connect";
-import Order from "../../../../db/models/Order";
+import Order from "../../../../models/Order";
 
 const handler = async (req, res) => {
   const {
@@ -20,10 +20,10 @@ const handler = async (req, res) => {
 
   if (method === "PUT") {
     try {
-      const order = await Product.findByIdAndUpdate(id, req.body, {
+      const order = await Order.findByIdAndUpdate(id, req.body, {
         new: true,
       });
-      res.status(201).json(order);
+      res.status(200).json(order);
     } catch (error) {
       res.status(500).json(error);
     }
