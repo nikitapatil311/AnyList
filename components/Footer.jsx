@@ -22,13 +22,15 @@ const Footer = () => {
 
       <div className={styles.item}>
         {" "}
-        <Image
-          priority
-          src="/assests/scanner.png"
-          alt=""
-          width={30}
-          height={30}
-        />
+        <Link href="/scan" passHref>
+          <Image
+            priority
+            src="/assests/scanner.png"
+            alt=""
+            width={30}
+            height={30}
+          />
+        </Link>
       </div>
 
       <Link href="/cart" passHref>
