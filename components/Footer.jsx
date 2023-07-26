@@ -4,7 +4,8 @@ import { useSelector } from "react-redux";
 import Link from "next/link";
 
 const Footer = () => {
-  const quantity = useSelector((state) => state.cart.quantity);
+  const quantity = useSelector((state) => state.cart.products.length);
+  // Use state.cart.products.length instead of state.cart.quantity
   return (
     <div className={styles.container}>
       <div className={styles.item}>

@@ -5,10 +5,10 @@
   top: 0;
   left: 0;
   display: flex;
+  z-index: 999;
   align-items: center;
   justify-content: center;
-  z-index: 999;
-  background-color: rgba(197, 197, 197, 0.56);
+  background-color: rgba(197, 197, 197, 0.568);
 }
 
 .wrapper {
@@ -34,8 +34,9 @@
 }
 
 .label {
-  margin-bottom: 10%;
+  margin-bottom: 10px;
 }
+
 .input {
   height: 40px;
 }

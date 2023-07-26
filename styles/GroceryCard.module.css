@@ -1,5 +1,5 @@
 .container {
-  width: 50%;
+  width: 22%;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -14,8 +14,29 @@
   font-weight: bold;
   color: #d1411e;
 }
+
 .price {
   font-size: 18px;
   font-weight: bold;
   color: #666;
+}
+
+.desc {
+  text-align: center;
+  color: #777;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .price,
+  .desc {
+    font-size: 24px;
+  }
 }

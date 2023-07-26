@@ -5,13 +5,29 @@ import { useState } from "react";
 
 const Index = ({ orders, products }) => {
   const [groceryList, setGroceryList] = useState(products);
-  //const [orderList, setOrderList] = useState(orders);
+  const [orderList, setOrderList] = useState(orders);
+
   const handleDelete = async (id) => {
+    console.log(id);
     try {
       const res = await axios.delete(
         "http://localhost:3000/api/products/" + id
       );
       setGroceryList(groceryList.filter((grocery) => grocery._id !== id));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleStatus = async (id) => {
+    // const item = orderList.filter((order) => order._id === id)[0];
+
+    try {
+      const res = await axios.put("http://localhost:3000/api/orders/" + id, {});
+      setOrderList([
+        res.data,
+        ...orderList.filter((order) => order._id !== id),
+      ]);
     } catch (err) {
       console.log(err);
     }
@@ -33,7 +49,7 @@ const Index = ({ orders, products }) => {
             </tr>
           </tbody>
           {groceryList.map((product) => (
-            <tbody key={products._id}>
+            <tbody key={product._id}>
               <tr className={styles.trTitle}>
                 <td>
                   <Image
@@ -85,9 +101,10 @@ const Index = ({ orders, products }) => {
                 <td>
                   {order.method === 0 ? <span>Cash</span> : <span>Paid</span>}
                 </td>
-                {/* <td>
-                  <button className={styles.button}>Next Stage</button>
-                </td> */}
+                <td>{order.status}</td>
+                <td>
+                  <button className={styles.button}>Refresh</button>
+                </td>
               </tr>
             </tbody>
           ))}
@@ -99,11 +116,6 @@ const Index = ({ orders, products }) => {
 
 export const getServerSideProps = async (ctx) => {
   const myCookie = ctx.req?.cookie || "";
-
-  let admin = false;
-  if (myCookie.token === process.env.TOKEN) {
-    admin = true;
-  }
 
   if (myCookie.token !== process.env.TOKEN) {
     return {

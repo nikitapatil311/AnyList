@@ -1,5 +1,5 @@
 import dbConnect from "../../../../db/connect";
-import Orders from "../../../../db/models/Order";
+import Order from "../../../../models/Order";
 
 const handler = async (req, res) => {
   const { method } = req;

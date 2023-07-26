@@ -7,10 +7,10 @@ import {
   PayPalButtons,
   usePayPalScriptReducer,
 } from "@paypal/react-paypal-js";
-import { ButtonWrapper } from "@paypal/react-paypal-js";
+//import { ButtonWrapper } from "@paypal/react-paypal-js";
 import axios from "axios";
 import { useRouter } from "next/router";
-import { reset } from "../../components/redux/cartSlice";
+import { reset } from "../../redux/cartSlice";
 import OrderDetail from "../../components/OrderDetail";
 
 const Cart = () => {
@@ -49,7 +49,7 @@ const Cart = () => {
           currency: currency,
         },
       });
-    }, [currency, showSpinner]);
+    }, [currency, showSpinner, options, dispatch]);
 
     return (
       <>
@@ -92,18 +92,13 @@ const Cart = () => {
     );
   };
 
-  // if (!cart.products || cart.products.length === 0) {
-  //   return <div>No products in the cart.</div>;
-  // }
-  console.log(cart.products);
-
   return (
     <>
       <div className={styles.container}>
         <div className={styles.left}>
           <table className={styles.table}>
             <tbody>
-              <tr className={styles.tr}>
+              <tr className={styles.trTitle}>
                 <th>Product</th>
                 <th>Name</th>
                 <th>Price</th>
@@ -118,8 +113,7 @@ const Cart = () => {
                     <div className={styles.imgContainer}>
                       <Image
                         src={product.Image}
-                        height={100}
-                        width={100}
+                        layout="fill"
                         alt=""
                         objectFit="cover"
                       />

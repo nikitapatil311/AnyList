@@ -1,13 +1,13 @@
 // importing
-import mongoose, { Schema } from "mongoose";
+import mongoose from "mongoose";
 
 //the places db schema
 
-const orderSchema = new Schema({
+const orderSchema = new mongoose.Schema({
   image: { type: String, required: true },
   price: { type: Number, required: true },
   name: { type: String, required: true },
-  quantity: { type: Number, default: 0 },
+  quantity: { type: Number },
   total: { type: Number, required: true },
   method: { type: Number, required: true },
 });
