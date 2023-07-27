@@ -4,10 +4,12 @@ import BarcodeScanner from "../../components/BarcodeScanner";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../../redux/cartSlice";
 import axios from "axios";
+import Image from "next/image";
 
 const ScanPage = () => {
   const dispatch = useDispatch();
   const [scannedCode, setScannedCode] = useState(null);
+  const [scannedProducts, setScannedProducts] = useState([]);
 
   const handleScan = async (code) => {
     setScannedCode(code);
@@ -17,6 +19,10 @@ const ScanPage = () => {
 
       if (response.status === 200) {
         const productData = response.data; // Assuming the response data contains product details
+        setScannedProducts((prevScannedProducts) => [
+          ...prevScannedProducts,
+          productData,
+        ]);
         dispatch(addProduct(productData));
       } else {
         console.log("Failed to fetch product data.");
@@ -35,6 +41,20 @@ const ScanPage = () => {
       ) : (
         <BarcodeScanner onScan={handleScan} />
       )}
+
+      {/* Display scanned products */}
+      <div>
+        <h2>Scanned Products</h2>
+        {scannedProducts.map((product) => (
+          <div key={product._id}>
+            <Image src={product.Image} alt={product.name} />
+            <p>Name: {product.name}</p>
+            <p>Price: {product.price}</p>
+            <p>Quantity: {product.quantity}</p>
+            <p>Total: {product.price * product.quantity}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
