@@ -34,4 +34,4 @@ export const getServerSideProps = async (context) => {
   };
 };
 
-export default account;
+export default Account;
