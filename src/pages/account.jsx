@@ -1,7 +1,7 @@
 import React from "react";
 import { useSession, signOut, getSession } from "next-auth/react";
 
-const account = () => {
+const Account = () => {
   const { data: session, status } = useSession({ required: true });
   if (status === "authenticated") {
     return (
