@@ -8,6 +8,12 @@ const nextConfig = {
       "www.refrigeratedfrozenfood.com",
       "res.cloudinary.com",
       "images.unsplash.com",
+      "plus.unsplash.com",
+      "media.istockphoto.com",
+      "images.pexels.com",
+      "www.bigbasket.com",
+      "lh3.googleusercontent.com",
+      "avatars.githubusercontent.com",
     ],
   },
 };

@@ -18,6 +18,12 @@ const Cart = () => {
   const cart = useSelector((state) => state.cart);
   const [cash, setCash] = useState(false);
   const [open, setOpen] = useState(false);
+  const [scannedProducts, setScannedProducts] = useState([]);
+  const [productId, setProductId] = useState("");
+
+  const handleProductIdChange = (event) => {
+    setProductId(event.target.value);
+  };
   const amount = cart.total;
   const currency = "EUR";
   const style = { layout: "vertical" };
@@ -34,6 +40,36 @@ const Cart = () => {
     } catch (err) {
       console.log(err);
     }
+  };
+
+  const handleScan = async (productId) => {
+    try {
+      // Fetch product details based on the productId (implement this part)
+      const productDetails = await fetchProductDetails(productId);
+      setScannedProducts((prevScannedProducts) => [
+        ...prevScannedProducts,
+        productDetails,
+      ]);
+      setProductId(""); // Reset the productId input field after scanning
+    } catch (err) {
+      console.error("Error fetching product details:", err);
+    }
+  };
+
+  const fetchProductDetails = async (productId) => {
+    // Implement your product fetching logic here based on the productId
+    // Return the product details as an object
+    // For example:
+    return {
+      name: "Product A",
+      price: 10,
+      quantity: 2,
+      Image: "/path/to/image",
+    };
+  };
+
+  const handleCheckout = () => {
+    setOpen(true);
   };
 
   // Custom component to wrap the PayPalButtons and handle currency changes
@@ -137,6 +173,37 @@ const Cart = () => {
                   </td>
                 </tr>
               ))}
+
+              {scannedProducts.map((scannedProduct) => (
+                <tr className={styles.tr} key={scannedProduct.productId}>
+                  <td>
+                    <div className={styles.imgContainer}>
+                      <Image
+                        src={scannedProduct.Image}
+                        layout="fill"
+                        alt=""
+                        objectFit="cover"
+                      />
+                    </div>
+                  </td>
+                  <td>
+                    <span className={styles.name}>{scannedProduct.name}</span>
+                  </td>
+                  <td>
+                    <span className={styles.price}>{scannedProduct.price}</span>
+                  </td>
+                  <td>
+                    <span className={styles.quantity}>
+                      {scannedProduct.quantity}
+                    </span>
+                  </td>
+                  <td>
+                    <span className={styles.total}>
+                      {scannedProduct.price * scannedProduct.quantity}
+                    </span>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
@@ -182,6 +249,11 @@ const Cart = () => {
           </div>
         </div>
         {cash && <OrderDetail total={cart.total} createOrder={createOrder} />}
+      </div>
+      <div>
+        <button onClick={handleScan} className={styles.scanButton}>
+          SCAN
+        </button>
       </div>
     </>
   );
