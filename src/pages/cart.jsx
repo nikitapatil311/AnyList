@@ -86,7 +86,7 @@ const Cart = () => {
           currency: currency,
         },
       });
-    }, []);
+    }, [currency, showSpinner, options, dispatch]);
     //currency, showSpinner
     return (
       <>
