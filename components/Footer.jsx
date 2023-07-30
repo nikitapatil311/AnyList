@@ -2,6 +2,8 @@ import styles from "../styles/Footer.module.css";
 import Image from "next/image";
 import { useSelector } from "react-redux";
 import Link from "next/link";
+import { BiSolidUserCircle } from "react-icons/bi";
+import { signIn } from "next-auth/react";
 
 const Footer = () => {
   const quantity = useSelector((state) => state.cart.products.length);
@@ -47,6 +49,16 @@ const Footer = () => {
           </div>
         </div>
       </Link>
+
+      <div className={styles.profile}>
+        <Link href="/login" passHref>
+          <BiSolidUserCircle
+            className={styles.profile}
+            height={60}
+            width={60}
+          />
+        </Link>
+      </div>
     </div>
   );
 };

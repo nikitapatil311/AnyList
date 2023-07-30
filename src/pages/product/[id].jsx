@@ -4,6 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 import { addProduct } from "../../../redux/cartSlice";
 import { useDispatch } from "react-redux";
+import Link from "next/link";
 
 const Product = ({ grocery }) => {
   const [quantity, setQuantity] = useState(1);
@@ -24,8 +25,9 @@ const Product = ({ grocery }) => {
       <div className={styles.right}>
         <h1 className={styles.title}>{grocery.name}</h1>
         <span className={styles.price}>
-          {grocery.price} {grocery.currency} {grocery.description}
+          {grocery.price} {grocery.currency}
         </span>
+        <div className={styles.right}>{grocery.info}</div>
       </div>
 
       {/* add cart functionality to scanned button */}
@@ -41,7 +43,16 @@ const Product = ({ grocery }) => {
           Add to Cart
         </button>
       </div>
-      {/*  */}
+      <div className={styles.buttonsContainer}>
+        <Link href="/cart" passHref>
+          <button className={styles.button}>View Cart</button>
+        </Link>
+        <div>
+          <Link href="/" passHref>
+            <button className={styles.button}>Back to Home</button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };

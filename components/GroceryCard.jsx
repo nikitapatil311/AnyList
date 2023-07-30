@@ -13,6 +13,11 @@ const GroceryCard = ({ grocery }) => {
         {grocery.price} {grocery.currency}
       </span>
       <p className={styles.desc}>{grocery.info}</p>
+      <div className={styles.buttonsContainer}>
+        <Link href={`/product/${grocery._id}`} passHref>
+          <button className={styles.backButton}>view</button>
+        </Link>
+      </div>
     </div>
   );
 };

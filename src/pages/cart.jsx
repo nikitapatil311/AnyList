@@ -268,9 +268,10 @@ import { useEffect } from "react";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import axios from "axios";
 import { useRouter } from "next/router";
-import { reset } from "../../redux/cartSlice";
+import { addProduct, reset } from "../../redux/cartSlice";
 import OrderDetail from "../../components/OrderDetail";
 import styles from "../../styles/Cart.module.css";
+import Link from "next/link";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
@@ -293,6 +294,21 @@ const Cart = () => {
     } catch (err) {
       console.log(err);
     }
+  };
+
+  const handleDeleteProduct = (productId) => {
+    // Filter out the selected product from the cart
+    const updatedCart = cart.products.filter(
+      (product) => product._id !== productId
+    );
+
+    // Dispatch an action to update the cart state with the new product list
+    dispatch(reset());
+
+    // Now add the products back to the cart using 'addProduct' action
+    updatedCart.forEach((product) => {
+      dispatch(addProduct(product));
+    });
   };
 
   const handleCheckout = () => {
@@ -353,6 +369,8 @@ const Cart = () => {
                 <th>Price</th>
                 <th>Quantity</th>
                 <th>Total</th>
+                <th>Edit</th>
+                <th>Delete</th>
               </tr>
             </tbody>
             <tbody>
@@ -382,6 +400,16 @@ const Cart = () => {
                       {" "}
                       {product.price * product.quantity}
                     </span>
+                  </td>
+                  <td>
+                    {/* Edit button, linking to the product/[id] page */}
+                    <Link href={`/product/${product._id}`}>Edit</Link>
+                  </td>
+                  <td>
+                    {/* Delete button, handleDeleteProduct function to be defined */}
+                    <button onClick={() => handleDeleteProduct(product._id)}>
+                      Delete
+                    </button>
                   </td>
                 </tr>
               ))}

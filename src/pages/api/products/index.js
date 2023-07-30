@@ -21,6 +21,11 @@ export default async function handler(req, res) {
       return res.status(401).json("Not authenticated!");
     }
     try {
+      // Make sure the "name" field is provided in the request body
+      if (!req.body.name) {
+        return res.status(400).json("Name field is required.");
+      }
+
       const product = await Product.create(req.body);
       res.status(201).json(product);
     } catch (error) {

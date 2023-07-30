@@ -98,25 +98,30 @@ import styles from "../styles/Add.module.css";
 import axios from "axios";
 
 const Add = ({ setClose, setReload }) => {
-  const [file, setFile] = useState("");
+  const [file, setFile] = useState(null);
   const [name, setName] = useState("");
   const [info, setInfo] = useState("");
-  const [prices, setPrices] = useState([]);
+  const [price, setPrice] = useState([]);
 
   const changePrice = (e, index) => {
-    const currentPrices = [...prices];
+    const currentPrices = [...price];
     currentPrices[index] = e.target.value;
-    setPrices(currentPrices);
+    setPrice(currentPrices);
   };
 
   const handleCreate = async () => {
+    if (!file || !name || !info || price.length === 0) {
+      console.log("Please fill out all the required fields.");
+      return;
+    }
+
     const data = new FormData();
     data.append("file", file);
     data.append("upload_preset", "uploads");
 
     try {
       const uploadRes = await axios.post(
-        "https://api.cloudinary.com/v1_1/dsbyq4sj1/image/upload",
+        "https://console.cloudinary.com/console/c-3b407fb1cf9cc95a20025f296c42b1/media_library/folders/c4d0776c18093c0895ecfd9fb699b338a2",
         data
       );
 
@@ -124,8 +129,8 @@ const Add = ({ setClose, setReload }) => {
       const newProduct = {
         name,
         info,
-        prices,
-        Image: url,
+        price,
+        image: url,
       };
 
       await axios.post("http://localhost:3000/api/products", newProduct);
