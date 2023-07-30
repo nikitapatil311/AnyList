@@ -1,5 +1,5 @@
 import styles from "../../../styles/Product.module.css";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useState } from "react";
 import axios from "axios";
 import { addProduct } from "../../../redux/cartSlice";
@@ -42,16 +42,14 @@ const Product = ({ grocery }) => {
         <button className={styles.button} onClick={handleClick}>
           Add to Cart
         </button>
-      </div>
-      <div className={styles.buttonsContainer}>
+
         <Link href="/cart" passHref>
           <button className={styles.button}>View Cart</button>
         </Link>
-        <div>
-          <Link href="/" passHref>
-            <button className={styles.button}>Back to Home</button>
-          </Link>
-        </div>
+
+        <Link href="/" passHref>
+          <button className={styles.button}>Back to Home</button>
+        </Link>
       </div>
     </div>
   );

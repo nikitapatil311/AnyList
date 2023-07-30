@@ -262,7 +262,7 @@
 // export default Cart;
 // components/Cart.js
 import React, { useState } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
@@ -402,12 +402,23 @@ const Cart = () => {
                     </span>
                   </td>
                   <td>
+                    <button className={styles.button}>
+                      {" "}
+                      <Link
+                        className={styles.btnlink}
+                        href={`/product/${product._id}`}
+                      >
+                        Edit
+                      </Link>
+                    </button>
                     {/* Edit button, linking to the product/[id] page */}
-                    <Link href={`/product/${product._id}`}>Edit</Link>
                   </td>
                   <td>
                     {/* Delete button, handleDeleteProduct function to be defined */}
-                    <button onClick={() => handleDeleteProduct(product._id)}>
+                    <button
+                      className={styles.button}
+                      onClick={() => handleDeleteProduct(product._id)}
+                    >
                       Delete
                     </button>
                   </td>

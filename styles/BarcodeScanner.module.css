@@ -1,0 +1,9 @@
+.videoContainer {
+  /* Hide the video element from the user's view */
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

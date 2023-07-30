@@ -97,8 +97,9 @@ import { useState } from "react";
 import styles from "../styles/Add.module.css";
 import axios from "axios";
 
-const Add = ({ setClose, setReload }) => {
-  const [file, setFile] = useState(null);
+const Add = ({ setClose }) => {
+  const [file, setFile] = useState("");
+
   const [name, setName] = useState("");
   const [info, setInfo] = useState("");
   const [price, setPrice] = useState([]);
@@ -121,7 +122,7 @@ const Add = ({ setClose, setReload }) => {
 
     try {
       const uploadRes = await axios.post(
-        "https://console.cloudinary.com/console/c-3b407fb1cf9cc95a20025f296c42b1/media_library/folders/c4d0776c18093c0895ecfd9fb699b338a2",
+        "https://api.cloudinary.com/v1_1/ddbosdu4g/image/upload",
         data
       );
 
@@ -135,7 +136,6 @@ const Add = ({ setClose, setReload }) => {
 
       await axios.post("http://localhost:3000/api/products", newProduct);
       setClose(true);
-      setReload(); // Trigger the reload of the grocery list
     } catch (err) {
       console.log(err);
     }

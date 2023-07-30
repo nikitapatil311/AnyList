@@ -1,60 +1,43 @@
-// pages/scan.js
-import React, { useState } from "react";
+// pages/ScanPage.jsx
+
+import React, { useState, useEffect } from "react";
 import BarcodeScanner from "../../components/BarcodeScanner";
-import { useDispatch } from "react-redux";
-import { addProduct } from "../../redux/cartSlice";
 import axios from "axios";
 import Image from "next/image";
 
 const ScanPage = () => {
-  const dispatch = useDispatch();
-  const [scannedCode, setScannedCode] = useState(null);
-  const [scannedProducts, setScannedProducts] = useState([]);
+  const [productsData, setProductsData] = useState([]);
+  const [scannedProduct, setScannedProduct] = useState(null);
 
-  const handleScan = async (code) => {
-    setScannedCode(code);
-    try {
-      // Make an API call to fetch product data based on the scanned barcode
-      const response = await axios.get(`/api/products/${code}`);
+  useEffect(() => {
+    // Fetch product data from the backend or API
+    axios
+      .get("http://localhost:3000/api/products")
+      .then((response) => {
+        setProductsData(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching product data:", error);
+      });
+  }, []);
 
-      if (response.status === 200) {
-        const productData = response.data; // Assuming the response data contains product details
-        setScannedProducts((prevScannedProducts) => [
-          ...prevScannedProducts,
-          productData,
-        ]);
-        dispatch(addProduct(productData));
-      } else {
-        console.log("Failed to fetch product data.");
-      }
-    } catch (error) {
-      console.error("Error fetching product data:", error);
-    }
+  const handleScan = (barcode) => {
+    const product = productsData.find((p) => p.barcode === barcode);
+    setScannedProduct(product);
   };
 
   return (
     <div>
       <h1>Barcode Scanner</h1>
-      <p>Scan the barcode of the products to purchase</p>
-      {scannedCode ? (
-        <p>Scanned barcode: {scannedCode}</p>
-      ) : (
-        <BarcodeScanner onScan={handleScan} />
-      )}
+      <BarcodeScanner onScan={handleScan} />
 
-      {/* Display scanned products */}
-      <div>
-        <h2>Scanned Products</h2>
-        {scannedProducts.map((product) => (
-          <div key={product._id}>
-            <Image src={product.Image} alt={product.name} />
-            <p>Name: {product.name}</p>
-            <p>Price: {product.price}</p>
-            <p>Quantity: {product.quantity}</p>
-            <p>Total: {product.price * product.quantity}</p>
-          </div>
-        ))}
-      </div>
+      {scannedProduct && (
+        <div>
+          <h2>{scannedProduct.name}</h2>
+          <p>Price: {scannedProduct.price}</p>
+          <Image src={scannedProduct.image} alt={scannedProduct.name} />
+        </div>
+      )}
     </div>
   );
 };

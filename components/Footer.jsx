@@ -1,5 +1,5 @@
 import styles from "../styles/Footer.module.css";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useSelector } from "react-redux";
 import Link from "next/link";
 import { BiSolidUserCircle } from "react-icons/bi";
@@ -35,8 +35,8 @@ const Footer = () => {
         </Link>
       </div>
 
-      <Link href="/cart" passHref>
-        <div className={styles.item}>
+      <div className={styles.item}>
+        <Link href="/cart" passHref>
           <div className={styles.cart}>
             <Image
               priority
@@ -47,8 +47,8 @@ const Footer = () => {
             />
             <div className={styles.counter}>{quantity}</div>
           </div>
-        </div>
-      </Link>
+        </Link>
+      </div>
 
       <div className={styles.profile}>
         <Link href="/login" passHref>
