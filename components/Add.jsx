@@ -106,7 +106,7 @@ const Add = ({ setClose }) => {
 
   const changePrice = (e, index) => {
     const currentPrices = [...price];
-    currentPrices[index] = e.target.value;
+    currentPrices[index] = +e.target.value;
     setPrice(currentPrices);
   };
 
@@ -128,10 +128,10 @@ const Add = ({ setClose }) => {
 
       const { url } = uploadRes.data;
       const newProduct = {
-        name,
-        info,
-        price,
         image: url,
+        name,
+        price,
+        info,
       };
 
       await axios.post("http://localhost:3000/api/products", newProduct);
