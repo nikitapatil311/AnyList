@@ -35,7 +35,7 @@
 // export default handler;
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import OrderDetail from "../../components/OrderDetail";
+import OrderDetail from "../../../../components/OrderDetail";
 
 const OrderPage = ({ orderId }) => {
   const [order, setOrder] = useState(null);
