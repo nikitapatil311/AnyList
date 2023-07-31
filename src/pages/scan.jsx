@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import BarcodeScanner from "../../components/BarcodeScanner";
 import axios from "axios";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const ScanPage = () => {
   const [productsData, setProductsData] = useState([]);

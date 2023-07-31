@@ -41,7 +41,7 @@
 // export default OrderDetail;
 
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const OrderDetail = ({ order }) => {
   return (
