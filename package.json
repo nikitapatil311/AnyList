@@ -11,7 +11,6 @@
   "dependencies": {
     "@paypal/react-paypal-js": "^8.1.1",
     "@reduxjs/toolkit": "^1.9.5",
-    "autoprefixer": "10.4.14",
     "axios": "^1.4.0",
     "cloudinary": "^1.39.0",
     "cloudinary-react": "^1.8.1",
@@ -28,14 +27,17 @@
     "next-images": "^1.8.5",
     "passport": "^0.6.0",
     "passport-github2": "^0.1.12",
-    "postcss": "8.4.26",
     "quagga": "^0.12.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
     "react-redux": "^8.1.1",
     "react-webcam": "^7.1.1",
-    "redux": "^4.2.1",
-    "tailwindcss": "3.3.3"
+    "redux": "^4.2.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.27",
+    "tailwindcss": "^3.3.3"
   }
 }
