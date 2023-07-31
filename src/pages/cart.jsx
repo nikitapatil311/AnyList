@@ -273,7 +273,7 @@ import OrderDetail from "../../components/OrderDetail";
 import styles from "../../styles/Cart.module.css";
 import Link from "next/link";
 
-const Cart = () => {
+export const Cart = () => {
   const cart = useSelector((state) => state.cart);
   const [cash, setCash] = useState(false);
   const [open, setOpen] = useState(false);
