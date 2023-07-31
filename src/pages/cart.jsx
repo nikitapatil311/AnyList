@@ -279,6 +279,7 @@ const Cart = () => {
   const [open, setOpen] = useState(false);
   const [scannedProducts, setScannedProducts] = useState([]);
   const [productId, setProductId] = useState("");
+
   const handleProductIdChange = (event) => {
     setProductId(event.target.value);
   };

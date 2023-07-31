@@ -76,7 +76,7 @@
 import React from "react";
 import Image from "next/legacy/image";
 import Link from "next/link";
-import styles from "../../../styles/Order.module.css";
+import styles from "../../../../styles/Order.module.css";
 import axios from "axios";
 
 const Order = ({ order }) => {

@@ -1,8 +1,12 @@
 import React, { useState } from "react";
-import { createOrder } from "../src/pages/cart"; // Import your API function for creating orders
+//import { createOrder } from "../src/pages/cart"; // Import your API function for creating orders
 import styles from "../styles/OrderDetail.module.css";
 
-const OrderDetail = ({ total }) => {
+const OrderDetail = (
+  {
+    //  total
+  }
+) => {
   const [customer, setCustomer] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [error, setError] = useState(null); // Add state for handling errors
@@ -10,7 +14,7 @@ const OrderDetail = ({ total }) => {
   const handleClick = async () => {
     try {
       // Make the API request to create the order
-      await createOrder({ customer, total, phoneNumber, method: 0 });
+      //await createOrder({ customer, total, phoneNumber, method: 0 });
       // Reset form and error state after successful order creation
       setCustomer("");
       setPhoneNumber("");
