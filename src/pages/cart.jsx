@@ -273,12 +273,13 @@ import OrderDetail from "../../components/OrderDetail";
 import styles from "../../styles/Cart.module.css";
 import Link from "next/link";
 
-export const Cart = () => {
+const Cart = () => {
   const cart = useSelector((state) => state.cart);
   const [cash, setCash] = useState(false);
   const [open, setOpen] = useState(false);
   const [scannedProducts, setScannedProducts] = useState([]);
   const [productId, setProductId] = useState("");
+
   const handleProductIdChange = (event) => {
     setProductId(event.target.value);
   };
