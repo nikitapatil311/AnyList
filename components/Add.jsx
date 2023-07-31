@@ -4,7 +4,6 @@
 // import { useRouter } from "next/router";
 
 // const Add = ({ setClose }) => {
-//
 //   const [file, setFile] = useState(null);
 //   const [name, setName] = useState(null);
 //   const [info, setInfo] = useState(null);
@@ -22,7 +21,7 @@
 //     data.append("upload_preset", "uploads");
 //     try {
 //       const uploadRes = await axios.post(
-//         "https://api.cloudinary.com/v1_1/dsbyq4sj1/image/upload",
+//         "https://api.cloudinary.com/v1_1/ddbosdu4g/image/upload",
 //         data
 //       );
 
@@ -32,12 +31,11 @@
 //         info,
 //         prices,
 
-//         Image: url,
+//         image: url,
 //       };
 
 //       await axios.post("http://localhost:3000/api/products", newProduct);
 //       setClose(true);
-
 //     } catch (err) {
 //       console.log(err);
 //     }
@@ -93,22 +91,25 @@
 
 // export default Add;
 
+//
+
 import { useState } from "react";
 import styles from "../styles/Add.module.css";
 import axios from "axios";
+import { useRouter } from "next/router";
 
 const Add = ({ setClose }) => {
-  const [file, setFile] = useState("");
+  const [file, setFile] = useState(null);
 
-  const [name, setName] = useState("");
-  const [info, setInfo] = useState("");
-  const [price, setPrice] = useState([]);
+  const [name, setName] = useState(null);
+  const [info, setInfo] = useState(null);
+  const [price, setPrice] = useState("");
 
-  const changePrice = (e, index) => {
-    const currentPrices = [...price];
-    currentPrices[index] = +e.target.value;
-    setPrice(currentPrices);
-  };
+  // const changePrice = (e, index) => {
+  //   const currentPrices = price;
+  //   currentPrices[index] = e.target.value;
+  //   setPrice(currentPrices);
+  // };
 
   const handleCreate = async () => {
     if (!file || !name || !info || price.length === 0) {
@@ -118,7 +119,7 @@ const Add = ({ setClose }) => {
 
     const data = new FormData();
     data.append("file", file);
-    data.append("upload_preset", "uploads");
+    data.append("upload_preset", "uploads1");
 
     data.append("api_key", "474874492862899");
 
@@ -140,11 +141,28 @@ const Add = ({ setClose }) => {
         info,
       };
 
-      await axios.post("http://localhost:3000/api/products", newProduct);
+      const createRes = await fetch("/api/products", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newProduct),
+      });
+
+      if (!createRes.ok) {
+        throw new Error("Failed to create product");
+      }
+
       setClose(true);
     } catch (err) {
       console.log(err);
     }
+
+    //   await axios.post("http://localhost:3000/api/products", newProduct);
+    //   setClose(true);
+    // } catch (err) {
+    //   console.log(err);
+    // }
   };
 
   return (
@@ -182,7 +200,7 @@ const Add = ({ setClose }) => {
               type="number"
               placeholder="Price"
               name="price"
-              onChange={(e) => changePrice(e, 0)}
+              onChange={(e) => setPrice(e.target.value)}
             />
           </div>
         </div>

@@ -2,8 +2,11 @@ import dbConnect from "../../../../db/connect";
 import Product from "../../../../models/Product";
 
 export default async function handler(req, res) {
-  const { method, cookies } = req;
-  const token = cookies.token;
+  const {
+    method,
+    // cookies
+  } = req;
+  //const token = cookies.token;
 
   dbConnect();
 
@@ -17,9 +20,11 @@ export default async function handler(req, res) {
   }
 
   if (method === "POST") {
-    if (!token || token !== process.env.token) {
-      return res.status(401).json("Not authenticated!");
-    }
+    // if (!token || token !== process.env.TOKEN) {
+    //   return res.status(401).json("Not authenticated!");
+    // }
+    console.log("Request body:", req.body);
+
     try {
       // Make sure the "name" field is provided in the request body
       if (!req.body.name) {

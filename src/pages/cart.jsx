@@ -277,6 +277,11 @@ const Cart = () => {
   const cart = useSelector((state) => state.cart);
   const [cash, setCash] = useState(false);
   const [open, setOpen] = useState(false);
+  const [scannedProducts, setScannedProducts] = useState([]);
+  const [productId, setProductId] = useState("");
+  const handleProductIdChange = (event) => {
+    setProductId(event.target.value);
+  };
 
   const amount = cart.total;
   const currency = "EUR";
@@ -294,6 +299,32 @@ const Cart = () => {
     } catch (err) {
       console.log(err);
     }
+  };
+
+  const handleScan = async (productId) => {
+    try {
+      // Fetch product details based on the productId (implement this part)
+      const productDetails = await fetchProductDetails(productId);
+      setScannedProducts((prevScannedProducts) => [
+        ...prevScannedProducts,
+        productDetails,
+      ]);
+      setProductId(""); // Reset the productId input field after scanning
+    } catch (err) {
+      console.error("Error fetching product details:", err);
+    }
+  };
+
+  const fetchProductDetails = async (productId) => {
+    // Implement your product fetching logic here based on the productId
+    // Return the product details as an object
+    // For example:
+    return {
+      name: "Product A",
+      price: 10,
+      quantity: 2,
+      Image: "/path/to/image",
+    };
   };
 
   const handleDeleteProduct = (productId) => {
@@ -374,12 +405,12 @@ const Cart = () => {
               </tr>
             </tbody>
             <tbody>
-              {cart.products.map((product) => (
-                <tr className={styles.tr} key={product._id}>
+              {cart.products.map((prod) => (
+                <tr className={styles.tr} key={prod._id}>
                   <td>
                     <div className={styles.imgContainer}>
                       <Image
-                        src={product.image}
+                        src={prod.image}
                         layout="fill"
                         alt=""
                         objectFit="cover"
@@ -387,18 +418,18 @@ const Cart = () => {
                     </div>
                   </td>
                   <td>
-                    <span className={styles.name}>{product.name}</span>
+                    <span className={styles.name}>{prod.name}</span>
                   </td>
                   <td>
-                    <span className={styles.price}> {product.price}</span>
+                    <span className={styles.price}> {prod.price}</span>
                   </td>
                   <td>
-                    <span className={styles.quantity}> {product.quantity}</span>
+                    <span className={styles.quantity}> {prod.quantity}</span>
                   </td>
                   <td>
                     <span className={styles.total}>
                       {" "}
-                      {product.price * product.quantity}
+                      {prod.price * prod.quantity}
                     </span>
                   </td>
                   <td>
@@ -406,7 +437,7 @@ const Cart = () => {
                       {" "}
                       <Link
                         className={styles.btnlink}
-                        href={`/product/${product._id}`}
+                        href={`/product/${prod._id}`}
                       >
                         Edit
                       </Link>
@@ -417,7 +448,7 @@ const Cart = () => {
                     {/* Delete button, handleDeleteProduct function to be defined */}
                     <button
                       className={styles.button}
-                      onClick={() => handleDeleteProduct(product._id)}
+                      onClick={() => handleDeleteProduct(prod._id)}
                     >
                       Delete
                     </button>

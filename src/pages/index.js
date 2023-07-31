@@ -31,10 +31,10 @@ export default function Home({ groceryList }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Featured />
-      {<AddButton setClose={setClose} />}
+      <AddButton setClose={setClose} />
       <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <GroceryList groceryList={filteredGroceryList} />
-      {/* <Footer /> */}
+
       {!close && <Add setClose={setClose} />}
     </div>
   );
