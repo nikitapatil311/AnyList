@@ -13,6 +13,7 @@
   flex: 2;
 }
 .right {
+  flex: 0;
 }
 
 .imgContainer {
@@ -73,4 +74,8 @@
   background-color: white;
   color: teal;
   font-weight: bold;
+}
+
+.btnlink {
+  text-decoration: none;
 }

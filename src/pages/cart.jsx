@@ -262,20 +262,26 @@
 // export default Cart;
 // components/Cart.js
 import React, { useState } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import axios from "axios";
 import { useRouter } from "next/router";
-import { reset } from "../../redux/cartSlice";
+import { addProduct, reset } from "../../redux/cartSlice";
 import OrderDetail from "../../components/OrderDetail";
 import styles from "../../styles/Cart.module.css";
+import Link from "next/link";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
   const [cash, setCash] = useState(false);
   const [open, setOpen] = useState(false);
+  const [scannedProducts, setScannedProducts] = useState([]);
+  const [productId, setProductId] = useState("");
+  const handleProductIdChange = (event) => {
+    setProductId(event.target.value);
+  };
 
   const amount = cart.total;
   const currency = "EUR";
@@ -293,6 +299,47 @@ const Cart = () => {
     } catch (err) {
       console.log(err);
     }
+  };
+
+  const handleScan = async (productId) => {
+    try {
+      // Fetch product details based on the productId (implement this part)
+      const productDetails = await fetchProductDetails(productId);
+      setScannedProducts((prevScannedProducts) => [
+        ...prevScannedProducts,
+        productDetails,
+      ]);
+      setProductId(""); // Reset the productId input field after scanning
+    } catch (err) {
+      console.error("Error fetching product details:", err);
+    }
+  };
+
+  const fetchProductDetails = async (productId) => {
+    // Implement your product fetching logic here based on the productId
+    // Return the product details as an object
+    // For example:
+    return {
+      name: "Product A",
+      price: 10,
+      quantity: 2,
+      Image: "/path/to/image",
+    };
+  };
+
+  const handleDeleteProduct = (productId) => {
+    // Filter out the selected product from the cart
+    const updatedCart = cart.products.filter(
+      (product) => product._id !== productId
+    );
+
+    // Dispatch an action to update the cart state with the new product list
+    dispatch(reset());
+
+    // Now add the products back to the cart using 'addProduct' action
+    updatedCart.forEach((product) => {
+      dispatch(addProduct(product));
+    });
   };
 
   const handleCheckout = () => {
@@ -353,15 +400,17 @@ const Cart = () => {
                 <th>Price</th>
                 <th>Quantity</th>
                 <th>Total</th>
+                <th>Edit</th>
+                <th>Delete</th>
               </tr>
             </tbody>
             <tbody>
-              {cart.products.map((product) => (
-                <tr className={styles.tr} key={product._id}>
+              {cart.products.map((prod) => (
+                <tr className={styles.tr} key={prod._id}>
                   <td>
                     <div className={styles.imgContainer}>
                       <Image
-                        src={product.image}
+                        src={prod.image}
                         layout="fill"
                         alt=""
                         objectFit="cover"
@@ -369,19 +418,40 @@ const Cart = () => {
                     </div>
                   </td>
                   <td>
-                    <span className={styles.name}>{product.name}</span>
+                    <span className={styles.name}>{prod.name}</span>
                   </td>
                   <td>
-                    <span className={styles.price}> {product.price}</span>
+                    <span className={styles.price}> {prod.price}</span>
                   </td>
                   <td>
-                    <span className={styles.quantity}> {product.quantity}</span>
+                    <span className={styles.quantity}> {prod.quantity}</span>
                   </td>
                   <td>
                     <span className={styles.total}>
                       {" "}
-                      {product.price * product.quantity}
+                      {prod.price * prod.quantity}
                     </span>
+                  </td>
+                  <td>
+                    <button className={styles.button}>
+                      {" "}
+                      <Link
+                        className={styles.btnlink}
+                        href={`/product/${prod._id}`}
+                      >
+                        Edit
+                      </Link>
+                    </button>
+                    {/* Edit button, linking to the product/[id] page */}
+                  </td>
+                  <td>
+                    {/* Delete button, handleDeleteProduct function to be defined */}
+                    <button
+                      className={styles.button}
+                      onClick={() => handleDeleteProduct(prod._id)}
+                    >
+                      Delete
+                    </button>
                   </td>
                 </tr>
               ))}

@@ -1,10 +1,11 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 //import { Inter } from "next/font/google";
 import axios from "axios";
 import Head from "next/head";
 import Add from "../../components/Add";
 import AddButton from "../../components/AddButton";
 import styles from "../../styles/Home.module.css";
+import { useSession } from "next-auth/react";
 
 import Featured from "../../components/Featured";
 import GroceryList from "../../components/GroceryList";
@@ -30,10 +31,10 @@ export default function Home({ groceryList }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Featured />
-      {<AddButton setClose={setClose} />}
+      <AddButton setClose={setClose} />
       <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <GroceryList groceryList={filteredGroceryList} />
-      {/* <Footer /> */}
+
       {!close && <Add setClose={setClose} />}
     </div>
   );

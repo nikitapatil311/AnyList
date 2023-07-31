@@ -1,5 +1,5 @@
 import styles from "../../../styles/Order.module.css";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import axios from "axios";
 
 const Order = ({ order }) => {
@@ -22,9 +22,9 @@ const Order = ({ order }) => {
             </tr>
 
             <tr className={styles.tr}>
-              <td>
+              {/* <td>
                 <span className={styles.id}>{order._id}</span>
-              </td>
+              </td> */}
               <td>
                 <span className={styles.name}>{order.name}</span>
               </td>

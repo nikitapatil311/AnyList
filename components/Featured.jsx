@@ -1,13 +1,13 @@
 import styles from "../styles/Featured.module.css";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useState } from "react";
 
 const Featured = () => {
   const [index, setIndex] = useState(0);
   const images = [
-    "/assests/featured.png",
-    "/assests/featured2.png",
-    "/assests/featured3.png",
+    "/assests/featured1.2.png",
+    "/assests/featured1.1.png",
+    "/assests/featured1.png",
   ];
 
   const handleArrow = (direction) => {
@@ -27,6 +27,7 @@ const Featured = () => {
         onClick={() => handleArrow("l")}
       >
         <Image
+          priority
           src="/assests/arrowl.png"
           alt=" "
           layout="fill"
@@ -40,7 +41,13 @@ const Featured = () => {
       >
         {images.map((img, i) => (
           <div className={styles.imgContainer} key={i}>
-            <Image src={img} alt="" layout="fill" objectFit="contain" />
+            <Image
+              src={img}
+              alt=""
+              priority
+              layout="fill"
+              objectFit="contain"
+            />
           </div>
         ))}
       </div>
@@ -50,6 +57,7 @@ const Featured = () => {
         onClick={() => handleArrow("r")}
       >
         <Image
+          priority
           src="/assests/arrowr.png"
           alt=" "
           layout="fill"

@@ -1,5 +1,5 @@
 import styles from "../styles/GroceryCard.module.css";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 
 const GroceryCard = ({ grocery }) => {
@@ -13,6 +13,11 @@ const GroceryCard = ({ grocery }) => {
         {grocery.price} {grocery.currency}
       </span>
       <p className={styles.desc}>{grocery.info}</p>
+      <div className={styles.buttonsContainer}>
+        <Link href={`/product/${grocery._id}`} passHref>
+          <button className={styles.button}>view</button>
+        </Link>
+      </div>
     </div>
   );
 };

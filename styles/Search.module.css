@@ -1,0 +1,9 @@
+.container {
+  height: 80px;
+  width: 30%;
+  border: 2px solid orangered;
+  margin-left: 40%;
+  border-radius: 20px;
+  font-family: fantasy;
+  font-weight: bolder;
+}

@@ -25,6 +25,15 @@
   text-align: center;
   color: #777;
 }
+.button {
+  height: 30px;
+  color: #e8e3e1;
+  background-color: #d1411e;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
+}
 
 @media screen and (max-width: 480px) {
   .container {
