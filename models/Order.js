@@ -4,12 +4,14 @@ import mongoose from "mongoose";
 //the places db schema
 
 const orderSchema = new mongoose.Schema({
-  image: { type: String, required: true },
-  price: { type: Number, required: true },
-  name: { type: String, required: true },
+  customer: { type: String },
+  image: { type: String },
+  price: { type: Number },
+  name: { type: String },
   quantity: { type: Number },
-  total: { type: Number, required: true },
-  method: { type: Number, required: true },
+  total: { type: Number },
+  method: { type: Number },
+  phoneNumber: { type: Number },
 });
 
 const Order = mongoose.models.Order || mongoose.model("Order", orderSchema);

@@ -261,13 +261,14 @@
 
 // export default Cart;
 // components/Cart.js
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import Image from "next/legacy/image";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import axios from "axios";
-import { useRouter } from "next/router";
+
 import { addProduct, reset } from "../../redux/cartSlice";
 import OrderDetail from "../../components/OrderDetail";
 import styles from "../../styles/Cart.module.css";
@@ -292,10 +293,13 @@ const Cart = () => {
 
   const createOrder = async (data) => {
     try {
-      const res = await axios.post("http://localhost:3000/api/orders", data);
-      if (res.status === 201) {
+      const response = await axios.post(
+        "http://localhost:3000/api/orders",
+        data
+      );
+      if (response.status === 201) {
         dispatch(reset());
-        router.push(`/orders/${res.data._id}`);
+        router.push(`/orders/${response.data._id}`);
       }
     } catch (err) {
       console.log(err);
@@ -502,6 +506,9 @@ const Cart = () => {
         </div>
         {cash && <OrderDetail total={cart.total} createOrder={createOrder} />}
       </div>
+      <Link href="/" passHref>
+        <button className={styles.button}>Back to 🏠</button>
+      </Link>
     </>
   );
 };

@@ -20,7 +20,7 @@
 //   };
 
 //   const handleStatus = async (id) => {
-//     // const item = orderList.filter((order) => order._id === id)[0];
+//     //const item = orderList.filter((order) => order._id === id)[0];
 
 //     try {
 //       const res = await axios.put("http://localhost:3000/api/orders/" + id, {});
@@ -53,7 +53,7 @@
 //               <tr className={styles.trTitle}>
 //                 <td>
 //                   <Image
-//                     src={product.Image}
+//                     src={product.image}
 //                     width={50}
 //                     height={50}
 //                     objectFit="cover"
@@ -114,18 +114,7 @@
 //   );
 // };
 
-// export const getServerSideProps = async (ctx) => {
-//   const myCookie = ctx.req?.cookie || "";
-
-//   if (myCookie.token !== process.env.TOKEN) {
-//     return {
-//       redirect: {
-//         destination: "/admin/login",
-//         permanent: false,
-//       },
-//     };
-//   }
-
+// export const getServerSideProps = async () => {
 //   const productRes = await axios.get("http://localhost:3000/api/products");
 //   const orderRes = await axios.get("http://localhost:3000/api/orders");
 

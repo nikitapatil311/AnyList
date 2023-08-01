@@ -1,46 +1,38 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useState } from "react";
+import startBarcodeScanner from "../src/pages/scan";
 import Quagga from "quagga";
 
-const BarcodeScanner = ({ onScan }) => {
-  const videoRef = useRef(null);
+const BarcodeScanner = () => {
+  const [scannedProduct, setScannedProduct] = useState(null);
 
   useEffect(() => {
-    const video = videoRef.current;
-
-    Quagga.init(
-      {
-        inputStream: {
-          name: "Live",
-          type: "LiveStream",
-          target: video,
-          constraints: {
-            facingMode: "environment", // Use the back camera for mobile devices
-          },
-        },
-        decoder: {
-          readers: ["ean_reader"], // Support EAN barcodes, you can add more types here
-        },
-      },
-      (err) => {
-        if (err) {
-          console.error("Error initializing Quagga:", err);
-          return;
-        }
-        Quagga.start();
-      }
-    );
-
-    Quagga.onDetected((data) => {
-      const code = data.codeResult.code;
-      onScan(code); // Pass the scanned barcode to the parent component
+    startBarcodeScanner((product) => {
+      setScannedProduct(product);
     });
 
     return () => {
+      // Stop the barcode scanner when the component unmounts
       Quagga.stop();
     };
-  }, [onScan]);
+  }, []);
 
-  return <video ref={videoRef} style={{ width: "100%", height: "auto" }} />;
+  return (
+    <div>
+      {/* Add a div with id="barcode-scanner" */}
+      <div id="barcode-scanner"></div>
+      {scannedProduct ? (
+        <div>
+          <h2>Scanned Product:</h2>
+          <p>Name: {scannedProduct.name}</p>
+          <p>Price: ${scannedProduct.price.toFixed(2)}</p>
+          {/* Add more product details as needed */}
+          <button>Add to Cart</button>
+          <h2>Cart:</h2>
+          {/* Display cart items */}
+        </div>
+      ) : null}
+    </div>
+  );
 };
 
 export default BarcodeScanner;

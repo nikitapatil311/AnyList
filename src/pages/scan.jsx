@@ -1,45 +1,58 @@
-// pages/ScanPage.jsx
+// components/Scan.js
 
-import React, { useState, useEffect } from "react";
+import Quagga from "quagga";
 import BarcodeScanner from "../../components/BarcodeScanner";
-import axios from "axios";
-import Image from "next/legacy/image";
 
-const ScanPage = () => {
-  const [productsData, setProductsData] = useState([]);
-  const [scannedProduct, setScannedProduct] = useState(null);
+const getProductDetailsByBarcode = async (barcode) => {
+  // Replace this with your actual product database logic
+  // or API call to fetch product details.
+  // For demonstration purposes, we'll assume the product details are fetched from the MongoDB database.
+  // You may need to update the logic according to your actual database setup.
+  try {
+    const response = await fetch(`/api/getProductByBarcode?barcode=${barcode}`);
+    if (response.ok) {
+      const data = await response.json();
+      return data.product;
+    } else {
+      console.error("Error fetching product details:", response.status);
+      return null;
+    }
+  } catch (error) {
+    console.error("Error fetching product details:", error);
+    return null;
+  }
+};
 
-  useEffect(() => {
-    // Fetch product data from the backend or API
-    axios
-      .get("http://localhost:3000/api/products")
-      .then((response) => {
-        setProductsData(response.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching product data:", error);
+const startBarcodeScanner = (onScanSuccess) => {
+  if (typeof window === "undefined") {
+    // Do nothing if running on the server-side
+    return;
+  }
+  Quagga.init(
+    {
+      inputStream: {
+        name: "Live",
+        type: "LiveStream",
+        target: "#barcode-scanner",
+      },
+      decoder: {
+        readers: ["ean_reader"],
+      },
+    },
+    (err) => {
+      if (err) {
+        console.error("Error initializing barcode scanner:", err);
+        return;
+      }
+      Quagga.onDetected((result) => {
+        const code = result.codeResult.code;
+        getProductDetailsByBarcode(code).then((product) => {
+          onScanSuccess(product);
+        });
       });
-  }, []);
-
-  const handleScan = (barcode) => {
-    const product = productsData.find((p) => p.barcode === barcode);
-    setScannedProduct(product);
-  };
-
-  return (
-    <div>
-      <h1>Barcode Scanner</h1>
-      <BarcodeScanner onScan={handleScan} />
-
-      {scannedProduct && (
-        <div>
-          <h2>{scannedProduct.name}</h2>
-          <p>Price: {scannedProduct.price}</p>
-          <Image src={scannedProduct.image} alt={scannedProduct.name} />
-        </div>
-      )}
-    </div>
+      Quagga.start();
+    }
   );
 };
 
-export default ScanPage;
+export default startBarcodeScanner;

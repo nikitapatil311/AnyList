@@ -1,12 +1,13 @@
 import styles from "../../../styles/Order.module.css";
 import Image from "next/legacy/image";
 import axios from "axios";
+import Link from "next/link";
 
 const Order = ({ order }) => {
-  const status = order.status;
+  const method = order.method;
 
   const statusClass = (index) => {
-    if (index - status < 1) return styles.done;
+    if (index - method < 1) return styles.done;
   };
   return (
     <div className={styles.container}>
@@ -15,24 +16,50 @@ const Order = ({ order }) => {
           <table className={styles.table}>
             <tr className={styles.trTitle}>
               <th>Product</th>
-              <th>Name</th>
+              <th>customer</th>
+              <th>name</th>
               <th>Price</th>
 
+              <th>quantity</th>
               <th>Bill</th>
+              <th>phone number</th>
+
+              <th>method</th>
             </tr>
 
             <tr className={styles.tr}>
-              {/* <td>
-                <span className={styles.id}>{order._id}</span>
-              </td> */}
+              <td>
+                <Image
+                  src={order.image}
+                  width={30}
+                  height={30}
+                  alt=""
+                  className={styles.id}
+                >
+                  {order.image}
+                </Image>
+              </td>
+              <td>
+                <span className={styles.name}>{order.customer}</span>
+              </td>
               <td>
                 <span className={styles.name}>{order.name}</span>
               </td>
+
               <td>
                 <span className={styles.address}>{order.price}</span>
               </td>
               <td>
-                <span className={styles.total}>${order.total}</span>
+                <span className={styles.address}>{order.quantity}</span>
+              </td>
+              <td>
+                <span className={styles.total}>{order.total}</span>
+              </td>
+              <td>
+                <span className={styles.total}>{order.phoneNumber}</span>
+              </td>
+              <td>
+                <span className={styles.total}>{order.method}</span>
               </td>
             </tr>
           </table>
@@ -40,35 +67,44 @@ const Order = ({ order }) => {
         <div className={styles.row}>
           <div className={statusClass(0)}>
             <Image src="/img/paid.png" width={30} height={30} alt="" />
-            <span>Payment</span>
-            <div className={styles.checkedIcon}>
-              <Image
-                className={styles.checkedIcon}
-                src="/img/checked.png"
-                width={20}
-                height={20}
-                alt=""
-              />
+            <div>
+              <span>Cash Payment</span>
+              <div className={styles.checkedIcon}>
+                <Image
+                  className={styles.checkedIcon}
+                  src="/img/checked.png"
+                  width={20}
+                  height={20}
+                  alt=""
+                />
+              </div>
             </div>
           </div>
 
-          <div className={styles.right}></div>
-          <div className={styles.wrapper}>
-            <h2 className={styles.title}>CART TOTAL</h2>
-            <div className={styles.totalText}>
-              <b className={styles.totalTextTitle}>SubTotal:</b>
-              {order.total}
+          <div className={styles.right}>
+            <div className={styles.wrapper}>
+              <h2 className={styles.title}>CART TOTAL</h2>
+              <div className={styles.totalText}>
+                <b className={styles.totalTextTitle}>SubTotal:</b>
+                {order.total}
+              </div>
+
+              <div className={styles.totalText}>
+                <b className={styles.totalTextTitle}>Discount:</b>0 EUR
+              </div>
+
+              <div className={styles.totalText}>
+                <b className={styles.totalTextTitle}>Total:</b>
+                {order.total}
+              </div>
+
+              <button disabled className={styles.button}>
+                PAID
+              </button>
+              <Link href="/" passHref>
+                <button className={styles.button}>Shop more 🛒</button>
+              </Link>
             </div>
-            <div className={styles.totalText}>
-              <b className={styles.totalTextTitle}>Discount:</b>0 EUR
-            </div>
-            <div className={styles.totalText}>
-              <b className={styles.totalTextTitle}>Total:</b>
-              {order.total}
-            </div>
-            <button disabled className={styles.button}>
-              PAID
-            </button>
           </div>
         </div>
       </div>

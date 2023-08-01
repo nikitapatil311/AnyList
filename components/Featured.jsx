@@ -1,6 +1,7 @@
 import styles from "../styles/Featured.module.css";
 import Image from "next/legacy/image";
 import { useState } from "react";
+import Link from "next/link";
 
 const Featured = () => {
   const [index, setIndex] = useState(0);
@@ -41,13 +42,15 @@ const Featured = () => {
       >
         {images.map((img, i) => (
           <div className={styles.imgContainer} key={i}>
-            <Image
-              src={img}
-              alt=""
-              priority
-              layout="fill"
-              objectFit="contain"
-            />
+            <Link href="/" passHref>
+              <Image
+                src={img}
+                alt=""
+                priority
+                layout="fill"
+                objectFit="contain"
+              />
+            </Link>
           </div>
         ))}
       </div>

@@ -11,8 +11,13 @@ const Product = ({ grocery }) => {
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    const { price } = grocery;
-    dispatch(addProduct({ ...grocery, price, quantity }));
+    const parsedQuantity = parseInt(quantity, 10);
+    if (parsedQuantity > 0) {
+      const { price } = grocery;
+      dispatch(addProduct({ ...grocery, price, quantity: parsedQuantity }));
+    } else {
+      alert("Please enter a valid quantity.");
+    }
   };
 
   return (
