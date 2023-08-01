@@ -15,7 +15,6 @@ const Order = ({ order }) => {
         <div className={styles.row}>
           <table className={styles.table}>
             <tr className={styles.trTitle}>
-              <th>Product</th>
               <th>customer</th>
               <th>name</th>
               <th>Price</th>
@@ -28,7 +27,7 @@ const Order = ({ order }) => {
             </tr>
 
             <tr className={styles.tr}>
-              <td>
+              {/* <td>
                 <Image
                   src={order.image}
                   width={30}
@@ -38,7 +37,7 @@ const Order = ({ order }) => {
                 >
                   {order.image}
                 </Image>
-              </td>
+              </td> */}
               <td>
                 <span className={styles.name}>{order.customer}</span>
               </td>
@@ -66,13 +65,13 @@ const Order = ({ order }) => {
         </div>
         <div className={styles.row}>
           <div className={statusClass(0)}>
-            <Image src="/img/paid.png" width={30} height={30} alt="" />
+            <Image src="/assests/paid.png" width={30} height={30} alt="" />
             <div>
               <span>Cash Payment</span>
               <div className={styles.checkedIcon}>
                 <Image
                   className={styles.checkedIcon}
-                  src="/img/checked.png"
+                  src="/assests/checked.png"
                   width={20}
                   height={20}
                   alt=""

@@ -1,11 +1,11 @@
-import Image from "next/legacy/image";
+//import Image from "next/legacy/image";
 //import { Inter } from "next/font/google";
 import axios from "axios";
 import Head from "next/head";
 import Add from "../../components/Add";
 //import AddButton from "../../components/AddButton";
 import styles from "../../styles/Home.module.css";
-import { useSession } from "next-auth/react";
+//import { useSession } from "next-auth/react";
 
 import Featured from "../../components/Featured";
 import GroceryList from "../../components/GroceryList";

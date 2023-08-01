@@ -9,15 +9,12 @@ const GroceryList = ({ groceryList }) => {
   const filteredGroceryList = groceryList.filter((grocery) =>
     grocery.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
-  {
-    /* Search bar */
-  }
 
   <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />;
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Shop Groceries</h1>
+      <h1>Shop Groceries</h1>
 
       <div className={styles.wrapper}>
         {groceryList.map((grocery) => (
@@ -27,4 +24,5 @@ const GroceryList = ({ groceryList }) => {
     </div>
   );
 };
+
 export default GroceryList;
