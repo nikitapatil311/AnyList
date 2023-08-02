@@ -268,6 +268,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import axios from "axios";
+import { AiTwotoneDelete } from "react-icons/ai";
 
 import { addProduct, reset } from "../../redux/cartSlice";
 import OrderDetail from "../../components/OrderDetail";
@@ -414,7 +415,7 @@ const Cart = () => {
                   <th>Price</th>
                   <th>Quantity</th>
                   <th>Total</th>
-                  <th>Edit</th>
+
                   <th>Delete</th>
                 </tr>
               </tbody>
@@ -423,12 +424,17 @@ const Cart = () => {
                   <tr className={styles.tr} key={prod._id}>
                     <td>
                       <div className={styles.imgContainer}>
-                        <Image
-                          src={prod.image}
-                          layout="fill"
-                          alt=""
-                          objectFit="cover"
-                        />
+                        <Link
+                          className={styles.btnlink}
+                          href={`/product/${prod._id}`}
+                        >
+                          <Image
+                            src={prod.image}
+                            layout="fill"
+                            alt=""
+                            objectFit="cover"
+                          />
+                        </Link>
                       </div>
                     </td>
                     <td>
@@ -449,12 +455,12 @@ const Cart = () => {
                     <td>
                       <button className={styles.button}>
                         {" "}
-                        <Link
+                        {/* <Link
                           className={styles.btnlink}
                           href={`/product/${prod._id}`}
                         >
                           Edit
-                        </Link>
+                        </Link> */}
                       </button>
                       {/* Edit button, linking to the product/[id] page */}
                     </td>
@@ -464,7 +470,7 @@ const Cart = () => {
                         className={styles.button}
                         onClick={() => handleDeleteProduct(prod._id)}
                       >
-                        Delete
+                        <AiTwotoneDelete height={60} width={60} />
                       </button>
                     </td>
                   </tr>
