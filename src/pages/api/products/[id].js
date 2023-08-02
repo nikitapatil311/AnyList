@@ -25,7 +25,7 @@ export default async function handler(req, res) {
     // }
     try {
       const product = await Product.findByIdAndUpdate(id, req.body, {
-        new: true,
+        // new: true,
       });
       res.status(200).json(product);
     } catch (error) {

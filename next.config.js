@@ -2,10 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
 
-  experimental: {
-    forceSwcTransforms: true,
-  },
-
   images: {
     domains: [
       "encrypted-tbn0.gstatic.com",
