@@ -8,6 +8,7 @@ const OrderDetail = ({ total, createOrder }) => {
   const [price, setPrice] = useState("");
   const [quantity, setQuantity] = useState("");
   const [bill, setBill] = useState("");
+  const [showForm, setShowForm] = useState(true);
 
   const handleClick = () => {
     createOrder({
@@ -20,6 +21,10 @@ const OrderDetail = ({ total, createOrder }) => {
       phoneNumber,
       method: 0,
     });
+  };
+  const handleCancel = () => {
+    setShowForm(false);
+    onCancel(); // Optional: If you want to perform any action on cancel, call onCancel function here.
   };
 
   return (
@@ -90,6 +95,9 @@ const OrderDetail = ({ total, createOrder }) => {
 
         <button className={styles.button} onClick={handleClick}>
           Purchase
+        </button>
+        <button className={styles.cancelButton} onClick={handleCancel}>
+          Cancel
         </button>
       </div>
     </div>
