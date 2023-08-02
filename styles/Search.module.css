@@ -1,9 +1,15 @@
 .container {
-  height: 80px;
-  width: 30%;
-  border: 2px solid orangered;
-  margin-left: 40%;
+  width: 50%;
   border-radius: 20px;
-  font-family: fantasy;
-  font-weight: bolder;
+  box-shadow: 16px 20px 5px rgba(0, 0, 0, 0.7);
+  border: 5px solid rgb(93, 85, 85);
+}
+
+.searchfull {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 30px;
+  font-family: monospace;
+
+  margin-top: 20px;
 }

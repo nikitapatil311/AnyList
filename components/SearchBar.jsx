@@ -7,15 +7,17 @@ const SearchBar = ({ searchQuery, setSearchQuery }) => {
   };
 
   return (
-    <div>
-      <input
-        className={styles.container}
-        type="text"
-        placeholder="Search for groceries..."
-        value={searchQuery}
-        onChange={handleSearchInputChange}
-      />
-    </div>
+    <>
+      <div className={styles.searchfull}>
+        <input
+          className={styles.container}
+          type="text"
+          placeholder="Search for groceries..."
+          value={searchQuery}
+          onChange={handleSearchInputChange}
+        />
+      </div>
+    </>
   );
 };
 

@@ -21,51 +21,53 @@ const Featured = () => {
     }
   };
   return (
-    <div className={styles.container}>
-      <div
-        className={styles.arrowContainer}
-        style={{ left: 0 }}
-        onClick={() => handleArrow("l")}
-      >
-        <Image
-          priority
-          src="/assests/arrowl.png"
-          alt=" "
-          layout="fill"
-          objectFit="contain"
-        />
-      </div>
+    <div>
+      <div className={styles.container}>
+        <div
+          className={styles.arrowContainer}
+          style={{ left: 0 }}
+          onClick={() => handleArrow("l")}
+        >
+          <Image
+            priority
+            src="/assests/arrowl.png"
+            alt=" "
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
 
-      <div
-        className={styles.wrapper}
-        style={{ transform: `translateX(${-100 * index}vw)` }}
-      >
-        {images.map((img, i) => (
-          <div className={styles.imgContainer} key={i}>
-            <Link href="/" passHref>
-              <Image
-                src={img}
-                alt=""
-                priority
-                layout="fill"
-                objectFit="contain"
-              />
-            </Link>
-          </div>
-        ))}
-      </div>
-      <div
-        className={styles.arrowContainer}
-        style={{ right: 0 }}
-        onClick={() => handleArrow("r")}
-      >
-        <Image
-          priority
-          src="/assests/arrowr.png"
-          alt=" "
-          layout="fill"
-          objectFit="contain"
-        />
+        <div
+          className={styles.wrapper}
+          style={{ transform: `translateX(${-100 * index}vw)` }}
+        >
+          {images.map((img, i) => (
+            <div className={styles.imgContainer} key={i}>
+              <Link href="/" passHref>
+                <Image
+                  src={img}
+                  alt=""
+                  priority
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </Link>
+            </div>
+          ))}
+        </div>
+        <div
+          className={styles.arrowContainer}
+          style={{ right: 0 }}
+          onClick={() => handleArrow("r")}
+        >
+          <Image
+            priority
+            src="/assests/arrowr.png"
+            alt=" "
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
       </div>
     </div>
   );

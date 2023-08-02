@@ -1,5 +1,5 @@
 .container {
-  background-color: #d1411e;
+  background-color: #dcb7a2;
   height: 100px;
   padding: 0px 50px;
   display: flex;
@@ -31,7 +31,7 @@
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  color: #d1411e;
+  color: #b05f4b;
 }
 
 .profile {

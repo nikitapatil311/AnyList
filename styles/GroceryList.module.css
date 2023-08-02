@@ -5,6 +5,12 @@
   align-items: center;
 }
 
+.container h1 {
+  font-size: 30px;
+  color: #553c36;
+  font-family: inherit;
+}
+
 .desc {
   font-size: 24px;
   color: #444;

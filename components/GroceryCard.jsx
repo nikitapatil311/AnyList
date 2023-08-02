@@ -7,11 +7,12 @@ import { addProduct } from "redux/cartSlice";
 
 const GroceryCard = ({ grocery }) => {
   const [quantity, setQuantity] = useState(1);
+
   const [showNotification, setShowNotification] = useState(false); // State to manage the pop-up notification
 
   const dispatch = useDispatch();
 
-  // // Step 2: Implement Handlers
+  // Step 2: Implement Handlers
   // const handleIncrement = () => {
   //   setNumber(number + 1);
   // };
@@ -34,34 +35,54 @@ const GroceryCard = ({ grocery }) => {
   };
 
   return (
-    <div className={styles.container}>
-      <Link href={`/product/${grocery._id}`} passHref>
-        <Image src={grocery.image} alt="" width={300} height={300} />
-      </Link>
-      <h1 className={styles.title}>{grocery.name}</h1>
-      <span className={styles.price}>
-        {grocery.price} {grocery.currency}
-      </span>
-      <p className={styles.desc}>{grocery.info}</p>
-      <div className={styles.buttonsContainer}>
-        {/* <input
-          onChange={(e) => setQuantity(e.target.value)}
-          type="number"
-          defaultValue={1}
-          className={styles.quantity}
-        /> */}
-        <button className={styles.button} onClick={handleClick}>
-          Add to Cart
-        </button>
-        <Link href="/cart" passHref>
-          <button className={styles.button}>View Cart</button>
+    <>
+      <div className={styles.container}>
+        <Link href={`/product/${grocery._id}`} passHref>
+          <Image
+            src={grocery.image}
+            alt=""
+            width={300}
+            height={300}
+            className={styles.imageCard}
+          />
         </Link>
+        <h1 className={styles.title}>{grocery.name}</h1>
+        <span className={styles.price}>
+          {grocery.price} {grocery.currency}
+        </span>
+        <p className={styles.desc}>{grocery.info}</p>
+        <div className={styles.buttonsContainer}>
+          <input
+            onChange={(e) => setQuantity(e.target.value)}
+            type="number"
+            defaultValue={1}
+            className={styles.quantity}
+          />
+          {/* <div>
+            <button onClick={handleDecrement}>-</button>
+            <span>{number}</span>
+            <button onClick={handleIncrement}>+</button>
+          </div> */}
+          <button className={styles.button} onClick={handleClick}>
+            Add to Cart
+          </button>
+        </div>
+        {/* <div>
+          <Link href="/cart" passHref>
+            <button className={styles.button}>View Cart</button>
+          </Link>
+        </div> */}
+        {/* Conditional rendering for the pop-up notification */}
+        {showNotification && (
+          <div
+            //className="absolute top-0 right-0 mt-12 mr-2 p-4 bg-white border border-gray-300 shadow-lg rounded"
+            className={styles.notification}
+          >
+            🎊{grocery.name}🎉 added to cart!🛍️
+          </div>
+        )}
       </div>
-      {/* Conditional rendering for the pop-up notification */}
-      {showNotification && (
-        <div className={styles.notification}>{grocery.name} added to cart!</div>
-      )}
-    </div>
+    </>
   );
 };
 

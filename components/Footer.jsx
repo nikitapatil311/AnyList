@@ -67,7 +67,6 @@ const Footer = () => {
           <div className="flex items-center">
             {session ? (
               <div className="flex items-center space-x-4">
-                <p className="text-white font-semibold">{session.user.name}</p>
                 <Image
                   src={session.user.image}
                   alt={session.user.name}
@@ -75,6 +74,7 @@ const Footer = () => {
                   width={40}
                   className="rounded-full"
                 />
+                <p className="text-white font-semibold">{session.user.name}</p>
               </div>
             ) : (
               // <Link href="/login" passHref>
