@@ -3,7 +3,7 @@ import Image from "next/legacy/image";
 import Link from "next/link";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addProduct } from "../../anylist/redux/cartSlice";
+import { addProduct } from "../redux/cartSlice";
 
 const GroceryCard = ({ grocery }) => {
   const [quantity, setQuantity] = useState(1);
