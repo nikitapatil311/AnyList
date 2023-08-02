@@ -414,7 +414,9 @@ const Cart = () => {
                     {" "}
                     <th>Product</th>
                   </div>
-                  <th>Name</th>
+                  <div>
+                    <th>Name</th>
+                  </div>
                   <th>Price</th>
                   <th>Quantity</th>
                   <th>Total</th>
@@ -437,9 +439,11 @@ const Cart = () => {
                         </Link>
                       </div>
                     </td>
-                    <td>
-                      <span className={styles.name}>{prod.name}</span>
-                    </td>
+                    <div>
+                      <td>
+                        <span className={styles.name}>{prod.name}</span>
+                      </td>
+                    </div>
                     <td>
                       <span className={styles.price}> {prod.price}</span>
                     </td>
