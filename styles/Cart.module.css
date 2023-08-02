@@ -67,7 +67,7 @@
   z-index: 9999;
   transition: background-color 0.3s ease;
 }
-homeButton:hover {
+.homeButton:hover {
   background-color: #ad725e;
 }
 
