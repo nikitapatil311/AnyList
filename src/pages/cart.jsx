@@ -307,7 +307,7 @@ const Cart = () => {
       const response = await axios.post(`${baseURL}/api/orders`, data);
       if (response.status === 201) {
         dispatch(reset());
-        router.push(`/order/${response.data._id}`);
+        router.push(`/orders/${response.data._id}`);
       }
     } catch (err) {
       console.log("err", err.message);
