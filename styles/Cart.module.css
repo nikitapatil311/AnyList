@@ -3,20 +3,12 @@
   display: flex;
 }
 
-.imgContainer {
-  width: 100px;
-  height: 100px;
-  position: relative;
-}
-
 .left {
   flex: 2;
 }
+
 .right {
   flex: 1;
-}
-.title {
-  font-family: serif;
 }
 
 .imgContainer {
@@ -28,47 +20,29 @@
 .table {
   width: 100%;
   border-spacing: 20px;
-  display: flow-root;
 }
 
 .name {
-  font-weight: 50;
+  font-weight: 500;
   color: #d1411e;
   font-size: 18px;
 }
+
 .total {
   font-weight: 500;
   font-size: 18px;
 }
 
 .wrapper {
-  width: 100%;
-  border-radius: 20px;
-  height: 500px;
+  width: 90%;
   max-height: 300px;
   background-color: #333;
   padding: 50px;
   padding-top: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   color: white;
-}
-.homeButton {
-  border: 2px solid black;
-  margin-left: 2%;
-  position: fixed;
-  bottom: 88vh;
-  background-color: #cb8d7e;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 15px;
-  z-index: 9999;
-  transition: background-color 0.3s ease;
-}
-.homeButton:hover {
-  background-color: #ad725e;
 }
 
 .totalTextTitle {
@@ -77,29 +51,12 @@
 
 .button {
   height: 30px;
-  color: #ad725e;
+  color: #d1411e;
   font-weight: bold;
   cursor: pointer;
   margin-top: 20px;
 }
 
-.paymentMethods {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-}
-.payButton {
-  padding: 10px 5px;
-  cursor: pointer;
-  margin-bottom: 5px;
-  background-color: white;
-  color: teal;
-  font-weight: bold;
-}
-
-.btnlink {
-  text-decoration: none;
-}
 @media screen and (max-width: 480px) {
   .container {
     flex-direction: column;
@@ -172,4 +129,20 @@
   background-color: white;
   color: teal;
   font-weight: bold;
+}
+.homeButton {
+  border: 2px solid black;
+  margin-left: 2%;
+  position: fixed;
+  bottom: 88vh;
+  background-color: #cb8d7e;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  z-index: 9999;
+  transition: background-color 0.3s ease;
+}
+.homeButton:hover {
+  background-color: #ad725e;
 }

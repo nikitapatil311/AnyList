@@ -12,7 +12,7 @@ const SearchBar = ({ searchQuery, setSearchQuery }) => {
         <input
           className={styles.container}
           type="text"
-          placeholder="Search for groceries..."
+          placeholder="Search..."
           value={searchQuery}
           onChange={handleSearchInputChange}
         />
