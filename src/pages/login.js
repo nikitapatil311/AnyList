@@ -35,7 +35,9 @@ const Login = () => {
   return (
     <>
       <div className="p-4 border border-gray-300 rounded-md shadow-md max-w-md mx-auto mt-8">
-        <p className="text-xl font-semibold mb-2">Not signed in</p>
+        <p className="text-xl font-semibold mb-2">
+          Please sign in to continue shopping.{" "}
+        </p>
         <button
           className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded"
           onClick={() => signIn()}
