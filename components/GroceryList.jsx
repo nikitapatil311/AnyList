@@ -1,5 +1,5 @@
 import styles from "../styles/GroceryList.module.css";
-import GroceryCard from "./GroceryCard";
+import GroceryCard from "../components/GroceryCard";
 import SearchBar from "./SearchBar";
 import React, { useState } from "react";
 
