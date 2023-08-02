@@ -13,7 +13,10 @@
   flex: 2;
 }
 .right {
-  flex: 0;
+  flex: 1;
+}
+.title {
+  font-family: serif;
 }
 
 .imgContainer {
@@ -39,7 +42,9 @@
 }
 
 .wrapper {
-  width: 90%;
+  width: 100%;
+  border-radius: 20px;
+  height: 500px;
   max-height: 300px;
   background-color: #333;
   padding: 50px;
@@ -48,6 +53,22 @@
   flex-direction: column;
   justify-content: space-around;
   color: white;
+}
+.homeButton {
+  border: 2px solid black;
+  margin-left: 2%;
+  position: fixed;
+  bottom: 88vh;
+  background-color: #cb8d7e;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  z-index: 9999;
+  transition: background-color 0.3s ease;
+}
+homeButton:hover {
+  background-color: #ad725e;
 }
 
 .totalTextTitle {

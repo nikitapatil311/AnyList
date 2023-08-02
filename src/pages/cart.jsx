@@ -531,7 +531,7 @@ const Cart = () => {
       )}
 
       <Link href="/" passHref>
-        <button className={styles.button}>Back to 🏠</button>
+        <button className={styles.homeButton}>Back to 🏠</button>
       </Link>
     </>
   );
