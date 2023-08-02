@@ -410,7 +410,10 @@ const Cart = () => {
             <table className={styles.table}>
               <tbody>
                 <tr className={styles.trTitle}>
-                  <th>Product</th>
+                  <div>
+                    {" "}
+                    <th>Product</th>
+                  </div>
                   <th>Name</th>
                   <th>Price</th>
                   <th>Quantity</th>
@@ -449,18 +452,18 @@ const Cart = () => {
                         {prod.price * prod.quantity}
                       </span>
                     </td>
-                    <td>
+                    {/* <td>
                       <button className={styles.button}>
                         {" "}
-                        {/* <Link
+                        <Link
                           className={styles.btnlink}
                           href={`/product/${prod._id}`}
                         >
                           Edit
-                        </Link> */}
+                        </Link>
                       </button>
-                      {/* Edit button, linking to the product/[id] page */}
-                    </td>
+                     
+                    </td> */}
                     <td>
                       {/* Delete button, handleDeleteProduct function to be defined */}
                       <button
