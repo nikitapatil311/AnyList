@@ -449,29 +449,29 @@ const Cart = () => {
                         {prod.price * prod.quantity}
                       </span>
                     </td>
-                  </tr>
-                ))}
-                <td>
-                  <button className={styles.button}>
-                    {" "}
-                    {/* <Link
+                    <td>
+                      <button className={styles.button}>
+                        {" "}
+                        {/* <Link
                           className={styles.btnlink}
                           href={`/product/${prod._id}`}
                         >
                           Edit
                         </Link> */}
-                  </button>
-                  {/* Edit button, linking to the product/[id] page */}
-                </td>
-                <td>
-                  {/* Delete button, handleDeleteProduct function to be defined */}
-                  <button
-                    className={styles.button}
-                    onClick={() => handleDeleteProduct(prod._id)}
-                  >
-                    <AiTwotoneDelete height={60} width={60} />
-                  </button>
-                </td>
+                      </button>
+                      {/* Edit button, linking to the product/[id] page */}
+                    </td>
+                    <td>
+                      {/* Delete button, handleDeleteProduct function to be defined */}
+                      <button
+                        className={styles.button}
+                        onClick={() => handleDeleteProduct(prod._id)}
+                      >
+                        <AiTwotoneDelete height={60} width={60} />
+                      </button>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
