@@ -424,10 +424,7 @@ const Cart = () => {
                   <tr className={styles.tr} key={prod._id}>
                     <td>
                       <div className={styles.imgContainer}>
-                        <Link
-                          className={styles.btnlink}
-                          href={`/product/${prod._id}`}
-                        >
+                        <Link href={`/product/${prod._id}`}>
                           <Image
                             src={prod.image}
                             layout="fill"
@@ -452,29 +449,29 @@ const Cart = () => {
                         {prod.price * prod.quantity}
                       </span>
                     </td>
-                    <td>
-                      <button className={styles.button}>
-                        {" "}
-                        {/* <Link
+                  </tr>
+                ))}
+                <td>
+                  <button className={styles.button}>
+                    {" "}
+                    {/* <Link
                           className={styles.btnlink}
                           href={`/product/${prod._id}`}
                         >
                           Edit
                         </Link> */}
-                      </button>
-                      {/* Edit button, linking to the product/[id] page */}
-                    </td>
-                    <td>
-                      {/* Delete button, handleDeleteProduct function to be defined */}
-                      <button
-                        className={styles.button}
-                        onClick={() => handleDeleteProduct(prod._id)}
-                      >
-                        <AiTwotoneDelete height={60} width={60} />
-                      </button>
-                    </td>
-                  </tr>
-                ))}
+                  </button>
+                  {/* Edit button, linking to the product/[id] page */}
+                </td>
+                <td>
+                  {/* Delete button, handleDeleteProduct function to be defined */}
+                  <button
+                    className={styles.button}
+                    onClick={() => handleDeleteProduct(prod._id)}
+                  >
+                    <AiTwotoneDelete height={60} width={60} />
+                  </button>
+                </td>
               </tbody>
             </table>
           </div>
