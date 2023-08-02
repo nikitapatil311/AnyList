@@ -43,6 +43,7 @@
   flex-direction: column;
   justify-content: space-between;
   color: white;
+  border-radius: 20px;
 }
 
 .totalTextTitle {

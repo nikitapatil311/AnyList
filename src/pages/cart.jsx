@@ -410,11 +410,12 @@ const Cart = () => {
             <table className={styles.table}>
               <tbody>
                 <tr className={styles.trTitle}>
-                  <div>
-                    {" "}
-                    <th>Product</th>
-                  </div>
-
+                  <td>
+                    <div>
+                      {" "}
+                      <th>Product</th>
+                    </div>
+                  </td>
                   <th>Name</th>
 
                   <th>Price</th>
@@ -424,6 +425,7 @@ const Cart = () => {
                   <th>Delete</th>
                 </tr>
               </tbody>
+
               <tbody>
                 {cart.products.map((prod) => (
                   <tr className={styles.tr} key={prod._id}>
