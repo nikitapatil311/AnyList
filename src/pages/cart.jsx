@@ -265,7 +265,7 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import Image from "next/legacy/image";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+//import { useEffect } from "react";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import axios from "axios";
 
