@@ -302,8 +302,7 @@ const Cart = () => {
   const router = useRouter();
 
   const createOrder = async (data) => {
-    const baseURL =
-      process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3000";
+    const baseURL = "https://any-list.vercel.app" || "http://localhost:3000";
     try {
       const response = await axios.post(`${baseURL}/api/orders`, data);
       if (response.status === 201) {
