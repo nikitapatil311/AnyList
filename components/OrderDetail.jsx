@@ -24,7 +24,6 @@ const OrderDetail = ({ total, createOrder }) => {
   };
   const handleCancel = () => {
     setShowForm(false);
-    onCancel(); // Optional: If you want to perform any action on cancel, call onCancel function here.
   };
 
   return (
