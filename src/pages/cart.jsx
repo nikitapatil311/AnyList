@@ -265,7 +265,7 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import Image from "next/legacy/image";
 import { useDispatch, useSelector } from "react-redux";
-//import { useEffect } from "react";
+import { useEffect } from "react";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import axios from "axios";
 
@@ -274,7 +274,17 @@ import OrderDetail from "../../components/OrderDetail";
 import styles from "../../styles/Cart.module.css";
 import Link from "next/link";
 
+import { useSession, signIn } from "next-auth/react";
+
 const Cart = () => {
+  const { data: session } = useSession();
+
+  useEffect(() => {
+    if (!session) {
+      router.push("/login"); // Replace "/login" with your login page URL
+    }
+  }, [session]);
+
   const cart = useSelector((state) => state.cart);
   const [cash, setCash] = useState(false);
   const [open, setOpen] = useState(false);
@@ -301,7 +311,7 @@ const Cart = () => {
         router.push(`/orders/${response.data._id}`);
       }
     } catch (err) {
-      console.log(err);
+      console.log("err", err.message);
     }
   };
 
@@ -394,117 +404,130 @@ const Cart = () => {
 
   return (
     <>
-      <div className={styles.container}>
-        <div className={styles.left}>
-          <table className={styles.table}>
-            <tbody>
-              <tr className={styles.trTitle}>
-                <th>Product</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Total</th>
-                <th>Edit</th>
-                <th>Delete</th>
-              </tr>
-            </tbody>
-            <tbody>
-              {cart.products.map((prod) => (
-                <tr className={styles.tr} key={prod._id}>
-                  <td>
-                    <div className={styles.imgContainer}>
-                      <Image
-                        src={prod.image}
-                        layout="fill"
-                        alt=""
-                        objectFit="cover"
-                      />
-                    </div>
-                  </td>
-                  <td>
-                    <span className={styles.name}>{prod.name}</span>
-                  </td>
-                  <td>
-                    <span className={styles.price}> {prod.price}</span>
-                  </td>
-                  <td>
-                    <span className={styles.quantity}> {prod.quantity}</span>
-                  </td>
-                  <td>
-                    <span className={styles.total}>
-                      {" "}
-                      {prod.price * prod.quantity}
-                    </span>
-                  </td>
-                  <td>
-                    <button className={styles.button}>
-                      {" "}
-                      <Link
-                        className={styles.btnlink}
-                        href={`/product/${prod._id}`}
-                      >
-                        Edit
-                      </Link>
-                    </button>
-                    {/* Edit button, linking to the product/[id] page */}
-                  </td>
-                  <td>
-                    {/* Delete button, handleDeleteProduct function to be defined */}
-                    <button
-                      className={styles.button}
-                      onClick={() => handleDeleteProduct(prod._id)}
-                    >
-                      Delete
-                    </button>
-                  </td>
+      {session ? (
+        <div className={styles.container}>
+          <div className={styles.left}>
+            <table className={styles.table}>
+              <tbody>
+                <tr className={styles.trTitle}>
+                  <th>Product</th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Total</th>
+                  <th>Edit</th>
+                  <th>Delete</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <div className={styles.right}>
-          <div className={styles.wrapper}>
-            <h2 className={styles.title}>CART TOTAL</h2>
-            <div className={styles.totalText}>
-              <b className={styles.totalTextTitle}>SubTotal:</b>
-              {cart.total}
-            </div>
-            <div className={styles.totalText}>
-              <b className={styles.totalTextTitle}>Discount:</b>0 EUR
-            </div>
-            <div className={styles.totalText}>
-              <b className={styles.totalTextTitle}>Total:</b>
-              {cart.total}
-            </div>
-            {open ? (
-              <div className={styles.paymentMethods}>
-                <button
-                  className={styles.payButton}
-                  onClick={() => setCash(true)}
-                >
-                  PAY CASH
-                </button>
-                <PayPalScriptProvider
-                  options={{
-                    "client-id":
-                      "AYINZcUmluM0JfS6Die9js1z5tfELQJ7nIRnruikMUJpbG_oBmttZWeS11a_uIppMOnrKb3eRiY1BcXn",
-                    components: "buttons",
-                    currency: "EUR",
-                    "disable-funding": "credit,card,p24",
-                  }}
-                >
-                  <ButtonWrapper currency={currency} showSpinner={false} />
-                </PayPalScriptProvider>
-              </div>
-            ) : (
-              <button onClick={() => setOpen(true)} className={styles.button}>
-                CHECKOUT NOW
-              </button>
-            )}
+              </tbody>
+              <tbody>
+                {cart.products.map((prod) => (
+                  <tr className={styles.tr} key={prod._id}>
+                    <td>
+                      <div className={styles.imgContainer}>
+                        <Image
+                          src={prod.image}
+                          layout="fill"
+                          alt=""
+                          objectFit="cover"
+                        />
+                      </div>
+                    </td>
+                    <td>
+                      <span className={styles.name}>{prod.name}</span>
+                    </td>
+                    <td>
+                      <span className={styles.price}> {prod.price}</span>
+                    </td>
+                    <td>
+                      <span className={styles.quantity}> {prod.quantity}</span>
+                    </td>
+                    <td>
+                      <span className={styles.total}>
+                        {" "}
+                        {prod.price * prod.quantity}
+                      </span>
+                    </td>
+                    <td>
+                      <button className={styles.button}>
+                        {" "}
+                        <Link
+                          className={styles.btnlink}
+                          href={`/product/${prod._id}`}
+                        >
+                          Edit
+                        </Link>
+                      </button>
+                      {/* Edit button, linking to the product/[id] page */}
+                    </td>
+                    <td>
+                      {/* Delete button, handleDeleteProduct function to be defined */}
+                      <button
+                        className={styles.button}
+                        onClick={() => handleDeleteProduct(prod._id)}
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
+          <div className={styles.right}>
+            <div className={styles.wrapper}>
+              <h2 className={styles.title}>CART TOTAL</h2>
+              <div className={styles.totalText}>
+                <b className={styles.totalTextTitle}>SubTotal:</b>
+                {cart.total}
+              </div>
+              <div className={styles.totalText}>
+                <b className={styles.totalTextTitle}>Discount:</b>0 EUR
+              </div>
+              <div className={styles.totalText}>
+                <b className={styles.totalTextTitle}>Total:</b>
+                {cart.total}
+              </div>
+              {open ? (
+                <div className={styles.paymentMethods}>
+                  <button
+                    className={styles.payButton}
+                    onClick={() => setCash(true)}
+                  >
+                    PAY CASH
+                  </button>
+                  <PayPalScriptProvider
+                    options={{
+                      "client-id":
+                        "AYINZcUmluM0JfS6Die9js1z5tfELQJ7nIRnruikMUJpbG_oBmttZWeS11a_uIppMOnrKb3eRiY1BcXn",
+                      components: "buttons",
+                      currency: "EUR",
+                      "disable-funding": "credit,card,p24",
+                    }}
+                  >
+                    <ButtonWrapper currency={currency} showSpinner={false} />
+                  </PayPalScriptProvider>
+                </div>
+              ) : (
+                <button onClick={() => setOpen(true)} className={styles.button}>
+                  CHECKOUT NOW
+                </button>
+              )}
+            </div>
+          </div>
+          {cash && <OrderDetail total={cart.total} createOrder={createOrder} />}
         </div>
-        {cash && <OrderDetail total={cart.total} createOrder={createOrder} />}
-      </div>
+      ) : (
+        <div className="p-4 border border-gray-300 rounded-md shadow-md max-w-md mx-auto mt-8">
+          <p className="text-xl font-semibold mb-2">Not signed in</p>
+          <button
+            className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded"
+            onClick={() => signIn()}
+          >
+            Sign in
+          </button>
+        </div>
+      )}
+
       <Link href="/" passHref>
         <button className={styles.button}>Back to 🏠</button>
       </Link>
