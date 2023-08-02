@@ -520,13 +520,7 @@ const Cart = () => {
           <p className="text-xl font-semibold mb-2">
             Please sign in to continue shopping.
           </p>
-          <Image
-            src="assests/water.png"
-            height={10}
-            width={10}
-            alt=""
-            passHref
-          />
+
           <button
             className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded"
             onClick={() => signIn()}

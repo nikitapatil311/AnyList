@@ -37,13 +37,7 @@ const Login = () => {
       <div className="p-4 border border-gray-300 rounded-md shadow-md max-w-md mx-auto mt-8">
         <p className="text-xl font-semibold mb-2">
           Please sign in to continue shopping.🛒{" "}
-          <Image
-            src="assests/water.png"
-            height={10}
-            width={10}
-            alt=""
-            passHref
-          />
+          <Image src="assests/water.png" height={10} width={10} alt="" />
         </p>
 
         <button
