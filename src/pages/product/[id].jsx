@@ -61,9 +61,9 @@ const Product = ({ grocery }) => {
 };
 
 export const getServerSideProps = async ({ params }) => {
-  const res = await axios.get(
-    `http://localhost:3000/api/products/${params.id}`
-  );
+  const baseURL =
+    process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3000";
+  const res = await axios.get(`${baseURL}/api/products/${params.id}`);
   return {
     props: {
       grocery: res.data,

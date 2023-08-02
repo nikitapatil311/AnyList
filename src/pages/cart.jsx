@@ -292,11 +292,10 @@ const Cart = () => {
   const router = useRouter();
 
   const createOrder = async (data) => {
+    const baseURL =
+      process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3000";
     try {
-      const response = await axios.post(
-        "http://localhost:3000/api/orders",
-        data
-      );
+      const response = await axios.post(`${baseURL}/api/orders`, data);
       if (response.status === 201) {
         dispatch(reset());
         router.push(`/orders/${response.data._id}`);

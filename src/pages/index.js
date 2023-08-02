@@ -41,7 +41,9 @@ export default function Home({ groceryList }) {
 }
 
 export const getServerSideProps = async () => {
-  const res = await axios.get("http://localhost:3000/api/products");
+  const baseURL =
+    process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3000";
+  const res = await axios.get(`${baseURL}/api/products`);
   console.log("Response Data:", res.data);
   return {
     props: {
