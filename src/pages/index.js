@@ -42,6 +42,7 @@ export default function Home({ groceryList }) {
 
 export const getServerSideProps = async () => {
   const res = await axios.get("http://localhost:3000/api/products");
+  console.log("Response Data:", res.data);
   return {
     props: {
       groceryList: res.data,
