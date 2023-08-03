@@ -527,7 +527,7 @@ const Cart = () => {
                     CHECKOUT NOW
                   </button>
                   <Link href="/" passHref>
-                    <button className={styles.homeButton}>Back to 🏠</button>
+                    <button className={styles.button}>Back to 🏠</button>
                   </Link>
                 </div>
               )}
