@@ -56,6 +56,8 @@
   font-weight: bold;
   cursor: pointer;
   margin-top: 20px;
+  display: flex;
+  gap: 20%;
 }
 
 @media screen and (max-width: 480px) {
@@ -131,9 +133,9 @@
   color: teal;
   font-weight: bold;
 }
-.homeButton {
-  border: 2px solid black;
-  margin-left: 2%;
+/* .homeButton {
+   border: 2px solid black;
+  margin-left: 5%;
   position: fixed;
   bottom: 88vh;
   background-color: #cb8d7e;
@@ -142,8 +144,8 @@
   cursor: pointer;
   font-size: 15px;
   z-index: 9999;
-  transition: background-color 0.3s ease;
-}
-.homeButton:hover {
+  transition: background-color 0.3s ease; 
+} */
+/* .homeButton:hover {
   background-color: #ad725e;
-}
+}  */
