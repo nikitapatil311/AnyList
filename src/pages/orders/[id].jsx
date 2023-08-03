@@ -39,26 +39,26 @@ const Order = ({ order }) => {
                 </Image>
               </td> */}
               <td>
-                <span className={styles.name}>{order.customer}</span>
+                <span className={styles.customer}>{order.customer}</span>
               </td>
               <td>
                 <span className={styles.name}>{order.name}</span>
               </td>
 
               <td>
-                <span className={styles.address}>{order.price}</span>
+                <span className={styles.price}>{order.price}</span>
               </td>
               {/* <td>
-                <span className={styles.address}>{order.quantity}</span>
+                <span className={styles.quantity}>{order.quantity}</span>
               </td> */}
               <td>
                 <span className={styles.total}>{order.total}</span>
               </td>
               <td>
-                <span className={styles.total}>{order.phoneNumber}</span>
+                <span className={styles.phoneNumber}>{order.phoneNumber}</span>
               </td>
               <td>
-                <span className={styles.total}>{order.method}</span>
+                <span className={styles.method}>{order.method}</span>
               </td>
             </tr>
           </table>

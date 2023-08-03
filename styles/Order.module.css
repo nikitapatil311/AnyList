@@ -98,7 +98,7 @@
     font-size: 20px;
   }
 
-  /* .id::before {
+  .customer::before {
     content: "customer: ";
     font-weight: 500;
   }
@@ -106,23 +106,23 @@
     content: "name: ";
     font-weight: 500;
   }
-  .address::before {
+  .Price::before {
     content: "Price: ";
     font-weight: 500;
-  } */
-  /* .total::before {
+  }
+  /* .quantity::before {
     content: "quantity: ";
     font-weight: 500;
   } */
-  .total::before {
+  .Bill::before {
     content: "Bill: ";
     font-weight: 500;
   }
-  .total::before {
+  .phone number::before {
     content: "phone number: ";
     font-weight: 500;
   }
-  .total::before {
+  .method::before {
     content: "method: ";
     font-weight: 500;
   }
