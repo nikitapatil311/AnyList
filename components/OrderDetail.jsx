@@ -23,9 +23,6 @@ const OrderDetail = ({ total, createOrder }) => {
       // method: 0,
     });
   };
-  const handleCancel = () => {
-    setShowForm(false);
-  };
 
   return (
     <div className={styles.container}>
@@ -49,6 +46,7 @@ const OrderDetail = ({ total, createOrder }) => {
             type="text"
             placeholder="enter ph.no"
             className={styles.input}
+            value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
           />
         </div>
@@ -69,6 +67,7 @@ const OrderDetail = ({ total, createOrder }) => {
             placeholder="enter product name"
             type="text"
             className={styles.input}
+            value={price}
             onChange={(e) => setPrice(e.target.value)}
           />
         </div>
@@ -89,15 +88,13 @@ const OrderDetail = ({ total, createOrder }) => {
             placeholder="enter product name"
             type="text"
             className={styles.input}
+            value={total}
             onChange={(e) => setBill(e.target.value)}
           />
         </div>
 
         <button className={styles.button} onClick={handleClick}>
           Purchase
-        </button>
-        <button className={styles.cancelButton} onClick={handleCancel}>
-          Cancel
         </button>
       </div>
     </div>
