@@ -99,12 +99,12 @@ const Order = ({ order }) => {
                 <b className={styles.totalTextTitle}>Total:</b>
                 {order.total}
               </div>
-
-              <button disabled className={styles.button}>
-                PAID
-              </button>
               <Link href="/" passHref>
-                <button className={styles.button}>Shop more 🛒</button>
+                <button disabled className={styles.button}>
+                  PAID
+                </button>
+
+                {/* <button className={styles.button}>Shop more 🛒</button> */}
               </Link>
             </div>
           </div>
