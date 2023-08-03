@@ -17,8 +17,8 @@ const Order = ({ order }) => {
             <tr className={styles.trTitle}>
               <th>customer Name</th>
               {/* <th>Product name</th> */}
-              <th>Price</th>
               <th>phone number</th>
+              <th>Price</th>
 
               {/* <th>quantity</th> */}
 

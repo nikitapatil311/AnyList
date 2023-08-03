@@ -78,6 +78,11 @@
   font-weight: bold;
   margin-top: 20px;
   cursor: not-allowed;
+  border-radius: 10px;
+}
+
+.button:hover {
+  transition: 2s ease-in-out;
 }
 
 @media screen and (max-width: 480px) {
