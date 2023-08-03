@@ -15,8 +15,8 @@ const Order = ({ order }) => {
         <div className={styles.row}>
           <table className={styles.table}>
             <tr className={styles.trTitle}>
-              <th>customer</th>
-              <th>name</th>
+              <th>customer Name</th>
+              {/* <th>Product name</th> */}
               <th>Price</th>
 
               {/* <th>quantity</th> */}
@@ -41,9 +41,9 @@ const Order = ({ order }) => {
               <td>
                 <span className={styles.customer}>{order.customer}</span>
               </td>
-              <td>
+              {/* <td>
                 <span className={styles.name}>{order.name}</span>
-              </td>
+              </td> */}
 
               <td>
                 <span className={styles.price}>{order.price}</span>

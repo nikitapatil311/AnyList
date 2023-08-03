@@ -102,10 +102,10 @@
     content: "customer: ";
     font-weight: 500;
   }
-  .name::before {
+  /* .name::before {
     content: "name: ";
     font-weight: 500;
-  }
+  } */
   .Price::before {
     content: "Price: ";
     font-weight: 500;
@@ -118,7 +118,7 @@
     content: "Bill: ";
     font-weight: 500;
   }
-  .phone number::before {
+  .phone::before {
     content: "phone number: ";
     font-weight: 500;
   }
