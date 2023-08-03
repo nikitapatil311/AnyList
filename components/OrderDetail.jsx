@@ -6,7 +6,7 @@ const OrderDetail = ({ total, createOrder }) => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
-  const [quantity, setQuantity] = useState("");
+  // const [quantity, setQuantity] = useState("");
   const [bill, setBill] = useState("");
   const [showForm, setShowForm] = useState(true);
 
@@ -15,7 +15,7 @@ const OrderDetail = ({ total, createOrder }) => {
       customer,
       name,
       price,
-      quantity,
+      // quantity,
       bill,
       total,
       phoneNumber,
@@ -62,7 +62,7 @@ const OrderDetail = ({ total, createOrder }) => {
           />
         </div>
 
-        <div className={styles.item}>
+        {/* <div className={styles.item}>
           <label className={styles.label}>Quantity</label>
           <input
             placeholder="enter product name"
@@ -70,7 +70,7 @@ const OrderDetail = ({ total, createOrder }) => {
             className={styles.input}
             onChange={(e) => setQuantity(e.target.value)}
           />
-        </div>
+        </div> */}
 
         <div className={styles.item}>
           <label className={styles.label}>Bill</label>

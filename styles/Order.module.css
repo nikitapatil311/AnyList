@@ -99,22 +99,33 @@
   }
 
   .id::before {
-    content: "Order ID: ";
+    content: "customer: ";
     font-weight: 500;
   }
   .name::before {
-    content: "Customer: ";
+    content: "name: ";
     font-weight: 500;
   }
   .address::before {
-    content: "Address: ";
+    content: "Price: ";
     font-weight: 500;
   }
   .total::before {
-    content: "Total: ";
+    content: "quantity: ";
     font-weight: 500;
   }
-
+  .total::before {
+    content: "Bill: ";
+    font-weight: 500;
+  }
+  .total::before {
+    content: "phone number: ";
+    font-weight: 500;
+  }
+  .total::before {
+    content: "method: ";
+    font-weight: 500;
+  }
   .row:last-child {
     width: 100%;
     flex-direction: column;
