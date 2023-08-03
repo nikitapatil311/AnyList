@@ -54,11 +54,11 @@ const Product = ({ grocery }) => {
           </button>
 
           <Link href="/cart" passHref>
-            <button className={styles.button}>View Cart</button>
+            <button className={styles.button}>➡ View 🛒 </button>
           </Link>
 
           <Link href="/" passHref>
-            <button className={styles.button}>Back to Home</button>
+            <button className={styles.button}>🔙 to Home</button>
           </Link>
         </div>
       </div>

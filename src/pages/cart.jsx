@@ -524,7 +524,7 @@ const Cart = () => {
                     onClick={() => setOpen(true)}
                     className={styles.button}
                   >
-                    CHECKOUT NOW
+                    CHECKOUT NOW ✅
                   </button>
                   <Link href="/" passHref>
                     <button className={styles.button}>Back to 🏠</button>
@@ -538,7 +538,7 @@ const Cart = () => {
       ) : (
         <div className="p-4 border border-gray-300 rounded-md shadow-md max-w-md mx-auto mt-8">
           <p className="text-xl font-semibold mb-2">
-            Please sign in to continue shopping.
+            Please sign in to continue shopping.🛒
           </p>
 
           <button

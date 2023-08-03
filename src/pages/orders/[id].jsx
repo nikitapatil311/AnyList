@@ -100,10 +100,11 @@ const Order = ({ order }) => {
                 {order.total}
               </div>
               <Link href="/" passHref>
-                <button className={styles.button}>PAID</button>
+                <button className={styles.button}>PAID </button>
 
                 {/* <button className={styles.button}>Shop more 🛒</button> */}
               </Link>
+              <p>Thank you 🙏</p>
             </div>
           </div>
         </div>
