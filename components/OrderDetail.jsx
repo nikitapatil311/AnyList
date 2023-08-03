@@ -13,12 +13,13 @@ const OrderDetail = ({ total, createOrder }) => {
   const handleClick = () => {
     createOrder({
       customer,
+      phoneNumber,
       // name,
       price,
       // quantity,
       bill,
       // total,
-      phoneNumber,
+
       // method: 0,
     });
   };
@@ -39,6 +40,16 @@ const OrderDetail = ({ total, createOrder }) => {
             className={styles.input}
             value={customer}
             onChange={(e) => setCustomer(e.target.value)}
+          />
+        </div>
+
+        <div className={styles.item}>
+          <label className={styles.label}>Phone Number</label>
+          <input
+            type="text"
+            placeholder="enter ph.no"
+            className={styles.input}
+            onChange={(e) => setPhoneNumber(e.target.value)}
           />
         </div>
 
@@ -71,15 +82,6 @@ const OrderDetail = ({ total, createOrder }) => {
             onChange={(e) => setQuantity(e.target.value)}
           />
         </div> */}
-        <div className={styles.item}>
-          <label className={styles.label}>Phone Number</label>
-          <input
-            type="text"
-            placeholder="enter ph.no"
-            className={styles.input}
-            onChange={(e) => setPhoneNumber(e.target.value)}
-          />
-        </div>
 
         <div className={styles.item}>
           <label className={styles.label}>Bill</label>
