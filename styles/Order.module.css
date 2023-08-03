@@ -110,10 +110,10 @@
     content: "Price: ";
     font-weight: 500;
   }
-  .total::before {
+  /* .total::before {
     content: "quantity: ";
     font-weight: 500;
-  }
+  } */
   .total::before {
     content: "Bill: ";
     font-weight: 500;
