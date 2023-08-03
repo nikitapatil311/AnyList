@@ -20,10 +20,10 @@ const Order = ({ order }) => {
               <th>Price</th>
 
               {/* <th>quantity</th> */}
-              <th>Bill</th>
               <th>phone number</th>
+              <th>Bill</th>
 
-              <th>method</th>
+              {/* <th>method</th> */}
             </tr>
 
             <tr className={styles.tr}>
@@ -52,14 +52,15 @@ const Order = ({ order }) => {
                 <span className={styles.quantity}>{order.quantity}</span>
               </td> */}
               <td>
-                <span className={styles.total}>{order.total}</span>
-              </td>
-              <td>
                 <span className={styles.phoneNumber}>{order.phoneNumber}</span>
               </td>
               <td>
-                <span className={styles.method}>{order.method}</span>
+                <span className={styles.total}>{order.total}</span>
               </td>
+
+              {/* <td>
+                <span className={styles.method}>{order.method}</span>
+              </td> */}
             </tr>
           </table>
         </div>

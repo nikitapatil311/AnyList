@@ -122,10 +122,10 @@
     content: "phone number: ";
     font-weight: 500;
   }
-  .method::before {
+  /* .method::before {
     content: "method: ";
     font-weight: 500;
-  }
+  } */
   .row:last-child {
     width: 100%;
     flex-direction: column;

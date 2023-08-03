@@ -17,9 +17,9 @@ const OrderDetail = ({ total, createOrder }) => {
       price,
       // quantity,
       bill,
-      total,
+      // total,
       phoneNumber,
-      method: 0,
+      // method: 0,
     });
   };
   const handleCancel = () => {
@@ -71,6 +71,15 @@ const OrderDetail = ({ total, createOrder }) => {
             onChange={(e) => setQuantity(e.target.value)}
           />
         </div> */}
+        <div className={styles.item}>
+          <label className={styles.label}>Phone Number</label>
+          <input
+            type="text"
+            placeholder="enter ph.no"
+            className={styles.input}
+            onChange={(e) => setPhoneNumber(e.target.value)}
+          />
+        </div>
 
         <div className={styles.item}>
           <label className={styles.label}>Bill</label>
@@ -79,16 +88,6 @@ const OrderDetail = ({ total, createOrder }) => {
             type="text"
             className={styles.input}
             onChange={(e) => setBill(e.target.value)}
-          />
-        </div>
-
-        <div className={styles.item}>
-          <label className={styles.label}>Phone Number</label>
-          <input
-            type="text"
-            placeholder="enter ph.no"
-            className={styles.input}
-            onChange={(e) => setPhoneNumber(e.target.value)}
           />
         </div>
 
