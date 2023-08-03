@@ -53,13 +53,13 @@ const Product = ({ grocery }) => {
             Add to Cart
           </button>
 
-          <Link href="/cart" passHref>
+          {/* <Link href="/cart" passHref>
             <button className={styles.button}>➡ View 🛒 </button>
           </Link>
 
           <Link href="/" passHref>
             <button className={styles.button}>🔙 to Home</button>
-          </Link>
+          </Link> */}
         </div>
       </div>
 

@@ -64,7 +64,7 @@ const OrderDetail = ({ total, createOrder }) => {
         <div className={styles.item}>
           <label className={styles.label}>Price</label>
           <input
-            placeholder="enter product name"
+            placeholder="Enter Price"
             type="text"
             className={styles.input}
             value={price}
@@ -85,7 +85,7 @@ const OrderDetail = ({ total, createOrder }) => {
         <div className={styles.item}>
           <label className={styles.label}>Bill</label>
           <input
-            placeholder="enter product name"
+            placeholder=" Bill..."
             type="text"
             className={styles.input}
             value={total}

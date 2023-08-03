@@ -104,7 +104,11 @@ const Order = ({ order }) => {
 
                 {/* <button className={styles.button}>Shop more 🛒</button> */}
               </Link>
-              <p>Thank you 🙏</p>
+              <p className={styles.purchase1}>
+                Thank you for purchasing from us!🤍 As a token of our
+                appreciation, here is 20% off your next order 🤑. See you again
+                soon!👋{" "}
+              </p>
             </div>
           </div>
         </div>

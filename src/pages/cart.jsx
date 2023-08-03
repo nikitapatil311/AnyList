@@ -524,10 +524,10 @@ const Cart = () => {
                     onClick={() => setOpen(true)}
                     className={styles.button}
                   >
-                    CHECKOUT NOW ✅
+                    CHECKOUT NOW
                   </button>
                   <Link href="/" passHref>
-                    <button className={styles.button}>Back to 🏠</button>
+                    <button className={styles.button}>🔙 to 🏠</button>
                   </Link>
                 </div>
               )}
