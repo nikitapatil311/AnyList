@@ -519,9 +519,17 @@ const Cart = () => {
                   </PayPalScriptProvider>
                 </div>
               ) : (
-                <button onClick={() => setOpen(true)} className={styles.button}>
-                  CHECKOUT NOW
-                </button>
+                <div>
+                  <button
+                    onClick={() => setOpen(true)}
+                    className={styles.button}
+                  >
+                    CHECKOUT NOW
+                  </button>
+                  <Link href="/" passHref>
+                    <button className={styles.homeButton}>Back to 🏠</button>
+                  </Link>
+                </div>
               )}
             </div>
           </div>
@@ -541,10 +549,6 @@ const Cart = () => {
           </button>
         </div>
       )}
-
-      <Link href="/" passHref>
-        <button className={styles.homeButton}>Back to 🏠</button>
-      </Link>
     </>
   );
 };
