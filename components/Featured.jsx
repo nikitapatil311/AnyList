@@ -6,9 +6,10 @@ import Link from "next/link";
 const Featured = () => {
   const [index, setIndex] = useState(0);
   const images = [
-    "/assests/featured1.2.png",
-    "/assests/featured1.1.png",
-    "/assests/featured1.png",
+    "/assests/grocery10.png",
+
+    "/assests/grocery1.1.png",
+    "/assests/grocery6.1.png",
   ];
 
   const handleArrow = (direction) => {
