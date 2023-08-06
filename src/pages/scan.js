@@ -1,21 +1,9 @@
 import React, { useState } from "react";
 import BarcodeScanner from "../../components/BarcodeScanner";
 import debounce from "lodash.debounce";
-import { useSession } from "next-auth/react";
-import { useRouter } from "next/router";
-import { useEffect } from "react";
 
 const ScanPage = () => {
   const [scannedBarcode, setScannedBarcode] = useState(null);
-  const { data: session } = useSession();
-  useEffect(() => {
-    const router = require("next/router"); // Dynamically import next/router here
-    // Now you can use router.push or router.replace here
-  }, []);
-  if (!session) {
-    router.replace("/login");
-    return null;
-  }
 
   // Function to handle barcode detection with debouncing
   const handleBarcodeDetected = debounce((result) => {
