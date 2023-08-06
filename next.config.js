@@ -15,6 +15,11 @@ const nextConfig = {
       "www.bigbasket.com",
       "lh3.googleusercontent.com",
       "avatars.githubusercontent.com",
+      "www.distacart.com",
+      "assets.office-discount.de",
+      "www.apodiscounter.de",
+      "cdn8.apopixx.de",
+      "img01.ztat.net",
     ],
   },
 };

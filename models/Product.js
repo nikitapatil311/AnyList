@@ -8,6 +8,7 @@ const productSchema = new mongoose.Schema(
     currency: { type: String },
     info: { type: String, required: true },
     quantity: { type: Number },
+    barcode: { type: String, unique: true, required: true },
   },
   { timestamps: true }
 );

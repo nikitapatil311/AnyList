@@ -15,7 +15,6 @@ const GroceryList = ({ groceryList }) => {
   return (
     <div className={styles.container}>
       <h1>Shop Groceries</h1>
-
       <div className={styles.wrapper}>
         {groceryList.map((grocery) => (
           <GroceryCard key={grocery._id} grocery={grocery} />

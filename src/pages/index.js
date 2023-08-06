@@ -19,8 +19,11 @@ export default function Home({ groceryList }) {
   const [searchQuery, setSearchQuery] = useState(""); // Add this line to create the search query state
 
   // Filter the grocery list based on the search query
-  const filteredGroceryList = groceryList.filter((grocery) =>
-    grocery.name.toLowerCase().includes(searchQuery.toLowerCase())
+  const filteredGroceryList = groceryList.filter(
+    (grocery) =>
+      grocery &&
+      grocery.name &&
+      grocery.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
