@@ -30,6 +30,7 @@ export default function Home({ groceryList }) {
         <meta name="description" content="Best Grocery Shop" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <Featured />
       {/* <AddButton setClose={setClose} /> */}
       <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
