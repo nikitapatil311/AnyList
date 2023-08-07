@@ -28,7 +28,8 @@ const Footer = () => {
         </a>
       </div>
       <div className="copyright">
-        © Grocery Shop {new Date().getFullYear()}. All rights reserved.
+        © Any List - A grocery Shop {new Date().getFullYear()}. All rights
+        reserved.
       </div>
       <style jsx>{`
         footer {
