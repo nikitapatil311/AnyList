@@ -125,10 +125,10 @@
     content: "quantity: ";
     font-weight: 500;
   } */
-  .Bill::before {
+  /* .Bill::before {
     content: "Bill: ";
     font-weight: 500;
-  }
+  } */
   .phone::before {
     content: "phone number: ";
     font-weight: 500;

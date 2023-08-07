@@ -417,11 +417,9 @@ const Cart = () => {
                     </div>
                   </td>
                   <th>Name</th>
-
                   <th>Price</th>
                   <th>Quantity</th>
                   <th>Total</th>
-
                   <th>Delete</th>
                 </tr>
               </tbody>

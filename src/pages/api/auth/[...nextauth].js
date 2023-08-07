@@ -1,6 +1,9 @@
 import NextAuth from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
+import clientPromise from "../../../../lib/mongoose";
+import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
+
 export const authOptions = {
   // Configure one or more authentication providers
   providers: [
@@ -16,5 +19,13 @@ export const authOptions = {
     }),
   ],
   secret: process.env.JWT_SECRET,
+  adapter: MongoDBAdapter(clientPromise),
+
+  callbacks: {
+    async session({ session, user }) {
+      session.user._id = user.id;
+      return session;
+    },
+  },
 };
 export default NextAuth(authOptions);

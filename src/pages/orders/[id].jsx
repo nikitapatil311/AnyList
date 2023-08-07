@@ -22,7 +22,7 @@ const Order = ({ order }) => {
 
               {/* <th>quantity</th> */}
 
-              <th>Bill</th>
+              {/* <th>Bill</th> */}
 
               {/* <th>method</th> */}
             </tr>
