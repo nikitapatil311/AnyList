@@ -3,11 +3,15 @@ import Quagga from "quagga";
 import debounce from "lodash/debounce";
 import Image from "next/image";
 import Link from "next/link";
+import { useDispatch } from "react-redux"; // Assuming you have Redux set up
+import { addProduct } from "../redux/cartSlice";
 
 const BarcodeScanner = () => {
   const videoRef = useRef(null);
   const [scannedBarcode, setScannedBarcode] = useState(null);
   const [productDetails, setProductDetails] = useState(null);
+  const [quantity, setQuantity] = useState("");
+  const dispatch = useDispatch();
 
   useEffect(() => {
     Quagga.init(
@@ -67,6 +71,22 @@ const BarcodeScanner = () => {
 
   Quagga.onDetected(handleBarcodeDetected);
 
+  const handleClick = () => {
+    const parsedQuantity = parseInt(quantity, 10);
+    if (parsedQuantity > 0 && productDetails) {
+      const { price } = productDetails;
+      dispatch(
+        addProduct({ ...productDetails, price, quantity: parsedQuantity })
+      );
+      setShowNotification(true); // Set the state to show the notification
+      setTimeout(() => {
+        setShowNotification(false); // Hide the notification after a certain time (optional)
+      }, 3000);
+    } else {
+      alert("Please enter a valid quantity or scan a valid barcode.");
+    }
+  };
+
   return (
     <div>
       <video ref={videoRef} style={{ width: "100%", height: "auto" }} />
@@ -83,13 +103,29 @@ const BarcodeScanner = () => {
               {/* Add more product details as needed */}
             </div>
           </div>
+          <input
+            type="number"
+            value={quantity}
+            onChange={(e) => setQuantity(e.target.value)}
+            placeholder="Enter quantity"
+          />
+
+          {/* Add to Cart button */}
+          <button
+            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded"
+            onClick={handleClick}
+          >
+            Add to Cart
+          </button>
         </div>
       )}
       {scannedBarcode && !productDetails && (
         <p>No product details found for this barcode.</p>
       )}
       <Link href="/" passHref>
-        <button>🔙 </button>
+        <button className="bg-gray-300 hover:bg-gray-400 text-black font-semibold px-4 py-2 rounded">
+          🔙
+        </button>
       </Link>
     </div>
   );

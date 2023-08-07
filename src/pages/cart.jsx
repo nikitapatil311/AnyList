@@ -538,7 +538,7 @@ const Cart = () => {
       ) : (
         <div className="p-4 border border-gray-300 rounded-md shadow-md max-w-md mx-auto mt-8">
           <p className="text-xl font-semibold mb-2">
-            Please sign in to continue shopping.🛒
+            Sign in and let the shopping dance continue! 🛒🕺
           </p>
 
           <button

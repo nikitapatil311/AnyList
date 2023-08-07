@@ -36,7 +36,7 @@ const Login = () => {
     <>
       <div className="p-4 border border-gray-300 rounded-md shadow-md max-w-md mx-auto mt-8">
         <p className="text-xl font-semibold mb-2">
-          Please sign in to continue shopping.🛒{" "}
+          Sign in to unlock the secrets of our grocery kingdom! 🛒
         </p>
 
         <button
