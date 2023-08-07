@@ -17,7 +17,6 @@
   margin-top: 20px;
 } */
 /* Tailwind CSS classes */
-
 .searchfull {
   margin-top: 2%;
   margin-left: 2%;
@@ -27,20 +26,40 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 5px;
-  box-shadow: 12px 12px 2px 1px rgba(165, 165, 234, 0.2);
-  border: linear-gradient(#f69d3c, #3f87a6);
+  box-shadow: 12px 12px 2px 1px rgba(237, 227, 125, 0.2);
+  border: 2px solid #3f87a6;
+
   height: 50px;
 }
 
-/* .icon {
+.icon {
   margin-left: 88%;
-
-  order: 1;
-} */
+  font-size: larger;
+  order: 1; /* Change the order to 1 to move it to the right */
+}
 /* Adjust the width and other styles of the input container as needed */
 .container {
   flex: 1;
   border: none;
   outline: none;
   font-size: 16px;
+}
+
+/* Media Query for iPhones */
+@media (max-width: 375px) {
+  /* Adjust the breakpoint as needed */
+  .searchfull {
+    /* Change the styles for smaller screens (iPhones) */
+    padding: 3px;
+  }
+
+  .icon {
+    /* Adjust the icon size for smaller screens (iPhones) */
+    margin-right: 3px;
+  }
+
+  .container {
+    /* Adjust the font size for smaller screens (iPhones) */
+    font-size: 14px;
+  }
 }
