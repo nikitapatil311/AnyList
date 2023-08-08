@@ -32,11 +32,11 @@
   height: 50px;
 }
 
-.icon {
+/* .icon {
   margin-left: 88%;
   font-size: larger;
-  order: 1; /* Change the order to 1 to move it to the right */
-}
+  order: 1; 
+} */
 /* Adjust the width and other styles of the input container as needed */
 .container {
   flex: 1;

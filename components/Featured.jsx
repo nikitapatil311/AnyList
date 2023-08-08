@@ -9,7 +9,7 @@ const Featured = () => {
     // "/assests/grocery10.png",
     "https://images.unsplash.com/photo-1593759608329-a8247d4f5e49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
     // "/assests/grocery1.1.png",
-    "https://images.unsplash.com/photo-1564518087238-8d82baa9d7cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+    "https://images.unsplash.com/photo-1589723933517-a08e544063cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
     // "/assests/grocery6.1.png",
     "https://images.unsplash.com/photo-1579697096985-41fe1430e5df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1772&q=80",
   ];
