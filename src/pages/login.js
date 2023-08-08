@@ -1,7 +1,7 @@
 import React from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
 import Image from "next/legacy/image";
-import styles from "Login1.module.css";
+import styles from "../../styles/Login1.module.css";
 
 const Login = () => {
   const { data: session } = useSession();
