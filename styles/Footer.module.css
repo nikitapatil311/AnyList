@@ -1,5 +1,6 @@
 .container {
-  background-color: #dcb7a2;
+  /* background-color: #dcb7a2; */
+  background-color: #ff9f45;
 
   height: 100px;
   padding: 0px 50px;
@@ -32,7 +33,7 @@
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  color: #b05f4b;
+  color: #f76e11;
 }
 
 .profile {

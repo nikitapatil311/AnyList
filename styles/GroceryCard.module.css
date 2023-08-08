@@ -19,25 +19,25 @@
 .title {
   font-size: 18px;
   font-weight: bold;
-  color: #26211f;
+  color: #f76e11;
   cursor: pointer;
 }
 
 .price {
   font-size: 18px;
   font-weight: bold;
-  color: #000000;
+  color: #fc4f4f;
 }
 
 .desc {
   text-align: center;
-  color: #393434;
+  color: #f76e11;
 }
 .button {
   height: 30px;
   width: 50%;
-  color: #e8e3e1;
-  background-color: #cb8d7e;
+  color: #ffffff;
+  background-color: #ff9f45;
   font-weight: bold;
   cursor: pointer;
   margin-top: 20px;

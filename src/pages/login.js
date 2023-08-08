@@ -49,7 +49,7 @@ const Login = () => {
 
       <div className="flex justify-center items-center mt-5 mb-5 rounded-md">
         <Image
-          src="https://i.gifer.com/RTN.gif"
+          src="https://img.freepik.com/free-vector/shopping-bag-basket-composition-with-isolated-image-products-supermarket-trolley-cart_1284-54441.jpg?w=1380&t=st=1691497115~exp=1691497715~hmac=bdfe30d0080476256c88ac0830489e6c40365b406a21b8c550ee31279a9a6218"
           alt=""
           height={400}
           width={400}

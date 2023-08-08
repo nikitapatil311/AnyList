@@ -23,6 +23,10 @@ const nextConfig = {
       "i.gifer.com",
       "media.tenor.com",
       "static.vecteezy.com",
+      "static.wixstatic.com",
+      "img.freepik.com",
+      "e7.pngegg.com",
+      "img.freepik.com",
     ],
   },
 };

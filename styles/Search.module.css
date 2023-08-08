@@ -23,11 +23,11 @@
   width: 90%;
   display: flex;
   align-items: center;
-  border: 2px solid #dcb7a2;
+  /* border: 2px solid #f76e11; */
   border-radius: 5px;
   padding: 5px;
-  box-shadow: 12px 12px 2px 1px rgba(108, 105, 62, 0.2);
-  border: 2px solid #8d6954;
+  box-shadow: 12px 12px 2px 1px #f76e11;
+  border: 2px solid #f76e11;
 
   height: 50px;
 }

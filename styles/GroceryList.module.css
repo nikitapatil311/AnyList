@@ -7,13 +7,13 @@
 
 .container h1 {
   font-size: 30px;
-  color: #553c36;
+  color: #000000;
   font-family: inherit;
 }
 
 .desc {
   font-size: 24px;
-  color: #444;
+  color: #f76e11;
   width: 70%;
 }
 
