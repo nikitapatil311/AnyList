@@ -75,7 +75,7 @@ const Footer = () => {
                   className="rounded-full"
                 />
 
-                <p className="text-white font-semibold">{session.user.name}</p>
+                <p className="text-white font-semibold"> {session.user.name}</p>
               </div>
             ) : (
               // <Link href="/login" passHref>
