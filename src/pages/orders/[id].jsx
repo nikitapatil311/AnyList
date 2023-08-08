@@ -22,7 +22,7 @@ const Order = ({ order }) => {
 
               {/* <th>quantity</th> */}
 
-              <th>Bill</th>
+              {/* <th>Bill</th> */}
 
               {/* <th>method</th> */}
             </tr>
@@ -57,7 +57,7 @@ const Order = ({ order }) => {
                 <span className={styles.quantity}>{order.quantity}</span>
               </td> */}
 
-                <span className={styles.total}>{order.total}</span>
+                {/* <span className={styles.total}>{order.total}</span> */}
               </td>
 
               {/* <td>
