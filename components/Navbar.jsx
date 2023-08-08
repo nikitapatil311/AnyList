@@ -7,7 +7,7 @@ const Footer = () => {
     <footer>
       <h2> Any List</h2>
       <br />
-      <p className="text-sm">Any List is a platform to shop groceries.</p>
+
       <div className="social-icons">
         <a
           href="https://www.instagram.com/nikita_.s._patil/"
