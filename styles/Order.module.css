@@ -67,7 +67,7 @@
   width: 90%;
   height: 400px;
   background-color: #ffbc80;
-  color: white;
+  color: rgb(50, 49, 49);
   padding: 10px 50px 50px 50px;
   display: flex;
   flex-direction: column;
