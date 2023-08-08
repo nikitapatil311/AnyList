@@ -68,9 +68,9 @@ const Footer = () => {
           color: #322e2e;
           font-size: 0.8rem;
         }
-        @media (max-width: 400px) {
+        @media (max-width: 300px) {
           .footer {
-            height: 1000px;
+            height: 1005px;
           }
           .social-icons {
             flex-direction: column;
