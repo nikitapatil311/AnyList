@@ -16,15 +16,16 @@ const Login = () => {
             width={100}
             className="rounded-full"
           />
-          <p className="text-xl font-semibold mb-2">
+          <p className="text-xl font-semibold mb-2 text-orange">
             Welcome, {session.user.name}
           </p>
-          <br />
-          <div className="mt-4">
-            You are signed in as {session.user.email} <br />
+
+          <div className="mt-4 text-orange">
+            You are signed in as {session.user.email}
           </div>
+          <br />
           <button
-            className="mt-4 bg-orange-500 hover:bg-FF9F45-600 text-white font-semibold px-4 py-2 rounded"
+            className="mt-4 bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 hover:from-orange-600 hover:via-orange-700 hover:to-orange-800 text-white font-semibold px-4 py-2 rounded transition-all"
             onClick={() => signOut()}
           >
             Sign out
