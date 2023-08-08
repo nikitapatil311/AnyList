@@ -1,6 +1,7 @@
 import React from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
 import Image from "next/legacy/image";
+import styles from "Login1.module.css";
 
 const Login = () => {
   const { data: session } = useSession();
@@ -16,19 +17,10 @@ const Login = () => {
             width={100}
             className="rounded-full"
           />
-          <p
-            className="text-xl font-semibold mb-2"
-            style="color: #cdab6d; font-family: monospace; font-size: 25px;"
-          >
-            Welcome, {session.user.name}
-          </p>
-          <div
-            className="mt-4"
-            style="color: #cdab6d; font-family: monospace; font-size: 25px;"
-          >
+          <p className={styles.nameEmail}>Welcome, {session.user.name}</p>
+          <div className="mt-4">
             You are signed in as {session.user.email} <br />
           </div>
-
           <button
             className="mt-4 bg-orange-500 hover:bg-FF9F45-600 text-white font-semibold px-4 py-2 rounded"
             onClick={() => signOut()}
