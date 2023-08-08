@@ -112,7 +112,7 @@ const BarcodeScanner = () => {
 
           {/* Add to Cart button */}
           <button
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded"
+            className="bg-orange-500 hover:bg-#FF9F45-600 text-white font-semibold px-4 py-2 rounded"
             onClick={handleClick}
           >
             Add to Cart
@@ -123,7 +123,7 @@ const BarcodeScanner = () => {
         <p>No product details found for this barcode.</p>
       )}
       <Link href="/" passHref>
-        <button className="bg-gray-300 hover:bg-gray-400 text-black font-semibold px-4 py-2 rounded">
+        <button className="bg-orange-500 hover:bg-#FC4F4F-600 text-black font-semibold px-6 py-4 rounded">
           🔙
         </button>
       </Link>
