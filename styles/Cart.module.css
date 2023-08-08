@@ -45,6 +45,9 @@
   color: white;
   border-radius: 20px;
 }
+.CartTitle {
+  color: #fc4f4f;
+}
 
 .totalTextTitle {
   margin-right: 10px;
@@ -133,8 +136,8 @@
   padding: 10px 5px;
   cursor: pointer;
   margin-bottom: 5px;
-  background-color: white;
-  color: #ff9f45;
+  background-color: #f76e11;
+  color: #fffffe;
   font-weight: bold;
 }
 /* .homeButton {
