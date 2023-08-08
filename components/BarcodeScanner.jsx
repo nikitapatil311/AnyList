@@ -123,8 +123,8 @@ const BarcodeScanner = () => {
         <p>No product details found for this barcode.</p>
       )}
       <Link href="/" passHref>
-        <button className="bg-orange-500 hover:bg-#FC4F4F-600 text-black font-semibold px-6 py-4 rounded">
-          🔙 Back
+        <button className="bg-orange-500 hover:bg-#FC4F4F-600 text-white font-semibold px-6 py-4 rounded">
+          ⬅ Back
         </button>
       </Link>
     </div>
