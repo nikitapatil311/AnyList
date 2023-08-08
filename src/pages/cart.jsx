@@ -403,7 +403,7 @@ const Cart = () => {
   };
 
   return (
-    <>
+    <div>
       {session ? (
         <div className={styles.container}>
           <div className={styles.left}>
@@ -453,7 +453,7 @@ const Cart = () => {
                     <td>
                       <span className={styles.total}>
                         {" "}
-                        {prod.price * prod.quantity}
+                        {Math.round(prod.price * prod.quantity)}
                       </span>
                     </td>
                     {/* <td>
@@ -525,7 +525,7 @@ const Cart = () => {
                     CHECKOUT NOW
                   </button>
                   <Link href="/" passHref>
-                    <button className={styles.button}>🔙 to 🏠</button>
+                    <button className={styles.button}>BACK TO HOME 🏠</button>
                   </Link>
                 </div>
               )}
@@ -540,14 +540,14 @@ const Cart = () => {
           </p>
 
           <button
-            className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded"
+            className="mt-4 bg-orange-500 hover:bg-#FF9F45-600 text-white font-semibold px-4 py-2 rounded"
             onClick={() => signIn()}
           >
             Sign in
           </button>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

@@ -5,9 +5,9 @@ const OrderDetail = ({ total, createOrder }) => {
   const [customer, setCustomer] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   // const [name, setName] = useState("");
-  const [price, setPrice] = useState("");
+  // const [price, setPrice] = useState("");
   // const [quantity, setQuantity] = useState("");
-  // const [bill, setBill] = useState("");
+  const [bill, setBill] = useState("");
   const [showForm, setShowForm] = useState(true);
 
   const handleClick = () => {
@@ -15,9 +15,9 @@ const OrderDetail = ({ total, createOrder }) => {
       customer,
       phoneNumber,
       // name,
-      price,
+      // price,
       // quantity,
-      // bill,
+      bill,
       // total,
 
       // method: 0,
@@ -61,7 +61,7 @@ const OrderDetail = ({ total, createOrder }) => {
           />
         </div> */}
 
-        <div className={styles.item}>
+        {/* <div className={styles.item}>
           <label className={styles.label}>Price</label>
           <input
             placeholder="Enter Price"
@@ -70,7 +70,7 @@ const OrderDetail = ({ total, createOrder }) => {
             value={price}
             onChange={(e) => setPrice(e.target.value)}
           />
-        </div>
+        </div> */}
 
         {/* <div className={styles.item}>
           <label className={styles.label}>Quantity</label>
@@ -82,7 +82,7 @@ const OrderDetail = ({ total, createOrder }) => {
           />
         </div> */}
 
-        {/* <div className={styles.item}>
+        <div className={styles.item}>
           <label className={styles.label}>Bill</label>
           <input
             placeholder=" Bill..."
@@ -91,7 +91,7 @@ const OrderDetail = ({ total, createOrder }) => {
             value={total}
             onChange={(e) => setBill(e.target.value)}
           />
-        </div> */}
+        </div>
 
         <button className={styles.button} onClick={handleClick}>
           Purchase

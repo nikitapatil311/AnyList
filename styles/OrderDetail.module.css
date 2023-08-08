@@ -8,7 +8,7 @@
   z-index: 999;
   align-items: center;
   justify-content: center;
-  background-color: rgba(197, 197, 197, 0.568);
+  background-color: #ff9f45;
 }
 
 .wrapper {
@@ -43,7 +43,7 @@
 
 .button {
   border: none;
-  background-color: teal;
+  background-color: #f76e11;
   color: white;
   padding: 10px 20px;
   font-weight: 500;
