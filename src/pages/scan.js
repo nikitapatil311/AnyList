@@ -48,10 +48,10 @@ const ScanPage = () => {
         </div>
         <div className="flex justify-center items-center mt-5 mb-5 rounded-md">
           <Image
-            src="https://static.vecteezy.com/system/resources/previews/006/779/231/original/cute-barcode-cartoon-eating-pizza-vector.jpg"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFGlRUZs37znALDOEy752mtSUyrPMOFaqa-kfm-hGzbYZavEBPKv2GEEAPWqrq4Msk-n8&usqp=CAU"
             alt=""
-            height={400}
-            width={400}
+            height={150}
+            width={150}
             className="rounded-md"
           />
         </div>
