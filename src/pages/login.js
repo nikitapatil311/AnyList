@@ -1,7 +1,6 @@
 import React from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
 import Image from "next/legacy/image";
-import styles from "../../styles/Login1.module.css";
 
 const Login = () => {
   const { data: session } = useSession();
@@ -17,7 +16,10 @@ const Login = () => {
             width={100}
             className="rounded-full"
           />
-          <p className={styles.nameEmail}>Welcome, {session.user.name}</p>
+          <p className="text-xl font-semibold mb-2">
+            Welcome, {session.user.name}
+          </p>
+          <br />
           <div className="mt-4">
             You are signed in as {session.user.email} <br />
           </div>
