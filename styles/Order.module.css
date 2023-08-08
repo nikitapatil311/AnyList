@@ -66,7 +66,7 @@
 .wrapper {
   width: 90%;
   height: 400px;
-  background-color: #333;
+  background-color: #f76e11;
   color: white;
   padding: 10px 50px 50px 50px;
   display: flex;
@@ -81,7 +81,7 @@
 .button {
   background-color: white;
   height: 30px;
-  color: teal;
+  color: #f76e11;
   font-weight: bold;
   margin-top: 20px;
   cursor: not-allowed;
@@ -129,8 +129,8 @@
     content: "Bill: ";
     font-weight: 500;
   } */
-  .phone::before {
-    content: "phone number: ";
+  .phoneNumber::before {
+    content: "phoneNumber: ";
     font-weight: 500;
   }
   /* .method::before {

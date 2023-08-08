@@ -410,12 +410,7 @@ const Cart = () => {
             <table className={styles.table}>
               <tbody>
                 <tr className={styles.trTitle}>
-                  <td>
-                    <div>
-                      {" "}
-                      <th>Product</th>
-                    </div>
-                  </td>
+                  <th>Product</th>
                   <th>Name</th>
                   <th>Price</th>
                   <th>Quantity</th>
@@ -482,9 +477,10 @@ const Cart = () => {
               </tbody>
             </table>
           </div>
+
           <div className={styles.right}>
             <div className={styles.wrapper}>
-              <h2 className={styles.title}>CART TOTAL</h2>
+              <h2 className={styles.CartTitle}>CART TOTAL</h2>
               <div className={styles.totalText}>
                 <b className={styles.totalTextTitle}>SubTotal:</b>
                 {cart.total}
