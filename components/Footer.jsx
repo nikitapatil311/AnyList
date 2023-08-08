@@ -31,8 +31,8 @@ const Footer = () => {
             priority
             src="/assests/scanner.png"
             alt=""
-            width={30}
-            height={30}
+            width={38}
+            height={38}
           />
         </Link>
       </div>

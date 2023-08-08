@@ -40,7 +40,7 @@ const ScanPage = () => {
           </p>
 
           <button
-            className="mt-4 bg-orange-500 hover:bg-FF9F45-600 text-white font-semibold px-4 py-2 rounded"
+            className="mt-4 bg-orange-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded"
             onClick={() => signIn()}
           >
             Sign in
@@ -48,10 +48,10 @@ const ScanPage = () => {
         </div>
         <div className="flex justify-center items-center mt-5 mb-5 rounded-md">
           <Image
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFGlRUZs37znALDOEy752mtSUyrPMOFaqa-kfm-hGzbYZavEBPKv2GEEAPWqrq4Msk-n8&usqp=CAU"
+            src="https://static.vecteezy.com/system/resources/previews/006/779/231/original/cute-barcode-cartoon-eating-pizza-vector.jpg"
             alt=""
-            height={150}
-            width={150}
+            height={400}
+            width={400}
             className="rounded-md"
           />
         </div>
