@@ -66,12 +66,13 @@
 .wrapper {
   width: 90%;
   height: 400px;
-  background-color: #ffbc80;
+  background: linear-gradient(#ff9f45, #ffbc80);
   color: rgb(50, 49, 49);
   padding: 10px 50px 50px 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-radius: 10px;
 }
 
 .totalTextTitle {
@@ -84,7 +85,7 @@
   color: #ffbc80;
   font-weight: bold;
   margin-top: 20px;
-  cursor: not-allowed;
+  cursor: pointer;
   border-radius: 10px;
 }
 

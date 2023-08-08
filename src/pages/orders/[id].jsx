@@ -18,7 +18,7 @@ const Order = ({ order }) => {
               <th>customer Name</th>
               {/* <th>Product name</th> */}
               <th>phone number</th>
-              <th>Price</th>
+              {/* <th>Price</th> */}
 
               {/* <th>quantity</th> */}
 
@@ -50,15 +50,15 @@ const Order = ({ order }) => {
                 <span className={styles.name}>{order.name}</span>
               </td> */}
 
-                <td>
+                {/* <td>
                   <span className={styles.price}>{order.price}</span>
-                </td>
+                </td> */}
                 {/* <td>
                 <span className={styles.quantity}>{order.quantity}</span>
               </td> */}
 
-                <span className={styles.total}>{order.total}</span>
-              </td>
+                {/* <span className={styles.total}>{order.total}</span>
+              </td> */}
 
               {/* <td>
                 <span className={styles.method}>{order.method}</span>
