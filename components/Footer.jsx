@@ -74,6 +74,7 @@ const Footer = () => {
                   width={40}
                   className="rounded-full"
                 />
+
                 <p className="text-white font-semibold">{session.user.name}</p>
               </div>
             ) : (
