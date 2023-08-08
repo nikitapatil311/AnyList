@@ -5,15 +5,9 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer>
-      <h4 className="text-customGreen font-serif text-lg font-semibold">
-        {" "}
-        Any List
-      </h4>
+      <h2> Any List</h2>
       <br />
-      <p className="text-sm">
-        Any List is a platform to to shop for groceries online and even make
-        quick offline purchases by scanning items and paying on the go.
-      </p>
+      <p className="text-sm">Any List is a platform to shop groceries.</p>
       <div className="social-icons">
         <a
           href="https://www.instagram.com/nikita_.s._patil/"
