@@ -36,7 +36,7 @@
 .wrapper {
   width: 90%;
   height: 500px;
-  background-color: #ffbc80;
+  background: linear-gradient(#ff9f45, #ffbc80);
   padding: 50px;
   padding-top: 10px;
   display: flex;

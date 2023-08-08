@@ -1,8 +1,7 @@
 .container {
   height: calc(100vh - 100px);
 
-  background: linear-gradient(0.25turn, #ff9f45, #ffbc80, #ff9f45);
-
+  background: linear-gradient(#ff9f45, #ffbc80);
   background-color: transparent;
   overflow: hidden;
   position: relative;
