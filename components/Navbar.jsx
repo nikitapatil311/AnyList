@@ -1,9 +1,19 @@
 // components/Footer.js
 import { AiFillInstagram, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <footer>
+      <h4 className="text-customGreen font-serif text-lg font-semibold">
+        {" "}
+        Any List
+      </h4>
+      <br />
+      <p className="text-sm">
+        Any List is a platform to to shop for groceries online and even make
+        quick offline purchases by scanning items and paying on the go.
+      </p>
       <div className="social-icons">
         <a
           href="https://www.instagram.com/nikita_.s._patil/"
@@ -26,8 +36,13 @@ const Footer = () => {
         >
           <AiFillGithub />
         </a>
+        <br />
       </div>
-      <div className="copyright">
+      <hr />
+
+      <hr />
+
+      <div className="bg-gray-200 border-t border-gray-900 py-4 px-4 md:px-0 text-sm text-black text-center">
         © Any List - A grocery Shop {new Date().getFullYear()}. All rights
         reserved.
       </div>
@@ -38,7 +53,7 @@ const Footer = () => {
           align-items: center;
           justify-content: center;
           padding: 1rem;
-          /* background-color: #dcb7a2; */
+
           background: linear-gradient(0.25turn, #f79453, #cf935a, #ffbc80);
           height: 300px;
         }
@@ -56,7 +71,7 @@ const Footer = () => {
         }
 
         .copyright {
-          color: #888;
+          color: #322e2e;
           font-size: 0.8rem;
         }
         @media (max-width: 400px) {

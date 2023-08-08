@@ -27,6 +27,7 @@ const nextConfig = {
       "img.freepik.com",
       "e7.pngegg.com",
       "img.freepik.com",
+      "img.freepik.com",
     ],
   },
 };

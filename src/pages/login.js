@@ -23,7 +23,7 @@ const Login = () => {
             Signed in as {session.user.email} <br />
           </div>
           <button
-            className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded"
+            className="mt-4 bg-orange-500 hover:bg-FF9F45-600 text-white font-semibold px-4 py-2 rounded"
             onClick={() => signOut()}
           >
             Sign out
