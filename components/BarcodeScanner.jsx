@@ -124,7 +124,7 @@ const BarcodeScanner = () => {
       )}
       <Link href="/" passHref>
         <button className="bg-orange-500 hover:bg-#FC4F4F-600 text-black font-semibold px-6 py-4 rounded">
-          🔙
+          🔙 Back
         </button>
       </Link>
     </div>
