@@ -37,7 +37,7 @@
   height: 30px;
   width: 50%;
   color: #ffffff;
-  background-color: #ff9f45;
+  background: linear-gradient(#ff9f45, #ffbc80);
   font-weight: bold;
   cursor: pointer;
   margin-top: 20px;
@@ -54,9 +54,9 @@
   top: 0;
   right: 0;
 
-  background-color: #763c05; /* Background color */
+  background: linear-gradient(#ff9f45, #ffbc80);
   color: #ffffff; /* Text color */
-  border: 10px solid #f76e11; /* Border color and thickness */
+  border: 10px solid #693c1e; /* Border color and thickness */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow effect */
   padding: 10px 15px; /* Padding around the content */
   border-radius: 10px; /* Rounded corners */

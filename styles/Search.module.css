@@ -27,7 +27,7 @@
   border-radius: 5px;
   padding: 5px;
   box-shadow: 12px 12px 2px 1px #f76e11;
-  border: 2px solid #f76e11;
+  border: 2px solid linear-gradient(#ff9f45, #ffbc80);
 
   height: 50px;
 }
