@@ -36,7 +36,7 @@ const Login = () => {
     <>
       <div className="p-4 border border-gray-300 rounded-md shadow-md max-w-md mx-auto mt-8">
         <p className="text-xl font-semibold mb-2">
-          Sign in to unlock the secrets of our grocery kingdom! 🛒
+          Sign in to add items and continue shopping 🛒
         </p>
 
         <button
@@ -45,6 +45,16 @@ const Login = () => {
         >
           Sign in
         </button>
+      </div>
+
+      <div className="flex justify-center items-center mt-5 mb-5 rounded-md">
+        <Image
+          src="https://i.gifer.com/RTN.gif"
+          alt=""
+          height={400}
+          width={400}
+          className="rounded-md"
+        />
       </div>
     </>
   );

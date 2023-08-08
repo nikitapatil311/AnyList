@@ -20,6 +20,9 @@ const nextConfig = {
       "www.apodiscounter.de",
       "cdn8.apopixx.de",
       "img01.ztat.net",
+      "i.gifer.com",
+      "media.tenor.com",
+      "static.vecteezy.com",
     ],
   },
 };

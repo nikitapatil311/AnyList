@@ -1,13 +1,13 @@
 .container {
-  height: calc(100vh - 600px);
-  width: 100%;
+  height: calc(100vh - 200px);
+
   background-repeat: no-repeat;
 
-  background: linear-gradient(0.25turn, #738c97, #a6b09f, #d2b28f);
+  background: linear-gradient(0.25turn, #dcb7a2, #dcb7a2, #dcb7a2);
 
   background-color: transparent;
   overflow: hidden;
-  position: relative;
+  /* position: relative; */
 
   animation: slideAnimation 15s infinite;
 }

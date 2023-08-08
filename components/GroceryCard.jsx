@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addProduct } from "redux/cartSlice";
+import React from "react";
 
 const GroceryCard = ({ grocery }) => {
   const [quantity, setQuantity] = useState(1);
@@ -48,7 +49,8 @@ const GroceryCard = ({ grocery }) => {
         </Link>
         <h1 className={styles.title}>{grocery.name}</h1>
         <span className={styles.price}>
-          {grocery.price} {grocery.currency}
+          {grocery.price}
+          {grocery.currency}
         </span>
         <p className={styles.desc}>{grocery.info}</p>
         <div className={styles.buttonsContainer}>

@@ -13,23 +13,25 @@
 
 .imageCard {
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .title {
   font-size: 18px;
   font-weight: bold;
-  color: #dd9887;
+  color: #26211f;
+  cursor: pointer;
 }
 
 .price {
   font-size: 18px;
   font-weight: bold;
-  color: #666;
+  color: #000000;
 }
 
 .desc {
   text-align: center;
-  color: #777;
+  color: #393434;
 }
 .button {
   height: 30px;

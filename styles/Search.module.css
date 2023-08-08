@@ -16,18 +16,18 @@
 
   margin-top: 20px;
 } */
-/* Tailwind CSS classes */
+
 .searchfull {
   margin-top: 2%;
   margin-left: 2%;
   width: 90%;
   display: flex;
   align-items: center;
-  border: 1px solid #ccc;
+  border: 2px solid #dcb7a2;
   border-radius: 5px;
   padding: 5px;
-  box-shadow: 12px 12px 2px 1px rgba(237, 227, 125, 0.2);
-  border: 2px solid #3f87a6;
+  box-shadow: 12px 12px 2px 1px rgba(108, 105, 62, 0.2);
+  border: 2px solid #8d6954;
 
   height: 50px;
 }
@@ -37,7 +37,7 @@
   font-size: larger;
   order: 1; 
 } */
-/* Adjust the width and other styles of the input container as needed */
+
 .container {
   flex: 1;
   border: none;

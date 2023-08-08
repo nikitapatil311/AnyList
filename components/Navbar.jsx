@@ -39,7 +39,7 @@ const Footer = () => {
           justify-content: center;
           padding: 1rem;
           /* background-color: #dcb7a2; */
-          background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+          background: linear-gradient(0.25turn, #141516, #ecf3e8, #dcb7a2);
           height: 300px;
         }
 

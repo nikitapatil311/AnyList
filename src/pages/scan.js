@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import BarcodeScanner from "../../components/BarcodeScanner";
 import debounce from "lodash.debounce";
 import { useSession, signIn } from "next-auth/react";
+import Image from "next/image";
 
 const ScanPage = () => {
   const [scannedBarcode, setScannedBarcode] = useState(null);
@@ -32,18 +33,29 @@ const ScanPage = () => {
     );
   } else {
     return (
-      <div className="p-4 border border-gray-300 rounded-md shadow-md max-w-md mx-auto mt-8">
-        <p className="text-xl font-semibold mb-2">
-          Hey there, barcode explorer!Sign in to unlock the barcode galaxy! 🚀🛒
-        </p>
+      <>
+        <div className="p-4 border border-gray-300 rounded-md shadow-md max-w-md mx-auto mt-8">
+          <p className="text-xl font-semibold mb-2">
+            Sign in to unlock the barcode galaxy! 🚀
+          </p>
 
-        <button
-          className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded"
-          onClick={() => signIn()}
-        >
-          Sign in
-        </button>
-      </div>
+          <button
+            className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded"
+            onClick={() => signIn()}
+          >
+            Sign in
+          </button>
+        </div>
+        <div className="flex justify-center items-center mt-5 mb-5 rounded-md">
+          <Image
+            src="https://static.vecteezy.com/system/resources/previews/006/779/231/original/cute-barcode-cartoon-eating-pizza-vector.jpg"
+            alt=""
+            height={400}
+            width={400}
+            className="rounded-md"
+          />
+        </div>
+      </>
     );
   }
 };
