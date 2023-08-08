@@ -22,7 +22,7 @@ const Order = ({ order }) => {
 
               {/* <th>quantity</th> */}
 
-              {/* <th>Bill</th> */}
+              <th>Bill</th>
 
               {/* <th>method</th> */}
             </tr>
@@ -57,8 +57,8 @@ const Order = ({ order }) => {
                 <span className={styles.quantity}>{order.quantity}</span>
               </td> */}
 
-                {/* <span className={styles.total}>{order.total}</span>
-              </td> */}
+                <span className={styles.total}>{order.total}</span>
+              </td>
 
               {/* <td>
                 <span className={styles.method}>{order.method}</span>
@@ -104,7 +104,7 @@ const Order = ({ order }) => {
 
                 {/* <button className={styles.button}>Shop more 🛒</button> */}
               </Link>
-              <p className={styles.purchase1}>
+              <p className={styles}>
                 Thank you for purchasing from us!🤍 As a token of our
                 appreciation, here is 20% off your next order 🤑. See you again
                 soon!👋{" "}
