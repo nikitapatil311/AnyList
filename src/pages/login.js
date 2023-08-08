@@ -9,9 +9,6 @@ const Login = () => {
     return (
       <>
         <div className="p-4 border border-gray-300 rounded-md shadow-md max-w-md mx-auto mt-8">
-          <p className="text-xl font-semibold mb-2">
-            Welcome, {session.user.name}
-          </p>
           <Image
             src={session.user.image}
             alt=""
@@ -19,9 +16,19 @@ const Login = () => {
             width={100}
             className="rounded-full"
           />
-          <div className="mt-4">
+          <p
+            className="text-xl font-semibold mb-2"
+            style="color: #cdab6d; font-family: monospace; font-size: 25px;"
+          >
+            Welcome, {session.user.name}
+          </p>
+          <div
+            className="mt-4"
+            style="color: #cdab6d; font-family: monospace; font-size: 25px;"
+          >
             You are signed in as {session.user.email} <br />
           </div>
+
           <button
             className="mt-4 bg-orange-500 hover:bg-FF9F45-600 text-white font-semibold px-4 py-2 rounded"
             onClick={() => signOut()}

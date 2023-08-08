@@ -66,7 +66,7 @@
 .wrapper {
   width: 90%;
   height: 400px;
-  background-color: #f76e11;
+  background-color: #ffbc80;
   color: white;
   padding: 10px 50px 50px 50px;
   display: flex;
@@ -81,7 +81,7 @@
 .button {
   background-color: white;
   height: 30px;
-  color: #f76e11;
+  color: #ffbc80;
   font-weight: bold;
   margin-top: 20px;
   cursor: not-allowed;
@@ -150,5 +150,6 @@
 
   .wrapper {
     width: 100%;
+    border-radius: 10px;
   }
 }
