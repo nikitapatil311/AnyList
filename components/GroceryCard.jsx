@@ -47,7 +47,7 @@ const GroceryCard = ({ grocery }) => {
             className={styles.imageCard}
           />
         </Link>
-        <h3 className={styles.title}>{grocery.name}</h3>
+        <h4 className={styles.title}>{grocery.name}</h4>
         <span className={styles.price}>
           {grocery.price}
           {grocery.currency}
