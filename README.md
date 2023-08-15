@@ -42,18 +42,19 @@ Complete your shopping experience with convenient payment choices:
 
 Follow these steps to start using AnyList:
 
-1. Open the app using the following Vercel link: https://any-list.vercel.app/ .
-2. Launch the app and explore the homepage to discover available groceries.
+1. Open the app using [Link to the Any List Grocery App](https://any-list.vercel.app/) .
+   
+3. Launch the app and explore the homepage to discover available groceries.
 
-3. Access the Scan page and follow on-screen instructions to add products using barcode scanning.
+4. Access the Scan page and follow on-screen instructions to add products using barcode scanning.
 
-4. Review product details and adjust quantities as needed.
+5. Review product details and adjust quantities as needed.
 
-5. Manage your shopping cart and proceed to checkout when ready.
+6. Manage your shopping cart and proceed to checkout when ready.
 
-6. Choose your preferred payment method: Pay with Cash or Pay with PayPal.
+7. Choose your preferred payment method: Pay with Cash or Pay with PayPal.
 
-7. Complete the purchase and enjoy a seamless shopping experience!
+8. Complete the purchase and enjoy a seamless shopping experience!
 
 ## Feedback and Support
 
