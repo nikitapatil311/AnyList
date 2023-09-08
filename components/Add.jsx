@@ -20,15 +20,15 @@ const Add = ({ setClose }) => {
     data.append("file", file);
     data.append("upload_preset", "uploads1");
 
-//     data.append("api_key", "474874492862899");
+    data.append("api_key", "474874492862899");
 
-//     data.append("timestamp", Math.round(new Date().getTime() / 1000));
+    data.append("timestamp", Math.round(new Date().getTime() / 1000));
 
-//     try {
-//       const uploadRes = await axios.post(
-//         "https://api.cloudinary.com/v1_1/ddbosdu4g/image/upload",
-//         data
-//       );
+    try {
+      const uploadRes = await axios.post(
+        "https://api.cloudinary.com/v1_1/ddbosdu4g/image/upload",
+        data
+      );
 
 //       const { url } = uploadRes.data;
 //       const newProduct = {
