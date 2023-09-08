@@ -81,9 +81,9 @@ const Add = ({ setClose }) => {
             rows={4}
              type="text"
             onChange={(e) => setInfo(e.target.value)}
-//           />
-//         </div>
-//         <div className={styles.item}>
+          />
+        </div>
+         <div className={styles.item}>
 //           <label className={styles.label}>Prices</label>
 //           <div className={styles.priceContainer}>
 //             <input
