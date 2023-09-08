@@ -71,9 +71,9 @@ const Add = ({ setClose }) => {
           <label className={styles.label}> Name</label>
           <input
             className={styles.input}
-//             type="text"
-//             onChange={(e) => setName(e.target.value)}
-//           />
+           type="text"
+           onChange={(e) => setName(e.target.value)}
+          />
 //         </div>
 //         <div className={styles.item}>
 //           <label className={styles.label}>Info</label>
