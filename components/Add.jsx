@@ -69,8 +69,8 @@ const Add = ({ setClose }) => {
         </div>
         <div className={styles.item}>
           <label className={styles.label}> Name</label>
-//           <input
-//             className={styles.input}
+          <input
+            className={styles.input}
 //             type="text"
 //             onChange={(e) => setName(e.target.value)}
 //           />
