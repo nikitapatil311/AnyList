@@ -46,7 +46,7 @@ const Add = ({ setClose }) => {
         body: JSON.stringify(newProduct),
       });
 
-//       if (!createRes.ok) {
+      if (!createRes.ok) {
 //         throw new Error("Failed to create product");
 //       }
 
