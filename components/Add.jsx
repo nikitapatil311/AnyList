@@ -56,7 +56,7 @@ const Add = ({ setClose }) => {
     }
   };
 
-//   return (
+  return (
 //     <div className={styles.container}>
 //       <div className={styles.wrapper}>
 //         <span onClick={() => setClose(true)} className={styles.close}>
@@ -100,7 +100,5 @@ const Add = ({ setClose }) => {
 //         </button>
 //       </div>
 //     </div>
-//   );
-// };
-
-// export default Add;
+  ); };
+ export default Add;
