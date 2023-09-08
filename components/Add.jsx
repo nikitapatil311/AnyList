@@ -38,13 +38,13 @@ const Add = ({ setClose }) => {
         info,
       };
 
-//       const createRes = await fetch("/api/products", {
-//         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify(newProduct),
-//       });
+      const createRes = await fetch("/api/products", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newProduct),
+      });
 
 //       if (!createRes.ok) {
 //         throw new Error("Failed to create product");
