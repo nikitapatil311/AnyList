@@ -74,8 +74,8 @@ const Add = ({ setClose }) => {
            type="text"
            onChange={(e) => setName(e.target.value)}
           />
-//         </div>
-//         <div className={styles.item}>
+         </div>
+         <div className={styles.item}>
 //           <label className={styles.label}>Info</label>
 //           <textarea
 //             rows={4}
