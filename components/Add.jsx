@@ -50,11 +50,11 @@ const Add = ({ setClose }) => {
         throw new Error("Failed to create product");
       }
 
-//       setClose(true);
-//     } catch (err) {
-//       console.log(err);
-//     }
-//   };
+      setClose(true);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
 //   return (
 //     <div className={styles.container}>
