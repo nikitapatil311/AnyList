@@ -57,7 +57,7 @@ const Add = ({ setClose }) => {
   };
 
   return (
-//     <div className={styles.container}>
+     <div className={styles.container}>
 //       <div className={styles.wrapper}>
 //         <span onClick={() => setClose(true)} className={styles.close}>
 //           X
