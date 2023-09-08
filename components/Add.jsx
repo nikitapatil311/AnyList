@@ -76,11 +76,11 @@ const Add = ({ setClose }) => {
           />
          </div>
          <div className={styles.item}>
-//           <label className={styles.label}>Info</label>
-//           <textarea
-//             rows={4}
-//             type="text"
-//             onChange={(e) => setInfo(e.target.value)}
+          <label className={styles.label}>Info</label>
+          <textarea
+            rows={4}
+             type="text"
+            onChange={(e) => setInfo(e.target.value)}
 //           />
 //         </div>
 //         <div className={styles.item}>
