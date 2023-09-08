@@ -30,13 +30,13 @@ const Add = ({ setClose }) => {
         data
       );
 
-//       const { url } = uploadRes.data;
-//       const newProduct = {
-//         image: url,
-//         name,
-//         price,
-//         info,
-//       };
+      const { url } = uploadRes.data;
+      const newProduct = {
+        image: url,
+        name,
+        price,
+        info,
+      };
 
 //       const createRes = await fetch("/api/products", {
 //         method: "POST",
