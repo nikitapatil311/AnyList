@@ -6,15 +6,15 @@ import { useRouter } from "next/router";
 const Add = ({ setClose }) => {
   const [file, setFile] = useState(null);
 
-//   const [name, setName] = useState(null);
-//   const [info, setInfo] = useState(null);
-//   const [price, setPrice] = useState("");
+  const [name, setName] = useState(null);
+  const [info, setInfo] = useState(null);
+  const [price, setPrice] = useState("");
 
-//   const handleCreate = async () => {
-//     if (!file || !name || !info || price.length === 0) {
-//       console.log("Please fill out all the required fields.");
-//       return;
-//     }
+  const handleCreate = async () => {
+    if (!file || !name || !info || price.length === 0) {
+      console.log("Please fill out all the required fields.");
+      return;
+    }
 
 //     const data = new FormData();
 //     data.append("file", file);
