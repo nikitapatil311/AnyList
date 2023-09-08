@@ -84,10 +84,10 @@ const Add = ({ setClose }) => {
           />
         </div>
          <div className={styles.item}>
-//           <label className={styles.label}>Prices</label>
-//           <div className={styles.priceContainer}>
-//             <input
-//               className={`${styles.input} ${styles.inputSm}`}
+          <label className={styles.label}>Prices</label>
+           <div className={styles.priceContainer}>
+             <input
+               className={`${styles.input} ${styles.inputSm}`}
 //               type="number"
 //               placeholder="Price"
 //               name="price"
