@@ -96,8 +96,8 @@ const Add = ({ setClose }) => {
           </div>{" "}
         </div>{" "}
         <button className={styles.addButton} onClick={handleCreate}>
-          Create{" "}
-        </button>{" "}
+          Create
+        </button>
       </div>{" "}
     </div>
   );
