@@ -58,8 +58,8 @@ const Add = ({ setClose }) => {
 
   return (
      <div className={styles.container}>
-//       <div className={styles.wrapper}>
-//         <span onClick={() => setClose(true)} className={styles.close}>
+    <div className={styles.wrapper}>
+      <span onClick={() => setClose(true)} className={styles.close}>
 //           X
 //         </span>
 //         <h1>Add a new Grocery</h1>
