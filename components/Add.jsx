@@ -16,9 +16,9 @@ const Add = ({ setClose }) => {
       return;
     }
 
-//     const data = new FormData();
-//     data.append("file", file);
-//     data.append("upload_preset", "uploads1");
+    const data = new FormData();
+    data.append("file", file);
+    data.append("upload_preset", "uploads1");
 
 //     data.append("api_key", "474874492862899");
 
