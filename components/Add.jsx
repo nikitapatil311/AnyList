@@ -88,8 +88,8 @@ const Add = ({ setClose }) => {
            <div className={styles.priceContainer}>
              <input
                className={`${styles.input} ${styles.inputSm}`}
-//               type="number"
-//               placeholder="Price"
+               type="number"
+               placeholder="Price"
 //               name="price"
 //               onChange={(e) => setPrice(e.target.value)}
 //             />
