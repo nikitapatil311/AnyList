@@ -47,8 +47,8 @@ const Add = ({ setClose }) => {
       });
 
       if (!createRes.ok) {
-//         throw new Error("Failed to create product");
-//       }
+        throw new Error("Failed to create product");
+      }
 
 //       setClose(true);
 //     } catch (err) {
