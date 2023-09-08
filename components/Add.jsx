@@ -57,48 +57,53 @@ const Add = ({ setClose }) => {
   };
 
   return (
-     <div className={styles.container}>
-    <div className={styles.wrapper}>
-      <span onClick={() => setClose(true)} className={styles.close}>
-      X
-         </span>
-         <h1>Add a new Grocery</h1>
+    <div className={styles.container}>
+      <div className={styles.wrapper}>
+        <span onClick={() => setClose(true)} className={styles.close}>
+          X
+        </span>
+        <h1>Add a new Grocery</h1>
         <div className={styles.item}>
-         <label className={styles.label}>Choose an image</label>
+          <label className={styles.label}>Choose an image</label>
           <input type="file" onChange={(e) => setFile(e.target.files[0])} />
         </div>
         <div className={styles.item}>
           <label className={styles.label}> Name</label>
           <input
             className={styles.input}
-           type="text"
-           onChange={(e) => setName(e.target.value)}
+            type="text"
+            onChange={(e) => setName(e.target.value)}
           />
-         </div>
-         <div className={styles.item}>
+        </div>
+        <div className={styles.item}>
           <label className={styles.label}>Info</label>
           <textarea
             rows={4}
-             type="text"
+            type="text"
             onChange={(e) => setInfo(e.target.value)}
           />
         </div>
-         <div className={styles.item}>
+        <div className={styles.item}>
           <label className={styles.label}>Prices</label>
-           <div className={styles.priceContainer}>
-             <input
-               className={`${styles.input} ${styles.inputSm}`}
-               type="number"
-               placeholder="Price"
-               name="price"
+          <div className={styles.priceContainer}>
+            <input
+              className={`${styles.input} ${styles.inputSm}`}
+              type="number"
+              placeholder="Price"
+              name="price"
               onChange={(e) => setPrice(e.target.value)}
-//             />
-//           </div>
-//         </div>
-//         <button className={styles.addButton} onClick={handleCreate}>
-//           Create
-//         </button>
-//       </div>
-//     </div>
-  ); };
- export default Add;
+            />
+          </div>
+          //{" "}
+        </div>
+        //{" "}
+        <button className={styles.addButton} onClick={handleCreate}>
+          // Create //{" "}
+        </button>
+        //{" "}
+      </div>
+      //{" "}
+    </div>
+  );
+};
+export default Add;
