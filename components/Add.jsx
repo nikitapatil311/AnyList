@@ -90,8 +90,8 @@ const Add = ({ setClose }) => {
                className={`${styles.input} ${styles.inputSm}`}
                type="number"
                placeholder="Price"
-//               name="price"
-//               onChange={(e) => setPrice(e.target.value)}
+               name="price"
+              onChange={(e) => setPrice(e.target.value)}
 //             />
 //           </div>
 //         </div>
