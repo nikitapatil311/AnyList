@@ -94,11 +94,11 @@ const Add = ({ setClose }) => {
               onChange={(e) => setPrice(e.target.value)}
             />
           </div>{" "}
-        </div>{" "}
+        </div>
         <button className={styles.addButton} onClick={handleCreate}>
           Create
         </button>
-      </div>{" "}
+      </div>
     </div>
   );
 };
