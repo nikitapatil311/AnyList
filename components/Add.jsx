@@ -64,8 +64,8 @@ const Add = ({ setClose }) => {
          </span>
          <h1>Add a new Grocery</h1>
         <div className={styles.item}>
-//           <label className={styles.label}>Choose an image</label>
-//           <input type="file" onChange={(e) => setFile(e.target.files[0])} />
+         <label className={styles.label}>Choose an image</label>
+          <input type="file" onChange={(e) => setFile(e.target.files[0])} />
 //         </div>
 //         <div className={styles.item}>
 //           <label className={styles.label}> Name</label>
