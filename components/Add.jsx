@@ -1,10 +1,10 @@
-// import { useState } from "react";
-// import styles from "../styles/Add.module.css";
-// import axios from "axios";
-// import { useRouter } from "next/router";
+import { useState } from "react";
+import styles from "../styles/Add.module.css";
+import axios from "axios";
+import { useRouter } from "next/router";
 
-// const Add = ({ setClose }) => {
-//   const [file, setFile] = useState(null);
+const Add = ({ setClose }) => {
+  const [file, setFile] = useState(null);
 
 //   const [name, setName] = useState(null);
 //   const [info, setInfo] = useState(null);
