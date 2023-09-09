@@ -8,4 +8,4 @@ const AddButton = ({ setClose }) => {
   );
 };
 
-// export default AddButton;
+export default AddButton;
