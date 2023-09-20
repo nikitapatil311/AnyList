@@ -5,9 +5,8 @@ export default async function handler(req, res) {
   const {
     method,
     query: { id },
-    // cookies,
   } = req;
-  // const token = cookies.token;
+
   await dbConnect();
 
   if (method === "GET") {
@@ -20,13 +19,8 @@ export default async function handler(req, res) {
   }
 
   if (method === "POST") {
-    // if (!token || token !== process.env.TOKEN) {
-    //   return res.status(401).json("Not authenticated!");
-    // }
     try {
-      const product = await Product.findByIdAndUpdate(id, req.body, {
-        // new: true,
-      });
+      const product = await Product.findByIdAndUpdate(id, req.body, {});
       res.status(200).json(product);
     } catch (error) {
       res.status(500).json(error);
@@ -34,9 +28,6 @@ export default async function handler(req, res) {
   }
 
   if (method === "DELETE") {
-    // if (!token || token !== process.env.TOKEN) {
-    //   return res.status(401).json("Not authenticated!");
-    // }
     try {
       await Product.findByIdAndDelete(id);
       res.status(200).json("The product has been deleted");

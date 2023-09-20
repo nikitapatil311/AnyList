@@ -16,7 +16,8 @@ const ScanPage = () => {
 
     // Update the state with the scanned barcode data
     setScannedBarcode(barcodeData);
-  }, 1000); // Adjust the debounce delay as per your requirement
+    // Adjust the debounce delay as per requirement
+  }, 1000);
 
   if (session) {
     return (

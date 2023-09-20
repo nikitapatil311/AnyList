@@ -19,11 +19,8 @@ const Order = ({ order }) => {
               {/* <th>Product name</th> */}
               <th>phone number</th>
               {/* <th>Price</th> */}
-
               {/* <th>quantity</th> */}
-
               {/* <th>Bill</th> */}
-
               {/* <th>method</th> */}
             </tr>
 
@@ -101,8 +98,6 @@ const Order = ({ order }) => {
               </div>
               <Link href="/" passHref>
                 <button className={styles.button}>PAID </button>
-
-                {/* <button className={styles.button}>Shop more 🛒</button> */}
               </Link>
               <p className={styles}>
                 Thank you for purchasing from us!🤍 As a token of our
