@@ -1,9 +1,8 @@
 .container {
   /* background-color: #dcb7a2; */
   background: linear-gradient(#ff9f45, #ffbc80);
-
   height: 100px;
-  padding: 20px;
+  padding: 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
