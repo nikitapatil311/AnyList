@@ -1,24 +1,21 @@
 //import Image from "next/legacy/image";
 //import { Inter } from "next/font/google";
-import axios from "axios";
-import Head from "next/head";
 //import Add from "../../components/Add";
 //import AddButton from "../../components/AddButton";
-import styles from "../../styles/Home.module.css";
 //import { useSession } from "next-auth/react";
-
-import Featured from "../../components/Featured";
-import GroceryList from "../../components/GroceryList";
 //import Footer from "../../components/Footer";
 //const inter = Inter({ subsets: ["latin"] });
+import axios from "axios";
+import Head from "next/head";
+import styles from "../../styles/Home.module.css";
+import Featured from "../../components/Featured";
+import GroceryList from "../../components/GroceryList";
 import { useState } from "react";
 import SearchBar from "../../components/SearchBar";
 
 export default function Home({ groceryList }) {
   const [close, setClose] = useState(true);
-  const [searchQuery, setSearchQuery] = useState(""); // Add this line to create the search query state
-
-  // Filter the grocery list based on the search query
+  const [searchQuery, setSearchQuery] = useState("");
   const filteredGroceryList = groceryList.filter(
     (grocery) =>
       grocery &&
