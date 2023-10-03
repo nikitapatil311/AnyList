@@ -4,17 +4,6 @@ const withPWA = require("next-pwa");
 
 const nextConfig = {
   reactStrictMode: true,
-  experimental: {
-    images: {
-      unoptimized: true,
-    },
-  },
-  pwa: {
-    dest: "public",
-    register: "true",
-    skipWaiting: true,
-    disable: process.env.NODE_ENV === "development",
-  },
 
   images: {
     domains: [
@@ -46,4 +35,14 @@ const nextConfig = {
   },
 };
 
-module.exports = withPWA(nextConfig);
+module.exports = withPWA({
+  pwa: {
+    dest: "public",
+    register: true,
+    skipWaiting: true,
+  },
+  // Pass the nextConfig object here
+  ...nextConfig,
+});
+
+module.exports = nextConfig;
