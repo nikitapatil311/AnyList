@@ -52,54 +52,8 @@ const Product = ({ grocery }) => {
           <button className={styles.button} onClick={handleClick}>
             Add to Cart
           </button>
-
-          {/* <Link href="/cart" passHref>
-            <button className={styles.button}>➡ View 🛒 </button>
-          </Link>
-
-          <Link href="/" passHref>
-            <button className={styles.button}>🔙 to Home</button>
-          </Link> */}
         </div>
       </div>
-
-      {/* <div>
-        <div className={styles.image}>
-          <Image
-            className={styles.img}
-            src={grocery.image}
-            height={500}
-            width={500}
-            alt=" "
-            // layout="fill" // objectFit="contain" alt=""
-          />
-        </div>
-      </div>
-
-      <div className={styles.information}>
-        <h1 className={styles.name}>{grocery.name}</h1>
-        <span className={styles.price}>
-          {grocery.price} {grocery.currency}
-        </span>
-        <div className={styles.info}>{grocery.info}</div>
-      </div>
-      <input
-        onChange={(e) => setQuantity(e.target.value)}
-        type="number"
-        defaultValue={1}
-        className={styles.quantity}
-      />
-      <button className={styles.button} onClick={handleClick}>
-        Add to Cart
-      </button>
-
-      <Link href="/cart" passHref>
-        <button className={styles.button}>View Cart</button>
-      </Link>
-
-      <Link href="/" passHref>
-        <button className={styles.button}>Back to Home</button>
-      </Link> */}
     </>
   );
 };

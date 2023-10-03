@@ -5,13 +5,11 @@ import clientPromise from "../../../../lib/mongoose";
 import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
 
 export const authOptions = {
-  // Configure one or more authentication providers
   providers: [
     GithubProvider({
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET,
     }),
-    // ...add more providers here
 
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
