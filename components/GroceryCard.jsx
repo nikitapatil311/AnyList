@@ -12,15 +12,6 @@ const GroceryCard = ({ grocery }) => {
   const [showNotification, setShowNotification] = useState(false); // State to manage the pop-up notification
 
   const dispatch = useDispatch();
-
-  // Step 2: Implement Handlers
-  // const handleIncrement = () => {
-  //   setNumber(number + 1);
-  // };
-
-  // const handleDecrement = () => {
-  //   setNumber(number - 1);
-  // };
   const handleClick = () => {
     const parsedQuantity = parseInt(quantity, 10);
     if (parsedQuantity > 0) {
@@ -60,26 +51,12 @@ const GroceryCard = ({ grocery }) => {
             defaultValue={1}
             className={styles.quantity}
           />
-          {/* <div>
-            <button onClick={handleDecrement}>-</button>
-            <span>{number}</span>
-            <button onClick={handleIncrement}>+</button>
-          </div> */}
           <button className={styles.button} onClick={handleClick}>
             Add to Cart
           </button>
         </div>
-        {/* <div>
-          <Link href="/cart" passHref>
-            <button className={styles.button}>View Cart</button>
-          </Link>
-        </div> */}
-        {/* Conditional rendering for the pop-up notification */}
         {showNotification && (
-          <div
-            //className="absolute top-0 right-0 mt-12 mr-2 p-4 bg-white border border-gray-300 shadow-lg rounded"
-            className={styles.notification}
-          >
+          <div className={styles.notification}>
             🎊{grocery.name}🎉 added to cart!🛍️
           </div>
         )}
