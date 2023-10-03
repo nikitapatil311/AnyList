@@ -3,13 +3,11 @@ import Image from "next/legacy/image";
 import { useSelector } from "react-redux";
 import Link from "next/link";
 import { BiSolidUserCircle } from "react-icons/bi";
-//import { signIn } from "next-auth/react";
 import { useSession } from "next-auth/react";
 
 const Footer = () => {
   const { data: session } = useSession();
   const quantity = useSelector((state) => state.cart.products.length);
-  // Use state.cart.products.length instead of state.cart.quantity
   return (
     <div className={styles.container}>
       <div className={styles.item}>
@@ -52,16 +50,6 @@ const Footer = () => {
         </Link>
       </div>
 
-      {/* <div className={styles.profile}>
-        <Link href="/login" passHref>
-          <BiSolidUserCircle
-            className={styles.profile}
-            height={60}
-            width={60}
-          />
-        </Link>
-      </div> */}
-
       <nav className="flex items-center justify-between bg-gray-800 p-4">
         <Link href="/login" passHref>
           <div className="flex items-center">
@@ -80,13 +68,11 @@ const Footer = () => {
                 </p>
               </div>
             ) : (
-              // <Link href="/login" passHref>
               <BiSolidUserCircle
                 className={styles.profile}
                 height={60}
                 width={60}
               />
-              // </Link>
             )}
           </div>
         </Link>
