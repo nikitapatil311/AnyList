@@ -1,7 +1,4 @@
-// importing
 import mongoose from "mongoose";
-
-//the places db schema
 
 const orderSchema = new mongoose.Schema({
   customer: { type: String },
