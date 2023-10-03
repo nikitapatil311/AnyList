@@ -4,9 +4,6 @@ import styles from "../styles/OrderDetail.module.css";
 const OrderDetail = ({ total, createOrder }) => {
   const [customer, setCustomer] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  // const [name, setName] = useState("");
-  // const [price, setPrice] = useState("");
-  // const [quantity, setQuantity] = useState("");
   const [bill, setBill] = useState("");
   const [showForm, setShowForm] = useState(true);
 
@@ -14,13 +11,7 @@ const OrderDetail = ({ total, createOrder }) => {
     createOrder({
       customer,
       phoneNumber,
-      // name,
-      // price,
-      // quantity,
       bill,
-      // total,
-
-      // method: 0,
     });
   };
 
@@ -50,37 +41,6 @@ const OrderDetail = ({ total, createOrder }) => {
             onChange={(e) => setPhoneNumber(e.target.value)}
           />
         </div>
-
-        {/* <div className={styles.item}>
-          <label className={styles.label}>Product Name</label>
-          <input
-            placeholder="enter product name"
-            type="text"
-            className={styles.input}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </div> */}
-
-        {/* <div className={styles.item}>
-          <label className={styles.label}>Price</label>
-          <input
-            placeholder="Enter Price"
-            type="text"
-            className={styles.input}
-            value={price}
-            onChange={(e) => setPrice(e.target.value)}
-          />
-        </div> */}
-
-        {/* <div className={styles.item}>
-          <label className={styles.label}>Quantity</label>
-          <input
-            placeholder="enter product name"
-            type="text"
-            className={styles.input}
-            onChange={(e) => setQuantity(e.target.value)}
-          />
-        </div> */}
 
         <div className={styles.item}>
           <label className={styles.label}>Bill</label>
