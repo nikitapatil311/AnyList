@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.15",
     "@mui/material": "^5.14.15",
     "@testing-library/jest-dom": "^5.17.0",
@@ -10,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "ansi-html": "^0.0.9",
     "browserslist": "^4.22.1",
+    "fsevents": "^2.3.3",
     "glob-parent": "^6.0.2",
     "immer": "^10.0.3",
     "jsdom": "^22.1.0",
@@ -21,7 +24,7 @@
     "postcss": "^8.4.31",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^5.0.1",
     "request": "^2.88.2",
     "scss-tokenizer": "^0.4.3",
     "semver": "^7.5.4",
@@ -52,5 +55,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }
