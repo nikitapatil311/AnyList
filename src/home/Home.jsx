@@ -5,7 +5,6 @@ import { AcUnit } from "@mui/icons-material";
 export default function Home() {
   return (
     <div className="home">
-      Hello from home
       <AcUnit />
     </div>
   );
