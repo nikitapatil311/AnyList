@@ -1,3 +1,9 @@
 .navbar {
   color: white;
+  font-size: 14px;
+}
+
+.container img {
+  height: 5px;
+  padding: 0 50px;
 }
