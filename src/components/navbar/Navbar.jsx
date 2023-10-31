@@ -1,4 +1,4 @@
-import { Search } from "@mui/icons-material";
+import { Notifications, Search } from "@mui/icons-material";
 import React from "react";
 
 export default function Navbar() {
@@ -18,6 +18,8 @@ export default function Navbar() {
         </div>
         <div className="right">
           <Search />
+          <span>Kid</span>
+          <Notifications />
         </div>
       </div>
     </div>
