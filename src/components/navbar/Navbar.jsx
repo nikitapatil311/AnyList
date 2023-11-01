@@ -1,4 +1,4 @@
-import { Notifications, Search } from "@mui/icons-material";
+import { ArrowDropDown, Notifications, Search } from "@mui/icons-material";
 import React from "react";
 
 export default function Navbar() {
@@ -20,6 +20,8 @@ export default function Navbar() {
           <Search />
           <span>Kid</span>
           <Notifications />
+          <img src="" alt="" />
+          <ArrowDropDown />
         </div>
       </div>
     </div>
