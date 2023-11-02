@@ -21,10 +21,7 @@ export default function Navbar() {
           <Search />
           <span>Kid</span>
           <Notifications />
-          <img
-            src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg"
-            alt=""
-          />
+          <img src="" alt="" />
           <ArrowDropDown />
         </div>
       </div>
