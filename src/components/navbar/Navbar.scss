@@ -13,8 +13,14 @@
   .left {
     display: flex;
     align-items: center;
+
     img {
       height: 25px;
+    }
+
+    span {
+      margin-right: 20px;
+      cursor: pointer;
     }
     .right {
       display: flex;
@@ -25,10 +31,7 @@
       height: 30px;
       border-radius: 5px;
       object-fit: cover;
+      cursor: pointer;
     }
   }
-}
-
-.left img {
-  height: 30px;
 }
