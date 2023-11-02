@@ -1,5 +1,6 @@
 import { ArrowDropDown, Notifications, Search } from "@mui/icons-material";
 import React from "react";
+import "../navbar/Navbar.scss";
 
 export default function Navbar() {
   return (

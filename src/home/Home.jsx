@@ -1,5 +1,5 @@
 import React from "react";
-import "../home/home.css";
+import "../home/home.scss";
 import { AcUnit } from "@mui/icons-material";
 import Navbar from "../components/navbar/Navbar";
 
