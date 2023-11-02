@@ -11,6 +11,8 @@
   height: 70px;
 
   .left {
+    display: flex;
+    align-items: center;
     img {
       height: 25px;
     }
