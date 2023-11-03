@@ -18,9 +18,9 @@ export default function Navbar() {
           <span>My List </span>
         </div>
         <div className="right">
-          <Search />
+          <Search className="icon" />
           <span>Kid</span>
-          <Notifications />
+          <Notifications className="icon" />
           <img src="" alt="" />
           <ArrowDropDown />
         </div>
