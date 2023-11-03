@@ -22,7 +22,7 @@ export default function Navbar() {
           <span>Kid</span>
           <Notifications className="icon" />
           <img src="" alt="" />
-          <ArrowDropDown />
+          <ArrowDropDown className="icon" />
         </div>
       </div>
     </div>
