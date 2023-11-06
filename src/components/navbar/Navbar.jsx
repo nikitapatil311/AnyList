@@ -24,6 +24,10 @@ export default function Navbar() {
           <img src="" alt="" />
           <div className="profile">
             <ArrowDropDown className="icon" />
+            <div className="options">
+              <span>Settings</span>
+              <span>Log Out</span>
+            </div>
           </div>
         </div>
       </div>
