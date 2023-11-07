@@ -41,6 +41,11 @@
       }
       .profile {
         .options {
+          display: none;
+        }
+        &:hover {
+          .options {
+          }
         }
       }
     }
