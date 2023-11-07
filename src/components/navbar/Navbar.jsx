@@ -1,8 +1,9 @@
 import { ArrowDropDown, Notifications, Search } from "@mui/icons-material";
-import React from "react";
+import React, { useState } from "react";
 import "../navbar/Navbar.scss";
 
 export default function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
   return (
     <div className="navbar">
       <div className="container">
