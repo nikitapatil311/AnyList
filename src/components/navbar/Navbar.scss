@@ -5,27 +5,27 @@
   position: fixed;
   top: 0;
   z-index: 999;
-}
 
-.container {
-  padding: 0 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 70px;
-
-  .left {
+  .container {
+    padding: 0 50px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    height: 70px;
 
-    img {
-      height: 25px;
-      margin-right: 40px;
-    }
+    .left {
+      display: flex;
+      align-items: center;
 
-    span {
-      margin-right: 20px;
-      cursor: pointer;
+      img {
+        height: 25px;
+        margin-right: 40px;
+      }
+
+      span {
+        margin-right: 20px;
+        cursor: pointer;
+      }
     }
     .right {
       display: flex;
