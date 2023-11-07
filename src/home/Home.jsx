@@ -13,7 +13,10 @@ export default function Home() {
       non fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit.
       Adipisci, non ea. Aperiam, magnam tempora harum aliquam non totam cumque
       natus, amet eius voluptate aspernatur culpa! Dicta debitis minima quia
-      ducimus.
+      ducimus. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      Aspernatur, nemo voluptatem iure quasi, quidem laborum hic laboriosam
+      commodi, eveniet eius modi voluptatibus cupiditate! Sunt vero rerum neque
+      accusamus quis tempora.
     </div>
   );
 }
