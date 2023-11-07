@@ -42,6 +42,7 @@
       .profile {
         .options {
           display: none;
+          background-color: var(--main-color);
         }
         &:hover {
           .options {
