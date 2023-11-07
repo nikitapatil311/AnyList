@@ -45,6 +45,10 @@
           background-color: var(--main-color);
           border-radius: 5px;
         }
+        span {
+          padding: 10px;
+          cursor: pointer;
+        }
         &:hover {
           .options {
             display: flex;
