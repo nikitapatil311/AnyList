@@ -43,6 +43,7 @@
         .options {
           display: none;
           background-color: var(--main-color);
+          border-radius: 5px;
         }
         &:hover {
           .options {
