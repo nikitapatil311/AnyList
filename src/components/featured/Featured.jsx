@@ -1,3 +1,4 @@
+import { PlayArrow } from "@mui/icons-material";
 import "../featured/featured.scss";
 
 export default function Featured() {
@@ -19,7 +20,9 @@ export default function Featured() {
           magni aliquid recusandae deleniti.
         </span>
         <div className="buttons">
-          <button className="play"></button>
+          <button className="play">
+            <PlayArrow />
+          </button>
           <button className="more"></button>
         </div>
       </div>
