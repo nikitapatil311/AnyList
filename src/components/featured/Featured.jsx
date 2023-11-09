@@ -12,7 +12,12 @@ export default function Featured() {
           src="https://i.pcmag.com/imagery/reviews/05cItXL96l4LE9n02WfDR0h-5.fit_scale.size_760x427.v1582751026.png"
           alt=""
         />
-        <span className="desc"></span>
+        <span className="desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quos
+          blanditiis eum necessitatibus aliquam autem inventore a ratione
+          expedita molestiae dolorem quidem, architecto temporibus, soluta sed
+          magni aliquid recusandae deleniti.
+        </span>
       </div>
     </div>
   );
