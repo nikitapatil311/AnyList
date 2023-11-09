@@ -18,6 +18,10 @@ export default function Featured() {
           expedita molestiae dolorem quidem, architecto temporibus, soluta sed
           magni aliquid recusandae deleniti.
         </span>
+        <div className="buttons">
+          <button className="play"></button>
+          <button className="more"></button>
+        </div>
       </div>
     </div>
   );
