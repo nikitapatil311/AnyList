@@ -1,4 +1,4 @@
-import { PlayArrow } from "@mui/icons-material";
+import { InfoOutlined, PlayArrow } from "@mui/icons-material";
 import "../featured/featured.scss";
 
 export default function Featured() {
@@ -24,7 +24,9 @@ export default function Featured() {
             <PlayArrow />
             <span>Play</span>
           </button>
-          <button className="more"></button>
+          <button className="more">
+            <InfoOutlined />
+          </button>
         </div>
       </div>
     </div>
