@@ -26,6 +26,7 @@ export default function Featured() {
           </button>
           <button className="more">
             <InfoOutlined />
+            <span>Info</span>
           </button>
         </div>
       </div>
