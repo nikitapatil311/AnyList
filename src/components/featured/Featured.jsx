@@ -22,6 +22,7 @@ export default function Featured() {
         <div className="buttons">
           <button className="play">
             <PlayArrow />
+            <span>Play</span>
           </button>
           <button className="more"></button>
         </div>
