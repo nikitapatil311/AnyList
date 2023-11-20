@@ -44,6 +44,10 @@
           background-color: white;
           color: var(--main-color);
         }
+
+        &.info {
+          background-color: gray;
+        }
       }
     }
   }
