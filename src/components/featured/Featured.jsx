@@ -4,6 +4,11 @@ import "../featured/featured.scss";
 export default function Featured({ type }) {
   return (
     <div className="featured">
+      {type && (
+        <div className="category">
+          <span>{type === movie}</span>
+        </div>
+      )}
       <img
         src="https://hips.hearstapps.com/hmg-prod/images/family-movies-on-netflix-benji-1651076104.jpeg"
         alt=""
