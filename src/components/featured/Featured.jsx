@@ -6,7 +6,7 @@ export default function Featured({ type }) {
     <div className="featured">
       {type && (
         <div className="category">
-          <span>{type === "movie"}</span>
+          <span>{type === "movie" ? "movies" : "series"}</span>
         </div>
       )}
       <img
