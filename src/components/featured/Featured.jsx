@@ -1,7 +1,7 @@
 import { InfoOutlined, PlayArrow } from "@mui/icons-material";
 import "../featured/featured.scss";
 
-export default function Featured() {
+export default function Featured({ type }) {
   return (
     <div className="featured">
       <img
