@@ -10,6 +10,9 @@ export default function Featured({ type }) {
 
           <select name="genre" id="genre">
             <option>Genre</option>
+            <option value="adventure">Adventure</option>
+            <option value="comedy">Comedy</option>
+            <option value="crime">Crime</option>
           </select>
         </div>
       )}
