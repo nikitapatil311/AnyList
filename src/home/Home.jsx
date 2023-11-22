@@ -9,7 +9,7 @@ export default function Home() {
     <div className="home">
       <Navbar />
 
-      <Featured type="movie" />
+      <Featured type="series" />
     </div>
   );
 }
