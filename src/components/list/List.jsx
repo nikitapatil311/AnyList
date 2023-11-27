@@ -1,5 +1,5 @@
 import React from "./list.scss";
 
 export default function List() {
-  return <div></div>;
+  return <div className="list"></div>;
 }
