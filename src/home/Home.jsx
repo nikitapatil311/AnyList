@@ -12,6 +12,9 @@ export default function Home() {
 
       <Featured />
       <List />
+      <List />
+      <List />
+      <List />
     </div>
   );
 }
