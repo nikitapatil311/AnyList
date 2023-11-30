@@ -1,5 +1,5 @@
 import "./listItem.scss";
 
 export default function ListItem() {
-  return <div></div>;
+  return <div className="listItem"></div>;
 }
