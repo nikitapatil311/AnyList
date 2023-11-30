@@ -13,6 +13,13 @@ export default function List() {
         <ArrowBackIosOutlined />
         <div className="container">
           <ListItem />
+          <ListItem />
+          <ListItem />
+          <ListItem />
+          <ListItem />
+          <ListItem />
+          <ListItem />
+          <ListItem />
         </div>
         <ArrowForwardIosOutlined />
       </div>
