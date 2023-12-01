@@ -21,7 +21,7 @@ export default function List() {
           <ListItem />
           <ListItem />
         </div>
-        <ArrowForwardIosOutlined className="slideArrow" />
+        <ArrowForwardIosOutlined className="slideArrow right" />
       </div>
     </div>
   );
