@@ -1,6 +1,7 @@
 import {
   ArrowBackIosOutlined,
   ArrowForwardIosOutlined,
+  RampRight,
 } from "@mui/icons-material";
 import React from "./list.scss";
 import ListItem from "../listItem/ListItem";
@@ -24,7 +25,10 @@ export default function List() {
           <ListItem />
           <ListItem />
         </div>
-        <ArrowForwardIosOutlined className="slideArrow right" />
+        <ArrowForwardIosOutlined
+          className="slideArrow right"
+          onClick={() => handleClick(right)}
+        />
       </div>
     </div>
   );
