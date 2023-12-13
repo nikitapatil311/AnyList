@@ -7,7 +7,11 @@ import React from "./list.scss";
 import ListItem from "../listItem/ListItem";
 
 export default function List() {
-  const handleClick = (direction) => {};
+
+    const listRef = useRef()
+  const handleClick = (direction) => {
+    if(direction === "left")
+  };
   return (
     <div className="list">
       <span className="listTitle">Continue to watch</span>
@@ -16,7 +20,7 @@ export default function List() {
           className="slideArrow left"
           onClick={() => handleClick(left)}
         />
-        <div className="container">
+        <div className="container" ref={listRef}>
           <ListItem />
           <ListItem />
           <ListItem />
