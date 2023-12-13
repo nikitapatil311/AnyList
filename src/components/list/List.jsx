@@ -10,7 +10,10 @@ export default function List() {
     <div className="list">
       <span className="listTitle">Continue to watch</span>
       <div className="wrapper">
-        <ArrowBackIosOutlined className="slideArrow left" />
+        <ArrowBackIosOutlined
+          className="slideArrow left"
+          onClick={handleClick()}
+        />
         <div className="container">
           <ListItem />
           <ListItem />
