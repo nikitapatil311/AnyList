@@ -7,6 +7,7 @@ import React from "./list.scss";
 import ListItem from "../listItem/ListItem";
 
 export default function List() {
+  const handleClick = (direction) => {};
   return (
     <div className="list">
       <span className="listTitle">Continue to watch</span>
