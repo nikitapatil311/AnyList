@@ -12,7 +12,7 @@ export default function List() {
       <div className="wrapper">
         <ArrowBackIosOutlined
           className="slideArrow left"
-          onClick={handleClick()}
+          onClick={() => handleClick(left)}
         />
         <div className="container">
           <ListItem />
