@@ -1,16 +1,15 @@
 import {
   ArrowBackIosOutlined,
   ArrowForwardIosOutlined,
-
 } from "@mui/icons-material";
 import React from "./list.scss";
 import ListItem from "../listItem/ListItem";
 
 export default function List() {
-
-    const listRef = useRef()
+  const listRef = useRef();
   const handleClick = (direction) => {
-    if(direction === "left")
+    if (direction === "left") {
+    }
   };
   return (
     <div className="list">
