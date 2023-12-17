@@ -8,9 +8,11 @@ import ListItem from "../listItem/ListItem";
 export default function List() {
   const listRef = useRef();
   const handleClick = (direction) => {
+    let distance = listRef.current.getBoundingClientRect();
     if (direction === "left") {
       listRef.current.style.transform = `translateX(230px)`;
     }
+    console.log(distance);
   };
   return (
     <div className="list">
