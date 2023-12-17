@@ -9,6 +9,7 @@ export default function List() {
   const listRef = useRef();
   const handleClick = (direction) => {
     if (direction === "left") {
+      listRef.current.style.transform = `translateX(230px)`;
     }
   };
   return (
