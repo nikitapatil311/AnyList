@@ -6,6 +6,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <link rel="manifest" href="/assests/manifest.json" />
+        <link rel="preload" as="image" href="/path/to/critical-image.jpg" />
       </Head>
       <body>
         <Main />
