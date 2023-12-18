@@ -32,7 +32,7 @@ const GroceryCard = ({ grocery }) => {
         <Link href={`/product/${grocery._id}`} passHref>
           <Image
             src={grocery.image}
-            alt=""
+            alt="grocery image"
             width={300}
             height={300}
             className={styles.imageCard}
@@ -50,8 +50,13 @@ const GroceryCard = ({ grocery }) => {
             type="number"
             defaultValue={1}
             className={styles.quantity}
+            aria-label="input number"
           />
-          <button className={styles.button} onClick={handleClick}>
+          <button
+            aria-label="add to cart button"
+            className={styles.button}
+            onClick={handleClick}
+          >
             Add to Cart
           </button>
         </div>
