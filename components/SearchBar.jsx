@@ -10,6 +10,7 @@ const SearchBar = ({ searchQuery, setSearchQuery }) => {
     <>
       <div className={styles.searchfull}>
         <input
+          aria-label="search icon"
           className={styles.container}
           type="text"
           placeholder="Search..."
