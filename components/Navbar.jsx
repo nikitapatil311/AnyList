@@ -13,7 +13,6 @@ const Footer = () => {
           href="https://www.instagram.com/nikita_.s._patil/"
           target="_blank"
           rel="noopener noreferrer"
-          aria-labelledby="link"
           alt="instagram icon"
         >
           <AiFillInstagram />
@@ -22,7 +21,6 @@ const Footer = () => {
           href="https://www.linkedin.com/in/nikita-s-patil/"
           target="_blank"
           rel="noopener noreferrer"
-          aria-labelledby="link"
           alt="linkdin icon"
         >
           <AiFillLinkedin />
@@ -31,7 +29,6 @@ const Footer = () => {
           href="https://github.com/nikitapatil311"
           target="_blank"
           rel="noopener noreferrer"
-          aria-labelledby="link"
           alt="github icon"
         >
           <AiFillGithub />
