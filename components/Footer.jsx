@@ -15,7 +15,7 @@ const Footer = () => {
           <Image
             priority
             src="/assests/home.png"
-            alt=""
+            alt="home page"
             width={30}
             height={30}
           />
