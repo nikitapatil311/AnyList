@@ -41,7 +41,7 @@ const Footer = () => {
             <Image
               priority
               src="/assests/cart.png"
-              alt=""
+              alt="cart icon"
               width={30}
               height={30}
             />
