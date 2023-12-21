@@ -1,0 +1,40 @@
+.container {
+  background: linear-gradient(#ff9f45, #ffbc80);
+  height: 100px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.item {
+  flex: 1;
+}
+
+.cart {
+  position: relative;
+}
+
+.counter {
+  position: absolute;
+  top: -10px;
+  /* right: -10px; */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #e36511;
+}
+
+.profile {
+  height: 50px;
+  width: 50px;
+}

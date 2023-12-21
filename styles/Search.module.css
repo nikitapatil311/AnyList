@@ -1,0 +1,65 @@
+/* .container {
+  width: 50%;
+  border-radius: 10px;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+  border: 2px solid rgb(9, 8, 8);
+}
+
+.icon {
+}
+
+.searchfull {
+  display: flex;
+  justify-content: space-evenly;
+  height: 50px;
+  font-family: monospace;
+
+  margin-top: 20px;
+} */
+
+.searchfull {
+  margin-top: 2%;
+  margin-left: 2%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  border: 2px solid #f76e11;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 12px 12px 2px 1px #f76e11;
+  border: 2px solid #f76e11;
+
+  height: 50px;
+}
+
+/* .icon {
+  margin-left: 88%;
+  font-size: larger;
+  order: 1; 
+} */
+
+.container {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Media Query for iPhones */
+@media (max-width: 375px) {
+  /* Adjust the breakpoint as needed */
+  .searchfull {
+    /* Change the styles for smaller screens (iPhones) */
+    padding: 3px;
+  }
+
+  .icon {
+    /* Adjust the icon size for smaller screens (iPhones) */
+    margin-right: 3px;
+  }
+
+  .container {
+    /* Adjust the font size for smaller screens (iPhones) */
+    font-size: 14px;
+  }
+}
