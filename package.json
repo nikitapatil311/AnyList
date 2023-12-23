@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "static": "next build && next export "
+    "static": "next build && next export"
   },
   "dependencies": {
     "@capacitor/android": "^5.4.0",
