@@ -4,8 +4,10 @@ import {
 } from "@mui/icons-material";
 import React from "./list.scss";
 import ListItem from "../listItem/ListItem";
+import { useState } from "react";
 
 export default function List() {
+  const [slideNumber, setslideNumber] = useState(0);
   const listRef = useRef();
 
   const handleClick = (direction) => {
